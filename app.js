@@ -93,50 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
     fieldGroupInterest.classList.remove('focused-select');
   });
 
-  // Pre-select dentist referral when dentist CTAs are clicked
-  const selectDentistReferral = (e) => {
-    if (e) e.preventDefault(); // Prevent default instant jump
+  // "Refer a patient" / "For Dentists" CTAs: pre-select the dentist-referral
+  // option, then let the native anchor (href="#form-container-block") do the
+  // scroll — that respects the desktop zoom, unlike scrollIntoView.
+  const selectDentistReferral = () => {
     const dentistOption = document.querySelector('.custom-option[data-value="dentist-referral"]');
     if (dentistOption) {
       dentistOption.click();
     }
-    const formSection = document.getElementById('form-container-block');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    // No preventDefault and no scrollIntoView — the <a href="#form-container-block">
+    // handles the smooth scroll natively and reliably.
   };
 
-  const forDentistsCta = document.getElementById('cta-for-dentists-sticky');
-  const forDentistsCtaDesktop = document.getElementById('cta-for-dentists');
-  const footerCtaRefer = document.getElementById('footer-cta-refer');
-  
-  const enquireStickyCta = document.getElementById('btn-enquire-sticky');
-  const enquireDesktopCta = document.getElementById('btn-enquire');
+  ['cta-for-dentists-sticky', 'cta-for-dentists', 'footer-cta-refer'].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('click', selectDentistReferral);
+  });
 
-  if (forDentistsCta) {
-    forDentistsCta.addEventListener('click', selectDentistReferral);
-  }
-  if (forDentistsCtaDesktop) {
-    forDentistsCtaDesktop.addEventListener('click', selectDentistReferral);
-  }
-  if (footerCtaRefer) {
-    footerCtaRefer.addEventListener('click', selectDentistReferral);
-  }
-
-  const handleEnquireClick = (e) => {
-    e.preventDefault();
-    const formSection = document.getElementById('form-container-block');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  if (enquireStickyCta) {
-    enquireStickyCta.addEventListener('click', handleEnquireClick);
-  }
-  if (enquireDesktopCta) {
-    enquireDesktopCta.addEventListener('click', handleEnquireClick);
-  }
+  // Plain "Enquire" CTAs simply scroll to the form via their native anchor —
+  // no JS needed (the href + CSS smooth scroll handle it under any zoom level).
 
   /* ==========================================================================
      3. Smooth Form Label Float and Validation Engine (Hims/Ro style)
