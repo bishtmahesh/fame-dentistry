@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%" fill="none">
+  <!-- Circle + Star Logo Mark -->
+  <g transform="translate(5, 5)">
+    <!-- Outer Circle -->
+    <circle cx="25" cy="25" r="22" stroke="#1A2233" stroke-width="1.5" />
+    <!-- Inner Decorative Geometry -->
+    <circle cx="25" cy="25" r="18" stroke="#1A2233" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4" />
+    
+    <!-- 8-point geometric luxury star -->
+    <!-- Primary Diamond -->
+    <path d="M 25 7 L 29 21 L 43 25 L 29 29 L 25 43 L 21 29 L 7 25 L 21 21 Z" fill="#1A2233" />
+    <!-- Secondary Rotated Diamond -->
+    <path d="M 25 12 L 27.8 22.2 L 38 25 L 27.8 27.8 L 25 38 L 22.2 27.8 L 12 25 L 22.2 22.2 Z" fill="#c5a059" opacity="0.95" />
+    
+    <!-- Center core dot -->
+    <circle cx="25" cy="25" r="3.5" fill="#fcfaf6" stroke="#1A2233" stroke-width="1" />
+  </g>
+  
+  <!-- Text Branding -->
+  <text x="68" y="31" font-family="'Prata', serif" font-size="20" font-weight="500" letter-spacing="0.18em" fill="#1A2233">FAME</text>
+  <text x="68" y="44" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.38em" fill="#c5a059">DENTISTRY</text>
+</svg>

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Private Dentist in Glasgow | FAME Dentistry — Scotland Street</title>
+  <meta name="description" content="FAME Dentistry is a private dental & implant practice opening summer 2026 on Scotland Street, Glasgow. Concierge cosmetic and implant care led by Dr Ferhan Ahmed (MBChB, BDS). Register your interest." />
+  <meta name="keywords" content="private dentist Glasgow, dental implants Glasgow, cosmetic dentistry Glasgow, Scotland Street dentist, FAME Dentistry, Dr Ferhan Ahmed" />
+  <link rel="canonical" href="https://www.famedentistry.co.uk/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1a2233" />
+
+  <!-- Geo / Local SEO -->
+  <meta name="geo.region" content="GB-GLG" />
+  <meta name="geo.placename" content="Glasgow" />
+  <meta name="geo.position" content="55.8487;-4.2780" />
+  <meta name="ICBM" content="55.8487, -4.2780" />
+
+  <!-- Favicon (FAME emblem, text removed) -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FAME Dentistry" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:url" content="https://www.famedentistry.co.uk/" />
+  <meta property="og:title" content="FAME Dentistry — Private & Implant Dentist in Glasgow" />
+  <meta property="og:description" content="A private dental practice with concierge care, opening summer 2026 on Scotland Street, Glasgow. Implant & cosmetic dentistry led by Dr Ferhan Ahmed (MBChB, BDS)." />
+  <meta property="og:image" content="https://www.famedentistry.co.uk/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="FAME Dentistry — Decidedly different dentistry, opening summer 2026 on Scotland Street, Glasgow." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAME Dentistry — Private & Implant Dentist in Glasgow" />
+  <meta name="twitter:description" content="A private dental practice with concierge care, opening summer 2026 on Scotland Street, Glasgow. Led by Dr Ferhan Ahmed (MBChB, BDS)." />
+  <meta name="twitter:image" content="https://www.famedentistry.co.uk/assets/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --color--navy: #1a2233;
+      --color--off-white: #f8f6f2;
+      --color--gold: #c9a96e;
+      --color--ink-navy: #1a2233;
+      --color--ink-subtle: #8a8f98;
+    }
+    html {
+      scroll-behavior: smooth;
+      scrollbar-width: none;        /* Firefox */
+      -ms-overflow-style: none;     /* old Edge/IE */
+    }
+    /* Hide the scrollbar / scroll arrows (scrolling still works) */
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+    .font-prata { font-family: 'Prata', serif; }
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    
+    /* Variable Inter Tuning (Superhuman style precise sub-default weights) */
+    .font-inter {
+      font-family: 'Inter', sans-serif;
+      font-variation-settings: "wght" 460;
+      font-weight: 460;
+    }
+    .font-inter-semibold {
+      font-family: 'Inter', sans-serif;
+      font-variation-settings: "wght" 540;
+      font-weight: 540;
+    }
+    
+    body { background-color: #11161f; }
+    
+    /* ---- CTA buttons: gold outline + hover ---- */
+    [data-name="button-primary"] {
+      cursor: pointer;
+      border: 1px solid var(--color--gold, #c9a96e);
+      transition: background-color .4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform .4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  border-color .4s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow .4s cubic-bezier(0.16, 1, 0.3, 1),
+                  color .4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-name="button-primary"]:hover {
+      background-color: #0e1320;
+      transform: translateY(-2px) scale(1.015);
+      border-color: #fcfaf6;
+    }
+    /* All children transition colour */
+    [data-name="button-primary"] > * {
+      transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1), color .4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    /* On hover — every child turns gold */
+    [data-name="button-primary"]:hover > * {
+      color: var(--color--gold, #c9a96e);
+    }
+    /* Arrow (last child) also slides right */
+    [data-name="button-primary"]:hover > *:last-child {
+      transform: translateX(6px);
+    }
+    
+    /* Secondary text CTA in the nav */
+    .nav-cta-link {
+      transition: color .4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      position: relative;
+    }
+    .nav-cta-link:hover { 
+      color: var(--color--gold, #c9a96e); 
+    }
+    .nav-cta-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--color--gold, #c9a96e);
+      transition: width .4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-cta-link:hover::after {
+      width: 100%;
+    }
+
+    /* ---- Glassmorphic Sticky Header overrides ---- */
+    #site-header {
+      transition: background-color .4s ease, backdrop-filter .4s ease,
+                  box-shadow .35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #site-header.header-scrolled {
+      background-color: rgba(248, 246, 242, 0.82) !important;
+      backdrop-filter: blur(16px);
+    }
+    /* Very faint warm shadow — visible only while actively scrolling */
+    #site-header.header-scrolling {
+      box-shadow: 0 4px 20px rgba(26, 34, 51, 0.06);
+    }
+    .header-layout {
+      transition: height .4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #site-header.header-scrolled [data-name="header-layout"] {
+      height: 68px !important;
+    }
+
+    /* ---- Golden Hour Hero Radial Glow backdrop ---- */
+    .hero-radial-glow {
+      background: radial-gradient(circle at 75% 30%, rgba(201, 169, 110, 0.08) 0%, rgba(248, 246, 242, 0) 65%);
+    }
+
+    /* ---- Form field ambient glow & underline ---- */
+    .form-field-group {
+      transition: background-color 0.4s ease;
+    }
+    .form-field-group:focus-within {
+      background-color: rgba(201, 169, 110, 0.035) !important;
+    }
+    .form-input-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: #c9a96e;
+      transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .form-field-group:focus-within .form-input-wrapper::after {
+      width: 100%;
+    }
+
+    /* ---- In-place form success overlay + animated tick ---- */
+    .form-success-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: var(--color--off-white, #f8f6f2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1.02);
+      transition: opacity .5s cubic-bezier(0.16,1,0.3,1),
+                  transform .5s cubic-bezier(0.16,1,0.3,1),
+                  visibility .5s;
+      z-index: 20;
+    }
+    .form-success-overlay.show {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+    .form-success-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    .form-success-overlay.show .form-success-inner {
+      animation: successContentIn .6s cubic-bezier(0.16,1,0.3,1) .15s forwards;
+    }
+    @keyframes successContentIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .success-tick-circle {
+      stroke-dasharray: 232;
+      stroke-dashoffset: 232;
+    }
+    .success-tick-check {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+    }
+    .form-success-overlay.show .success-tick-circle {
+      animation: tickCircle .7s cubic-bezier(0.65,0,0.45,1) .2s forwards;
+    }
+    .form-success-overlay.show .success-tick-check {
+      animation: tickCheck .45s cubic-bezier(0.65,0,0.45,1) .75s forwards;
+    }
+    @keyframes tickCircle { to { stroke-dashoffset: 0; } }
+    @keyframes tickCheck { to { stroke-dashoffset: 0; } }
+    #btn-success-refresh svg { transition: transform .6s cubic-bezier(0.16,1,0.3,1); }
+    #btn-success-refresh:hover svg { transform: rotate(-360deg); }
+    @media (prefers-reduced-motion: reduce) {
+      .form-success-overlay, .form-success-inner,
+      .success-tick-circle, .success-tick-check {
+        transition: opacity .2s ease !important;
+        animation: none !important;
+        stroke-dashoffset: 0 !important;
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* ---- Toast Shimmer Reflection effect ---- */
+    .toast-notification {
+      position: fixed;
+      bottom: 64px;
+      right: 64px;
+      background-color: var(--color--navy, #1a2233);
+      color: white;
+      border: 1px solid var(--color--gold, #c9a96e);
+      border-radius: 6px;
+      padding: 24px 32px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(40px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+      z-index: 200;
+      max-width: 420px;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .toast-notification.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .toast-notification::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.18), transparent);
+      transform: skewX(-25deg);
+      transition: none;
+    }
+    .toast-notification.show::before {
+      left: 150%;
+      transition: left 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+    }
+    .toast-content {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .toast-title {
+      color: var(--color--gold, #c9a96e);
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+    }
+    .toast-message {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5;
+    }
+    .toast-close {
+      background: transparent;
+      border: none;
+      color: #8a8f98;
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color .25s ease;
+    }
+    .toast-close:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .toast-notification {
+        right: 16px !important;
+        left: 16px !important;
+        bottom: 16px !important;
+        max-width: none !important;
+        padding: 16px 20px !important;
+      }
+    }
+
+    /* ---- Custom select: closed by default, opens on .open ---- */
+    .custom-options {
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+    }
+    .custom-select-wrapper.open .custom-options {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .custom-select-arrow { transition: transform .3s ease; }
+    .custom-select-wrapper.open .custom-select-arrow { transform: rotate(180deg); }
+
+    /* ---- Scroll-Reveal Animations ---- */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+    .delay-500 { transition-delay: 500ms; }
+
+    /* ---- Hero Image: fixed position, slow continuous zoom in/out ---- */
+    .hero-reveal-image {
+      /* Stays centred and fixed — no vertical drift. A gentle scale loop
+         (always >1 so the frame stays fully covered) breathes the image. */
+      transform: scale(1.08);
+      transform-origin: center center;
+      animation: heroZoom 18s ease-in-out infinite alternate;
+      will-change: transform;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      filter: contrast(1.02) brightness(1.01) saturate(1.02);
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.08); }
+      to   { transform: scale(1.2); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-reveal-image { animation: none; transform: scale(1.1); }
+    }
+
+    /* ---- Framed imagery: one refined soft drop-shadow, gallery-print style (Apple) ---- */
+    [data-name="image-wrapper"] {
+      box-shadow: 0 30px 60px -24px rgba(26, 34, 51, 0.28);
+      transition: transform .5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .5s cubic-bezier(0.16, 1, 0.3, 1), border-color .5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-name="image-wrapper"]:hover {
+      transform: translateY(-6px);
+      border-color: #fcfaf6 !important;
+      box-shadow: 0 40px 80px -28px rgba(26, 34, 51, 0.34);
+    }
+    .custom-option {
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity .35s cubic-bezier(0.16, 1, 0.3, 1), transform .35s cubic-bezier(0.16, 1, 0.3, 1), background-color .25s ease;
+    }
+    .custom-select-wrapper.open .custom-option {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .custom-select-wrapper.open .custom-option:nth-child(1) { transition-delay: 30ms; }
+    .custom-select-wrapper.open .custom-option:nth-child(2) { transition-delay: 60ms; }
+    .custom-select-wrapper.open .custom-option:nth-child(3) { transition-delay: 90ms; }
+    .custom-select-wrapper.open .custom-option:nth-child(4) { transition-delay: 120ms; }
+    .custom-select-wrapper.open .custom-option:nth-child(5) { transition-delay: 150ms; }
+    .custom-select-wrapper.open .custom-option:nth-child(6) { transition-delay: 180ms; }
+
+    /* ================================================================
+       PREMIUM ANIMATION LAYER — Apple × Stripe × Editorial Luxury
+       ================================================================ */
+
+    /* 1. Word-by-word staggered hero title reveal */
+    .hero-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(28px) skewY(2deg);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .hero-word.visible {
+      opacity: 1;
+      transform: translateY(0) skewY(0deg);
+    }
+
+    /* 2. Apple-style press/active micro-interaction on all CTAs */
+    [data-name="button-primary"]:active {
+      transform: scale(0.96) !important;
+      transition-duration: 0.12s !important;
+    }
+
+    /* 3. Ambient gold pulse glow on form container — breathes slowly */
+    @keyframes goldPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,169,110,0); }
+      50%       { box-shadow: 0 0 32px 6px rgba(201,169,110,0.09); }
+    }
+    [data-name="form-container"] {
+      animation: goldPulse 5s ease-in-out infinite;
+    }
+
+    /* 4. Founder portrait slow Ken Burns drift */
+    @keyframes portraitDrift {
+      0%   { transform: scale(1.04) translateY(0px); }
+      50%  { transform: scale(1.07) translateY(-8px); }
+      100% { transform: scale(1.04) translateY(0px); }
+    }
+    #founder-portrait-inner {
+      animation: portraitDrift 14s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    /* 5. Eyebrow label line-reveal — line slides in from left */
+    .eyebrow-line-reveal {
+      position: relative;
+      overflow: hidden;
+    }
+    .eyebrow-line-reveal::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: var(--color--off-white, #f8f6f2);
+      transform: translateX(0%);
+      transition: transform 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+    }
+    .eyebrow-line-reveal.unmasked::after {
+      transform: translateX(101%);
+    }
+
+    /* 6. Footer logo shimmer sweep on hover */
+    #footer-logo {
+      position: relative;
+      overflow: hidden;
+    }
+    #footer-logo::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -80%;
+      width: 60%; height: 100%;
+      background: linear-gradient(120deg, transparent 0%, rgba(201,169,110,0.25) 50%, transparent 100%);
+      transform: skewX(-20deg);
+      transition: left 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    #footer-logo:hover::after {
+      left: 130%;
+    }
+
+    /* 7. Scroll-triggered section divider line — gold line draws in */
+    .gold-divider-reveal {
+      position: relative;
+    }
+    .gold-divider-reveal::before {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0;
+      height: 1px;
+      width: 0%;
+      background: var(--color--gold, #c9a96e);
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gold-divider-reveal.drawn::before {
+      width: 100%;
+    }
+
+    /* 8. Sticky bar micro-bounce on first appear */
+    @keyframes barBounceIn {
+      0%   { transform: translateY(100%); }
+      70%  { transform: translateY(-6px); }
+      85%  { transform: translateY(3px); }
+      100% { transform: translateY(0); }
+    }
+    #sticky-bottom-bar.bounce-in {
+      animation: barBounceIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    /* Hidden state while scrolling — wins over the element's translate-y-0 */
+    #sticky-bottom-bar.bar-hidden {
+      transform: translateY(135%) !important;
+    }
+  </style>
+
+  <!-- Local SEO: Dentist structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "FAME Dentistry",
+    "description": "Private dental and implant practice with a concierge service, opening summer 2026 on Scotland Street, Glasgow. Cosmetic, implant and reconstructive dentistry led by Dr Ferhan Ahmed (MBChB, BDS).",
+    "url": "https://www.famedentistry.co.uk/",
+    "image": "https://www.famedentistry.co.uk/assets/og-image.jpg",
+    "logo": "https://www.famedentistry.co.uk/assets/favicon-512.png",
+    "email": "enquiries@famedentistry.co.uk",
+    "priceRange": "£££",
+    "founder": {
+      "@type": "Person",
+      "name": "Dr Ferhan Ahmed",
+      "jobTitle": "Principal Dentist",
+      "hasCredential": "MBChB · BDS"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Corner of Scotland Street and Shields Road",
+      "addressLocality": "Glasgow",
+      "addressRegion": "Glasgow City",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 55.8487,
+      "longitude": -4.2780
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Glasgow"
+    },
+    "medicalSpecialty": ["CosmeticDentistry", "Implant Dentistry"],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "opens": "2026-06-01"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Shimmering Gold Scroll Progress Indicator (Coutts style) -->
+  <div class="scroll-progress" id="scroll-progress-bar"></div>
+
+  <div id="page" class="bg-[var(--color--navy,#1a2233)] flex flex-col items-start relative w-full lg:w-[1440px] mx-auto min-h-screen shadow-2xl pb-16 lg:pb-0" data-name="FAME Editorial — Gold Palette">
+
+    <!-- HEADER -->
+    <div id="site-header" class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center overflow-clip sticky top-0 z-50 shrink-0 w-full max-w-[1440px] mx-auto border-b border-solid border-transparent transition-colors duration-300" data-name="section-header">
+      <div class="flex flex-col items-center overflow-clip px-[16px] md:px-[72px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">
+        <div class="flex h-[80px] items-center justify-between overflow-clip relative shrink-0 w-full" data-name="header-layout">
+          <a href="#page" class="h-[60px] md:h-[80px] relative shrink-0 w-[130px] md:w-[170px] block" id="header-logo">
+            <img alt="FAME Dentistry — private dental practice in Glasgow" class="absolute inset-0 max-w-none object-contain object-left w-full h-full" src="assets/logo.png" />
+          </a>
+          <div class="hidden lg:flex gap-[32px] items-center overflow-clip relative shrink-0" data-name="header-nav">
+            <a href="#form-container-block" class="nav-cta-link font-mono font-medium leading-normal relative shrink-0 text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.92px] uppercase whitespace-nowrap no-underline cursor-pointer" id="cta-for-dentists">For Dentists</a>
+            <a href="#form-container-block" class="bg-[var(--color--ink-navy,#1a2233)] flex items-center justify-center overflow-clip px-[22px] py-[12px] relative shrink-0 text-decoration-none" id="btn-enquire" data-name="button-primary">
+              <p class="font-inter font-semibold leading-normal not-italic relative shrink-0 text-[12px] text-white tracking-[2.16px] uppercase whitespace-nowrap">Enquire</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="bg-[var(--color--off-white,#f8f6f2)] hero-radial-glow flex flex-col items-center overflow-clip relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="section-hero">
+      <div class="flex flex-col items-start overflow-clip px-[16px] md:px-[72px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">
+        <div class="flex flex-col items-start overflow-clip pb-[60px] md:pb-[110px] pt-[32px] md:pt-[56px] relative shrink-0 w-full" data-name="padding-section">
+          <div class="flex flex-col gap-[36px] md:gap-[48px] items-start overflow-clip relative shrink-0 w-full" data-name="hero-layout">
+            <div class="border-[var(--color--gold,#c9a96e)] border-b border-solid flex flex-col md:flex-row gap-y-2 md:items-center justify-between overflow-clip pb-[20px] relative shrink-0 w-full order-1" data-name="index-row">
+              <div class="flex items-start overflow-clip relative shrink-0">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.92px] uppercase whitespace-nowrap">The Practice</p>
+              </div>
+              <p class="font-mono font-normal leading-[1.5] relative shrink-0 text-[13px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[2px] md:tracking-[5.12px] uppercase whitespace-normal md:whitespace-nowrap">Opening Summer 2026 · Scotland Street · Glasgow </p>
+            </div>
+            <h1 class="font-prata leading-[1.2] not-italic relative shrink-0 text-[36px] md:text-[64px] text-[var(--color--ink-navy,#1a2233)] tracking-[-1px] md:tracking-[-2.82px] w-full scroll-reveal order-3 md:order-2">Decidedly Different Dentistry.<br class="hidden md:inline" />Opening This Summer on<br class="hidden md:inline" />Scotland Street.</h1>
+            <div class="content-center flex flex-wrap gap-y-[24px] md:gap-y-[32px] items-center justify-between not-italic overflow-clip relative shrink-0 w-full scroll-reveal delay-200 order-4 md:order-3" data-name="hero-lower">
+              <p class="font-inter font-normal leading-[1.65] relative shrink-0 text-[16px] md:text-[18px] text-[var(--color--ink-navy,#1a2233)] w-full lg:w-[580px]">A private dental practice with a concierge service for the business community on Scotland Street, Glasgow — opening summer 2026. Founded by Dr Ferhan Ahmed, MBChB · BDS.</p>
+              <a href="#form-container-block" class="bg-[var(--color--ink-navy,#1a2233)] flex font-inter font-semibold gap-[12px] items-center justify-center leading-normal overflow-clip px-[28px] py-[16px] relative shrink-0 text-white whitespace-nowrap text-decoration-none w-full md:w-auto text-center" id="hero-cta-btn" data-name="button-primary">
+                <p class="relative shrink-0 text-[12px] tracking-[2.16px] uppercase w-full">Register your interest</p>
+                <p class="relative shrink-0 text-[14px]">→</p>
+              </a>
+            </div>
+            <div class="border border-[var(--color--gold,#c9a96e)] border-solid h-[320px] sm:h-[480px] md:h-[720px] relative shrink-0 w-full scroll-reveal delay-400 image-wrapper-hover cursor-pointer order-2 md:order-4" data-name="image-wrapper">
+              <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img alt="Exterior of FAME Dentistry's practice on Scotland Street, Glasgow at dusk" class="hero-reveal-image absolute inset-0 w-full h-full object-cover object-[50%_30%]" src="assets/hero.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center overflow-clip relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="section-register" id="form-container-block">
+      <div class="flex flex-col items-start overflow-clip px-[16px] md:px-[72px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">
+        <div class="flex flex-col items-start overflow-clip py-[60px] md:py-[110px] relative shrink-0 w-full" data-name="padding-section">
+          <div class="flex flex-col gap-[36px] md:gap-[56px] items-start overflow-clip relative shrink-0 w-full" data-name="register-layout">
+            <div class="border-[var(--color--gold,#c9a96e)] border-b border-solid flex flex-col md:flex-row gap-y-2 md:items-center justify-between overflow-clip pb-[20px] relative shrink-0 w-full" data-name="index-row">
+              <div class="flex items-start overflow-clip relative shrink-0">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.92px] uppercase whitespace-nowrap">Register your interest</p>
+              </div>
+              <p class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1.92px] uppercase whitespace-nowrap">Reply from a real person</p>
+            </div>
+            <div class="content-start flex flex-col lg:flex-row gap-x-[80px] gap-y-[40px] md:gap-y-[56px] items-start overflow-clip relative shrink-0 w-full" data-name="register-split">
+              <div class="flex flex-col lg:flex-1 gap-[24px] items-start min-w-0 w-full overflow-clip relative scroll-reveal" data-name="register-head">
+                <h2 class="font-playfair font-normal leading-[1.05] relative shrink-0 text-[32px] md:text-[56px] text-[var(--color--ink-navy,#1a2233)] tracking-[-0.5px] md:tracking-[-1.12px] w-full">Be Among the First to Be Seen.</h2>
+                <p class="font-inter font-normal leading-[1.65] not-italic relative shrink-0 text-[16px] md:text-[18px] text-[var(--color--ink-navy,#1a2233)] w-full">Share a few details below. You'll hear back from a real person — never an automated reply.</p>
+                <div class="border border-[var(--color--gold,#c9a96e)] border-solid h-[260px] md:h-[405px] relative shrink-0 w-full" data-name="image-wrapper">
+                  <img alt="Interior of the FAME Dentistry practice on Scotland Street, Glasgow" class="absolute inset-0 max-w-none object-cover pointer-events-none w-full h-full" src="assets/register.png?v=2" />
+                </div>
+              </div>
+              <div class="bg-[var(--color--off-white,#f8f6f2)] border border-[var(--color--gold,#c9a96e)] border-solid flex flex-col items-start min-w-0 w-full lg:w-[584px] overflow-clip p-[16px] sm:p-[24px] md:p-[48px] relative scroll-reveal delay-200" data-name="form-container">
+                <form action="#" class="registration-form flex flex-col gap-[28px] items-start overflow-clip relative shrink-0 w-full" id="fame-enquiry-form" novalidate>
+                  <h3 class="font-playfair font-normal leading-[1.15] min-w-full relative shrink-0 text-[24px] md:text-[28px] text-[var(--color--ink-navy,#1a2233)] tracking-[-0.28px] text-center mb-6">Begin Your Enquiry</h3>
+                  
+                  <!-- Dropdown Field -->
+                  <div class="flex flex-col gap-[10px] items-start relative shrink-0 w-full form-field-group" id="field-group-interest" data-name="field-interest">
+                    <label class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1px] md:tracking-[1.28px] uppercase whitespace-normal cursor-pointer" id="label-interest">What brings you to FAME?  (select one)  *</label>
+                    <div class="custom-select-wrapper w-full relative" id="custom-select-wrapper-block">
+                      <div class="border-b border-[#c7c7c7] border-solid flex items-center justify-between overflow-clip pb-[12px] pt-[10px] relative shrink-0 w-full cursor-pointer" id="custom-select-trigger" data-name="custom-select">
+                        <span class="custom-select-trigger-text font-inter font-normal leading-normal not-italic text-[16px] md:text-[18px] text-[var(--color--ink-subtle,#8a8f98)] opacity-45 whitespace-nowrap">Select one</span>
+                        <div class="h-[6px] relative shrink-0 w-[12px]">
+                          <div class="absolute inset-[-13.33%_-6.67%]">
+                            <img alt="" class="custom-select-arrow block max-w-none w-full h-full transition-transform duration-300" src="assets/select-arrow.svg" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="custom-options absolute top-[100%] left-0 right-0 bg-[#f8f6f2] border border-[#c9a96e] rounded shadow-lg z-50 flex-col py-1 mt-1 transition-all duration-300" id="custom-select-options">
+                        <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer selected" data-value="">Select one</div>
+                        <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="general">General & Preventive Care</div>
+                        <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="cosmetic">Cosmetic Dentistry</div>
+                        <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="implants">Dental Implants & Reconstructive</div>
+                        <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="dentist-referral">Dentist Referring a Patient</div>
+                        <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="other">Other / Custom Enquiry</div>
+                      </div>
+                    </div>
+                    <select name="interest" id="real-select-interest" required style="display: none;">
+                      <option value="" selected>Select one</option>
+                      <option value="general">General & Preventive Care</option>
+                      <option value="cosmetic">Cosmetic Dentistry</option>
+                      <option value="implants">Dental Implants & Reconstructive</option>
+                      <option value="dentist-referral">Dentist Referring a Patient</option>
+                      <option value="other">Other / Custom Enquiry</option>
+                    </select>
+                    <span class="field-error-message text-xs text-[#a83c3c] font-medium tracking-[0.05em] mt-1.5 hidden" id="error-interest">Please select an option.</span>
+                  </div>
+
+                  <!-- Name Input -->
+                  <div class="flex flex-col gap-[10px] items-start overflow-clip relative shrink-0 w-full form-field-group" id="field-group-name" data-name="field-name">
+                    <label class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1px] md:tracking-[1.28px] uppercase whitespace-normal cursor-pointer" for="input-name" id="label-name">Your name  *</label>
+                    <div class="form-input-wrapper w-full relative">
+                      <input type="text" id="input-name" name="name" required placeholder="First name, last name" class="form-input w-full border-b border-[#c7c7c7] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--color--ink-navy,#1a2233)] placeholder:text-[var(--color--ink-subtle,#8a8f98)] placeholder:opacity-45 outline-none transition-all duration-300">
+                    </div>
+                    <span class="field-error-message text-xs text-[#a83c3c] font-medium tracking-[0.05em] mt-1.5 hidden" id="error-name">Please enter your name.</span>
+                  </div>
+
+                  <!-- Email Input -->
+                  <div class="flex flex-col gap-[10px] items-start overflow-clip relative shrink-0 w-full form-field-group" id="field-group-email" data-name="field-email">
+                    <label class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1px] md:tracking-[1.28px] uppercase whitespace-normal cursor-pointer" for="input-email" id="label-email">Email address  *</label>
+                    <div class="form-input-wrapper w-full relative">
+                      <input type="email" id="input-email" name="email" required placeholder="you@example.com" class="form-input w-full border-b border-[#c7c7c7] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--color--ink-navy,#1a2233)] placeholder:text-[var(--color--ink-subtle,#8a8f98)] placeholder:opacity-45 outline-none transition-all duration-300">
+                    </div>
+                    <span class="field-error-message text-xs text-[#a83c3c] font-medium tracking-[0.05em] mt-1.5 hidden" id="error-email">Please enter a valid email address.</span>
+                  </div>
+
+                  <!-- Phone Input -->
+                  <div class="flex flex-col gap-[10px] items-start overflow-clip relative shrink-0 w-full form-field-group" id="field-group-phone" data-name="field-phone">
+                    <label class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1px] md:tracking-[1.28px] uppercase whitespace-normal cursor-pointer" for="input-phone" id="label-phone">Phone number  *</label>
+                    <div class="form-input-wrapper w-full relative">
+                      <input type="tel" id="input-phone" name="phone" required placeholder="e.g. +44 7700 900000" class="form-input w-full border-b border-[#c7c7c7] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--color--ink-navy,#1a2233)] placeholder:text-[var(--color--ink-subtle,#8a8f98)] placeholder:opacity-45 outline-none transition-all duration-300">
+                    </div>
+                    <span class="field-error-message text-xs text-[#a83c3c] font-medium tracking-[0.05em] mt-1.5 hidden" id="error-phone">Please enter your phone number.</span>
+                  </div>
+
+                  <!-- Notes Input -->
+                  <div class="flex flex-col gap-[10px] items-start overflow-clip relative shrink-0 w-full form-field-group" id="field-group-notes" data-name="field-notes">
+                    <label class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1px] md:tracking-[1.28px] uppercase whitespace-normal cursor-pointer" for="input-notes" id="label-notes">Anything else?  (optional)</label>
+                    <div class="form-input-wrapper w-full relative">
+                      <textarea id="input-notes" name="notes" rows="2" maxlength="100" placeholder="A specific concern, a timing preference, or how you heard about us." class="form-input block w-full border-b border-[#c7c7c7] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] leading-[1.5] text-[var(--color--ink-navy,#1a2233)] placeholder:text-[var(--color--ink-subtle,#8a8f98)] placeholder:opacity-45 outline-none transition-all duration-300 resize-none overflow-hidden"></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button type="submit" class="bg-[var(--color--ink-navy,#1a2233)] flex font-inter font-semibold gap-[12px] items-center justify-center leading-normal not-italic overflow-clip px-[28px] py-[16px] relative shrink-0 text-white whitespace-nowrap w-full cursor-pointer transition-all duration-300" id="btn-submit-enquiry" data-name="button-primary">
+                    <span class="relative text-[12px] tracking-[2.16px] uppercase">Begin an enquiry</span>
+                    <span class="relative text-[14px]">→</span >
+                  </button>
+                </form>
+
+                <!-- In-place success overlay: covers the form, leaves it untouched underneath -->
+                <div class="form-success-overlay" id="form-success-overlay" aria-hidden="true">
+                  <div class="form-success-inner">
+                    <svg class="success-tick" viewBox="0 0 80 80" width="80" height="80" aria-hidden="true">
+                      <circle class="success-tick-circle" cx="40" cy="40" r="36" fill="none" stroke="var(--color--gold,#c9a96e)" stroke-width="2.5" />
+                      <path class="success-tick-check" fill="none" stroke="var(--color--gold,#c9a96e)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M24 41.5 L35 52.5 L57 29" />
+                    </svg>
+                    <h3 class="font-playfair font-normal text-[26px] md:text-[30px] text-[var(--color--ink-navy,#1a2233)] tracking-[-0.4px] mt-7">Enquiry Registered</h3>
+                    <p class="font-inter text-[16px] md:text-[18px] leading-[1.6] text-[var(--color--ink-navy,#1a2233)] mt-3 max-w-[380px]">Thank you. You'll hear back from a real person shortly — never an automated reply.</p>
+                    <p class="font-mono font-medium text-[12px] tracking-[1.92px] uppercase text-[var(--color--gold,#c9a96e)] mt-6">— FAME Dentistry, Glasgow</p>
+                    <button type="button" id="btn-success-refresh" data-name="button-primary" class="bg-[var(--color--ink-navy,#1a2233)] flex font-inter font-semibold gap-[10px] items-center justify-center overflow-clip px-[28px] py-[16px] relative text-white whitespace-nowrap mt-8 cursor-pointer" aria-label="Submit another enquiry">
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+                        <polyline points="21 3 21 9 15 9" />
+                      </svg>
+                      <span class="text-[12px] tracking-[2.16px] uppercase">Submit another enquiry</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOUNDER -->
+    <div class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center overflow-clip relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="section-founder">
+      <div class="flex flex-col items-start overflow-clip px-[16px] md:px-[72px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">
+        <div class="flex flex-col items-start overflow-clip py-[60px] md:py-[110px] relative shrink-0 w-full" data-name="padding-section">
+          <div class="flex flex-col gap-[36px] md:gap-[56px] items-start overflow-clip relative shrink-0 w-full" data-name="founder-layout">
+            <div class="border-[var(--color--gold,#c9a96e)] border-b border-solid flex flex-col md:flex-row gap-y-2 md:items-center justify-between overflow-clip pb-[20px] relative shrink-0 w-full" data-name="index-row">
+              <div class="flex items-start overflow-clip relative shrink-0">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.92px] uppercase whitespace-nowrap">The founder</p>
+              </div>
+              <p class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1.92px] uppercase whitespace-nowrap">Dr Ferhan Ahmed</p>
+            </div>
+            <div class="content-start flex flex-col lg:flex-row gap-x-[80px] gap-y-[40px] md:gap-y-[56px] items-start overflow-clip relative shrink-0 w-full" data-name="founder-grid">
+              <div class="border border-[var(--color--gold,#c9a96e)] border-solid w-full lg:w-[480px] lg:flex-1 h-[360px] sm:h-[480px] md:h-[600px] min-w-0 relative scroll-reveal" data-name="image-wrapper">
+                <div class="absolute inset-0 overflow-hidden pointer-events-none" id="founder-portrait-inner">
+                  <img alt="Dr Ferhan Ahmed, founder of FAME Dentistry, Glasgow (MBChB, BDS)" class="absolute h-[144.87%] left-0 max-w-none top-[-7.77%] w-full object-cover" src="assets/founder.png" />
+                </div>
+              </div>
+              <div class="flex flex-col lg:flex-1 gap-[24px] md:gap-[28px] items-start min-w-0 w-full overflow-clip relative scroll-reveal delay-200" data-name="founder-content">
+                <h2 class="font-playfair font-normal leading-[1.04] relative shrink-0 text-[42px] md:text-[64px] text-[var(--color--ink-navy,#1a2233)] tracking-[-0.5px] md:tracking-[-1.28px] w-full">Dr Ferhan Ahmed</h2>
+                <div class="border-[var(--color--gold,#c9a96e)] border-l-2 border-solid flex flex-col font-mono font-medium gap-[8px] items-start leading-normal overflow-clip pl-[20px] relative shrink-0 text-[12px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] uppercase w-full" data-name="founder-creds">
+                  <p class="relative shrink-0 whitespace-normal">MBChB · BDS</p>
+                  <p class="min-w-full relative shrink-0 whitespace-normal">Implant Surgery · International Lecturer · Mentor</p>
+                </div>
+                <p class="font-inter font-normal leading-[1.65] not-italic relative shrink-0 text-[16px] md:text-[18px] text-[var(--color--ink-navy,#1a2233)] w-full">One of a small number of UK dentists with both medical and dental qualifications. International speaker and mentor to implant dentists across the UK and Europe.</p>
+                <p class="font-inter font-normal leading-[1.65] not-italic relative shrink-0 text-[16px] md:text-[18px] text-[var(--color--ink-navy,#1a2233)] w-full">Currently practising in Edinburgh, where patients needing immediate care are welcome until FAME opens on Scotland Street, Glasgow this summer.</p>
+                <div class="flex gap-[20px] items-start overflow-clip relative shrink-0 w-full" data-name="text-style-quote">
+                  <div class="bg-[var(--color--gold,#c9a96e)] relative self-stretch shrink-0 w-[2px]" data-name="quote-bar"></div>
+                  <p class="flex-[1_0_0] font-inter font-normal italic leading-[1.5] min-w-px relative text-[18px] md:text-[22px] text-[var(--color--ink-navy,#1a2233)] tracking-[-0.11px]">“I went back to study medicine because I wanted to understand the whole patient, not just the teeth. Twenty years later, that philosophy still shapes every procedure I do and every conversation I have with my patients.”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTE -->
+    <div class="bg-[var(--color--navy,#1a2233)] flex flex-col items-center overflow-clip relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="section-note">
+      <div class="flex flex-col items-start overflow-clip px-[16px] md:px-[72px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">
+        <div class="flex flex-col items-start overflow-clip py-[60px] md:py-[110px] relative shrink-0 w-full" data-name="padding-section">
+          <div class="flex flex-col gap-[36px] md:gap-[56px] items-start overflow-clip relative shrink-0 w-full" data-name="note-layout">
+            <div class="border-[var(--color--gold,#c9a96e)] border-b border-solid flex flex-col md:flex-row gap-y-2 md:items-center justify-between overflow-clip pb-[20px] relative shrink-0 w-full" data-name="index-row">
+              <div class="flex items-start overflow-clip relative shrink-0">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[12px] text-[var(--color--off-white,#f8f6f2)] tracking-[1.44px] uppercase whitespace-nowrap">A note from Ferhan</p>
+              </div>
+              <p class="font-mono font-medium leading-normal relative shrink-0 text-[12px] text-[var(--color--gold,#c9a96e)] tracking-[1.44px] uppercase whitespace-nowrap">Referrals</p>
+            </div>
+            <blockquote class="font-playfair font-normal relative shrink-0 text-[32px] md:text-[60px] text-[var(--color--off-white,#f8f6f2)] tracking-[-0.5px] md:tracking-[-1.2px] w-full leading-[1.12] scroll-reveal"><span>“Most of our </span><span class="text-[var(--color--gold,#c9a96e)]">implant patients</span><span> and the advanced dental work we undertake are referred to us by other dentists.”</span></blockquote>
+            <div class="border-[var(--color--gold,#c9a96e)] border-solid border-t content-start flex flex-col md:flex-row gap-x-[64px] gap-y-[24px] items-start overflow-clip pt-[40px] relative shrink-0 w-full scroll-reveal delay-200" data-name="note-body-grid">
+              <p class="font-mono font-medium leading-normal relative shrink-0 text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1.92px] uppercase w-full md:w-[260px]">A note from Ferhan</p>
+              <div class="flex flex-col md:flex-1 font-normal gap-[22px] items-start min-w-0 w-full overflow-clip relative" data-name="note-body">
+                <p class="font-inter leading-[1.65] min-w-full not-italic relative shrink-0 text-[16px] md:text-[18px] text-[rgba(248,246,242,0.82)]">I've spent twenty years thinking about what dentistry could feel like if it were designed around the patient rather than around the practitioner's day. FAME is the practice I've been working towards my entire career.</p>
+                <p class="font-inter leading-[1.65] min-w-full not-italic relative shrink-0 text-[16px] md:text-[18px] text-[rgba(248,246,242,0.82)]">If something here resonates, register above. I read every enquiry personally before our PA replies.</p>
+                <p class="font-inter italic leading-normal relative shrink-0 text-[20px] text-[var(--color--gold,#c9a96e)] tracking-[-0.1px] whitespace-nowrap">— Ferhan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center overflow-clip relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="section-footer">
+      <div class="flex flex-col items-start overflow-clip px-[16px] md:px-[72px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">
+        <div class="flex flex-col items-start overflow-clip pb-[32px] md:pb-[44px] pt-[60px] md:pt-[90px] relative shrink-0 w-full" data-name="padding-section-small">
+          <div class="flex flex-col gap-[36px] md:gap-[56px] items-start overflow-clip relative shrink-0 w-full" data-name="footer-layout">
+            <div class="border-[var(--color--gold,#c9a96e)] border-b border-solid flex flex-col md:flex-row gap-y-2 md:items-center justify-between overflow-clip pb-[20px] relative shrink-0 w-full" data-name="index-row">
+              <div class="flex items-start overflow-clip relative shrink-0">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.92px] uppercase whitespace-nowrap">Visit & contact</p>
+              </div>
+              <p class="font-mono font-medium leading-normal relative shrink-0 text-[14px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1.92px] uppercase whitespace-nowrap">Glasgow</p>
+            </div>
+            <a href="#page" class="h-[80px] md:h-[110px] relative shrink-0 w-[170px] md:w-[235px] block" id="footer-logo">
+              <img alt="FAME Dentistry — private dental practice in Glasgow" class="absolute inset-0 max-w-none object-contain object-left w-full h-full" src="assets/logo.png" />
+            </a>
+            <div class="content-start grid grid-cols-1 md:flex md:flex-wrap gap-x-[12px] md:gap-x-[64px] gap-y-[32px] md:gap-y-[40px] items-start overflow-clip relative shrink-0 w-full" data-name="footer-grid">
+              <div class="flex flex-col gap-[18px] items-start w-full md:flex-1 md:min-w-[180px] relative" data-name="footer-col">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[12px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1px] md:tracking-[1.92px] uppercase whitespace-normal">Address</p>
+                <div class="flex flex-col items-start overflow-clip relative shrink-0 w-full">
+                  <p class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[13px] md:text-[15px] text-[var(--color--ink-navy,#1a2233)] w-full">Corner of Scotland Street and Shields Road, Glasgow</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[18px] items-start w-full md:flex-1 md:min-w-[180px] relative" data-name="footer-col">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[12px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1px] md:tracking-[1.92px] uppercase whitespace-normal">Need care now?</p>
+                <div class="flex flex-col font-inter font-normal gap-[10px] items-start leading-[1.5] not-italic overflow-clip relative shrink-0 text-[13px] md:text-[15px] text-[var(--color--ink-navy,#1a2233)] w-full">
+                  <p class="relative shrink-0 w-full">Dr Ahmed in Edinburgh</p>
+                  <p class="relative shrink-0 w-full">[phone number]</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[18px] items-start w-full md:flex-1 md:min-w-[180px] relative" data-name="footer-col">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[12px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1px] md:tracking-[1.92px] uppercase whitespace-normal">For Dentists</p>
+                <div class="flex flex-col items-start overflow-clip relative shrink-0 w-full">
+                  <a href="#form-container-block" class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[13px] md:text-[15px] text-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 w-full no-underline" id="footer-cta-refer">Refer a patient</a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[18px] items-start w-full md:flex-1 md:min-w-[180px] relative" data-name="footer-col">
+                <p class="font-mono font-medium leading-normal relative shrink-0 text-[12px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1px] md:tracking-[1.92px] uppercase whitespace-normal">Contact</p>
+                <div class="flex flex-col items-start overflow-clip relative shrink-0 w-full">
+                  <p class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[13px] md:text-[15px] text-[var(--color--ink-navy,#1a2233)] w-full">enquiries@famedentistry.co.uk</p>
+                </div>
+              </div>
+            </div>
+            <div class="border-[var(--color--gold,#c9a96e)] border-solid border-t flex flex-row flex-wrap gap-x-2 gap-y-1 font-mono font-medium items-center justify-center text-center leading-normal overflow-clip pt-[32px] relative text-[11px] text-[var(--color--ink-navy,#1a2233)] tracking-[0.88px] uppercase w-full" data-name="footer-bottom">
+              <p class="relative shrink-0">© 2026 FAME Dentistry</p>
+              <span class="relative shrink-0" aria-hidden="true">·</span>
+              <a href="https://remedo.io" target="_blank" rel="noopener noreferrer" class="relative shrink-0 text-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 no-underline">Digital Marketing by Remedo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Scale the fixed 1440px design to fit the viewport (like Figma "fit to screen").
+    // Only active on desktop screens (>= 1024px) to retain the luxury lookbook fit-to-screen zoom.
+    // For smaller screens (< 1024px), standard fluid responsive media queries stack the elements comfortably.
+    (function () {
+      var page = document.getElementById('page');
+      if (!page) return;
+      
+      function fitToViewport() {
+        var width = window.innerWidth;
+        if (width >= 1024) {
+          var scale = Math.min(1, width / 1440);
+          page.style.width = '1440px';
+          
+          if ('zoom' in document.documentElement.style) {
+            page.style.zoom = scale;
+            page.style.transform = '';
+            page.style.transformOrigin = '';
+            page.style.marginBottom = '';
+          } else {
+            page.style.transform = 'scale(' + scale + ')';
+            page.style.transformOrigin = 'top center';
+            page.style.marginBottom = -page.offsetHeight * (1 - scale) + 'px';
+          }
+        } else {
+          // Reset zoom and scale on tablet/mobile screens to allow fluid vertical stacking
+          page.style.zoom = '';
+          page.style.transform = '';
+          page.style.transformOrigin = '';
+          page.style.marginBottom = '';
+          page.style.width = '100%';
+        }
+      }
+      fitToViewport();
+      window.addEventListener('resize', fitToViewport, { passive: true });
+    })();
+
+    // Auto-grow the notes textarea so text is never cropped and no scrollbar appears.
+    (function () {
+      var notes = document.getElementById('input-notes');
+      if (!notes) return;
+      function grow() {
+        notes.style.height = 'auto';
+        notes.style.height = notes.scrollHeight + 'px';
+      }
+      notes.addEventListener('input', grow);
+      window.addEventListener('load', grow);
+    })();
+
+    (function () {
+      var header = document.getElementById('site-header');
+      var scrollTimer = null;
+
+      function onScroll() {
+        var y = window.scrollY;
+
+        // Dynamic Glassmorphism toggle
+        if (y > 20) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+
+        // Show a very light shadow while actively scrolling (both directions)
+        header.classList.add('header-scrolling');
+
+        // Clear previous stop-timer, reset after scrolling pauses
+        if (scrollTimer) clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function () {
+          header.classList.remove('header-scrolling');
+        }, 300);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
+
+  <!-- Floating Sticky Bottom CTA Bar -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-[#f8f6f2]/90 backdrop-blur-md border-t border-[#c9a96e] px-[16px] md:px-[72px] py-4 flex gap-4 justify-between items-center max-w-[1440px] mx-auto shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] translate-y-0 lg:hidden" id="sticky-bottom-bar">
+    <div class="hidden md:flex flex-col items-start gap-1">
+      <img alt="FAME Dentistry, Glasgow" class="h-[28px] object-contain object-left" src="assets/logo.png" />
+      <span class="font-mono text-[10px] tracking-[1.5px] uppercase text-[var(--color--gold,#c9a96e)]">Scotland Street · Opening Summer 2026</span>
+    </div>
+    <div class="flex gap-6 w-full md:w-auto items-center justify-between md:justify-end">
+      <a href="#form-container-block" class="nav-cta-link font-mono font-medium leading-normal relative text-[13px] md:text-[14px] text-[var(--color--ink-navy,#1a2233)] tracking-[1px] md:tracking-[1.92px] uppercase whitespace-nowrap no-underline cursor-pointer" id="cta-for-dentists-sticky">For Dentists</a>
+      <a href="#form-container-block" class="bg-[var(--color--ink-navy,#1a2233)] flex items-center justify-center overflow-clip px-[20px] md:px-[28px] py-[12px] md:py-[14px] relative text-decoration-none border border-[#c9a96e]" id="btn-enquire-sticky" data-name="button-primary">
+        <p class="font-inter font-semibold leading-normal not-italic relative text-[11px] md:text-[12px] text-white tracking-[1.5px] md:tracking-[2.16px] uppercase whitespace-nowrap">Enquire Now</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Form Success -->
+  <div class="toast-notification" id="toast-success">
+    <div class="toast-content">
+      <p class="toast-title monospace-eyebrow">Enquiry Registered</p>
+      <p class="toast-message">Thank you. You will hear back from a real person shortly.</p>
+    </div>
+    <button class="toast-close" id="toast-close-btn">×</button>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
