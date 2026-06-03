@@ -15,3 +15,6 @@ index_prev_backup.html
 # Local OG render template (the generated og-image.jpg is what ships)
 assets/og-template.html
 .vercel
+
+# Raw stock source (optimized version lives in assets/)
+AdobeStock_512017985.jpeg
