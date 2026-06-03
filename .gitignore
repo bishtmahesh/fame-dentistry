@@ -19,3 +19,6 @@ assets/og-template.html
 # Raw stock source (optimized version lives in assets/)
 AdobeStock_512017985.jpeg
 Dr ferhan'.png
+
+# Tailwind build deps (generated CSS ships in assets/)
+.build/node_modules/

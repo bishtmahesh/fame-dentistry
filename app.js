@@ -113,6 +113,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Plain "Enquire" CTAs simply scroll to the form via their native anchor —
   // no JS needed (the href + CSS smooth scroll handle it under any zoom level).
 
+  // On MOBILE only, send every form-bound CTA straight to the form fields
+  // (the form container), not the section heading above it. On desktop the
+  // native anchor (#form-container-block, the whole section) is left alone.
+  const formAnchor = document.getElementById('enquiry-form-anchor');
+  const MOBILE_MAX = 1023; // below Tailwind's lg breakpoint
+  document.querySelectorAll('a[href="#form-container-block"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      if (formAnchor && window.innerWidth <= MOBILE_MAX) {
+        e.preventDefault();
+        formAnchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
   /* ==========================================================================
      3. Smooth Form Label Float and Validation Engine (Hims/Ro style)
      ========================================================================== */
