@@ -454,6 +454,23 @@
       will-change: transform;
     }
 
+    /* 4b. Interior photo slow Ken Burns drift (matches founder portrait) */
+    @keyframes interiorDrift {
+      0%   { transform: scale(1.05) translate(0, 0); }
+      50%  { transform: scale(1.12) translate(-1.5%, -1%); }
+      100% { transform: scale(1.05) translate(0, 0); }
+    }
+    .interior-reveal-image {
+      transform: scale(1.05);
+      transform-origin: center center;
+      animation: interiorDrift 16s ease-in-out infinite;
+      will-change: transform;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .interior-reveal-image { animation: none; transform: scale(1.05); }
+      #founder-portrait-inner { animation: none; }
+    }
+
     /* 5. Eyebrow label line-reveal — line slides in from left */
     .eyebrow-line-reveal {
       position: relative;
@@ -637,8 +654,8 @@
               <div class="flex flex-col lg:flex-1 gap-[24px] items-start min-w-0 w-full overflow-clip relative scroll-reveal" data-name="register-head">
                 <h2 class="font-prata font-normal leading-[1.05] relative shrink-0 text-[32px] md:text-[56px] text-[var(--color--ink-navy,#1a2233)] tracking-[-0.5px] md:tracking-[-1.12px] w-full">Be Among the First to Be Seen.</h2>
                 <p class="font-inter font-normal leading-[1.65] not-italic relative shrink-0 text-[16px] md:text-[18px] text-[var(--color--ink-navy,#1a2233)] w-full">Share a few details below. You'll hear back from a real person — never an automated reply.</p>
-                <div class="border border-[var(--color--gold,#c9a96e)] border-solid h-[260px] md:h-[405px] relative shrink-0 w-full" data-name="image-wrapper">
-                  <img alt="Interior of the FAME Dentistry practice on Scotland Street, Glasgow" class="absolute inset-0 max-w-none object-cover pointer-events-none w-full h-full" src="assets/register.webp?v=3" />
+                <div class="border border-[var(--color--gold,#c9a96e)] border-solid h-[260px] md:h-[405px] relative shrink-0 w-full overflow-hidden" data-name="image-wrapper">
+                  <img alt="Interior of the FAME Dentistry practice on Scotland Street, Glasgow" class="interior-reveal-image absolute inset-0 max-w-none object-cover pointer-events-none w-full h-full" src="assets/register.webp?v=3" />
                 </div>
               </div>
               <div class="bg-[var(--color--off-white,#f8f6f2)] border border-[var(--color--gold,#c9a96e)] border-solid flex flex-col items-start min-w-0 w-full lg:w-[584px] overflow-clip p-[16px] sm:p-[24px] md:p-[48px] relative scroll-reveal delay-200" data-name="form-container">
