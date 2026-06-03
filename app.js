@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
   (function () {
     const headings = [
       document.querySelector('[data-name="hero-layout"] h1'),
-      ...document.querySelectorAll('h2.font-prata, h3.font-prata, blockquote.font-prata')
+      ...document.querySelectorAll('h2.font-prata, h3.font-prata, blockquote.scroll-reveal')
     ].filter(Boolean);
 
     headings.forEach((heading) => {
