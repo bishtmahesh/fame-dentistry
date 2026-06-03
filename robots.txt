@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fame-dentistry.vercel.app/sitemap.xml
+Sitemap: https://famedentistry.co.uk/sitemap.xml
