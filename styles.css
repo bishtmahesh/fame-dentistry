@@ -19,9 +19,9 @@
   --color-error: #a83c3c;
   
   /* Fonts */
-  --font-serif: 'Prata', 'Playfair Display', Georgia, serif;
+  --font-serif: 'Prata', Georgia, serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Courier New', Courier, monospace;
+  --font-mono: 'Inter', sans-serif;
   
   /* Transitions & Animation speeds */
   --transition-smooth: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
