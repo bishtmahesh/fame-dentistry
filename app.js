@@ -10,6 +10,44 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const revealElements = document.querySelectorAll('.scroll-reveal');
   
+  revealElements.forEach(el => {
+    const processNode = (node) => {
+      if (node.nodeType === 3) {
+        return node.textContent
+          .split(" ")
+          .filter(word => word.trim() !== "")
+          .map(word => `<span class="word"><span class="word-inner">${word}</span></span>`)
+          .join(" ");
+      }
+      if (node.nodeType === 1 && node.classList.contains("highlight")) {
+        return `<span class="highlight">${node.textContent
+          .split(" ")
+          .filter(word => word.trim() !== "")
+          .map(word => `<span class="word"><span class="word-inner">${word}</span></span>`)
+          .join(" ")}</span>`;
+      }
+      return node.outerHTML;
+    };
+    
+    // Check if the element contains any direct text nodes with actual text, or a highlight node
+    let hasTextToWrap = false;
+    Array.from(el.childNodes).forEach(node => {
+      if ((node.nodeType === 3 && node.textContent.trim() !== "") || (node.nodeType === 1 && node.classList.contains("highlight"))) {
+        hasTextToWrap = true;
+      }
+    });
+
+    if (hasTextToWrap) {
+      const html = Array.from(el.childNodes).map(processNode).join(" ");
+      el.innerHTML = html;
+      const words = el.querySelectorAll(".word-inner");
+      words.forEach((word, index) => {
+        word.style.transitionDelay = `${index * 0.04}s`;
+      });
+      el.classList.add("has-word-reveal");
+    }
+  });
+
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -34,64 +72,73 @@ document.addEventListener('DOMContentLoaded', () => {
      2. Custom Dropdown Select Component (Apothecary style)
      ========================================================================== */
   const customSelectWrapper = document.getElementById('custom-select-wrapper-block');
-  const customTrigger = document.getElementById('custom-select-trigger');
-  const triggerText = customTrigger.querySelector('.custom-select-trigger-text');
-  const customOptionsContainer = document.getElementById('custom-select-options');
-  const customOptions = customOptionsContainer.querySelectorAll('.custom-option');
-  const realSelect = document.getElementById('real-select-interest');
-  const fieldGroupInterest = document.getElementById('field-group-interest');
-  
-  // Toggle Options Menu
-  customTrigger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isOpen = customSelectWrapper.classList.toggle('open');
-    if (isOpen) {
-      fieldGroupInterest.classList.add('focused-select');
-    } else {
-      fieldGroupInterest.classList.remove('focused-select');
+  if (customSelectWrapper) {
+    const customTrigger = document.getElementById('custom-select-trigger');
+    const triggerText = customTrigger ? customTrigger.querySelector('.custom-select-trigger-text') : null;
+    const customOptionsContainer = document.getElementById('custom-select-options');
+    const customOptions = customOptionsContainer ? customOptionsContainer.querySelectorAll('.custom-option') : [];
+    const realSelect = document.getElementById('real-select-interest');
+    const fieldGroupInterest = document.getElementById('field-group-interest');
+    
+    if (customTrigger && triggerText && customOptions.length > 0 && realSelect && fieldGroupInterest) {
+      // Toggle Options Menu
+      customTrigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = customSelectWrapper.classList.toggle('open');
+        if (isOpen) {
+          fieldGroupInterest.classList.add('focused-select');
+        } else {
+          fieldGroupInterest.classList.remove('focused-select');
+        }
+      });
+
+      // Handle Option Selection
+      customOptions.forEach(option => {
+        option.addEventListener('mousedown', (e) => {
+          e.preventDefault(); // Prevent blur of other elements
+        });
+        option.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const val = option.getAttribute('data-value');
+          const text = option.textContent;
+          
+          // Update hidden native select
+          realSelect.value = val;
+          
+          // Update custom trigger label
+          triggerText.textContent = text;
+          
+          // Toggle placeholder vs. selected styling so a chosen value matches
+          // the other inputs' filled colour (ink-navy), not the muted placeholder grey.
+          if (val === '') {
+            triggerText.style.opacity = '0.45'; // back to placeholder look
+            triggerText.style.color = '';       // revert to subtle grey class
+          } else {
+            triggerText.style.opacity = '1';
+            triggerText.style.color = '#1a2233'; // ink-navy, same as filled inputs
+            // Clear error if a valid option is selected
+            fieldGroupInterest.classList.remove('error');
+          }
+          
+          // Toggle selected class among list
+          customOptions.forEach(opt => opt.classList.remove('selected'));
+          option.classList.add('selected');
+          
+          // Close dropdown
+          customSelectWrapper.classList.remove('open');
+          fieldGroupInterest.classList.remove('focused-select');
+        });
+      });
+
+      // Close dropdown on outside click
+      document.addEventListener('click', () => {
+        customSelectWrapper.classList.remove('open');
+        fieldGroupInterest.classList.remove('focused-select');
+      });
     }
-  });
-
-  // Handle Option Selection
-  customOptions.forEach(option => {
-    option.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const val = option.getAttribute('data-value');
-      const text = option.textContent;
-      
-      // Update hidden native select
-      realSelect.value = val;
-      
-      // Update custom trigger label
-      triggerText.textContent = text;
-      
-      // Toggle placeholder vs. selected styling so a chosen value matches
-      // the other inputs' filled colour (ink-navy), not the muted placeholder grey.
-      if (val === '') {
-        triggerText.style.opacity = '0.45'; // back to placeholder look
-        triggerText.style.color = '';       // revert to subtle grey class
-      } else {
-        triggerText.style.opacity = '1';
-        triggerText.style.color = '#1a2233'; // ink-navy, same as filled inputs
-        // Clear error if a valid option is selected
-        fieldGroupInterest.classList.remove('error');
-      }
-      
-      // Toggle selected class among list
-      customOptions.forEach(opt => opt.classList.remove('selected'));
-      option.classList.add('selected');
-      
-      // Close dropdown
-      customSelectWrapper.classList.remove('open');
-      fieldGroupInterest.classList.remove('focused-select');
-    });
-  });
-
-  // Close dropdown on outside click
-  document.addEventListener('click', () => {
-    customSelectWrapper.classList.remove('open');
-    fieldGroupInterest.classList.remove('focused-select');
-  });
+  }
 
   // "Refer a patient" / "For Dentists" CTAs: pre-select the dentist-referral
   // option, then let the native anchor (href="#form-container-block") do the
@@ -247,30 +294,41 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      5. Form Submission Event
      ========================================================================== */
-  form.addEventListener('submit', (e) => {
+  const submitBtn = document.getElementById('btn-submit-enquiry');
+  const submitLabel = submitBtn ? submitBtn.querySelector('span') : null;
+
+  // Inline error message element (created lazily, sits just above the submit button)
+  function showFormError(message) {
+    let errEl = document.getElementById('form-error-msg');
+    if (!errEl) {
+      errEl = document.createElement('p');
+      errEl.id = 'form-error-msg';
+      errEl.setAttribute('role', 'alert');
+      errEl.className = 'font-inter text-[14px] w-full';
+      errEl.style.color = '#a83c3c';
+      if (submitBtn && submitBtn.parentNode) {
+        submitBtn.parentNode.insertBefore(errEl, submitBtn);
+      }
+    }
+    errEl.textContent = message;
+    errEl.style.display = 'block';
+  }
+  function clearFormError() {
+    const errEl = document.getElementById('form-error-msg');
+    if (errEl) errEl.style.display = 'none';
+  }
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     // Trigger all validations
     const isDropdownValid = validateDropdown();
     const isNameValid = validateField(nameInput);
     const isEmailValid = validateField(emailInput);
     const isPhoneValid = validateField(phoneInput);
     const isNotesValid = validateField(notesInput);
-    
-    if (isDropdownValid && isNameValid && isEmailValid && isPhoneValid && isNotesValid) {
-      // Form is valid — reveal the in-place success overlay with the animated tick.
-      // The form is intentionally left untouched underneath (no reset, no layout change).
-      const successOverlay = document.getElementById('form-success-overlay');
-      if (successOverlay) {
-        // Restart the animation if submitted more than once.
-        successOverlay.classList.remove('show');
-        void successOverlay.offsetWidth; // reflow to replay CSS animations
-        successOverlay.classList.add('show');
-        successOverlay.setAttribute('aria-hidden', 'false');
-      }
 
-      console.log('Fame Dentistry: Luxury enquiry successfully submitted.');
-    } else {
+    if (!(isDropdownValid && isNameValid && isEmailValid && isPhoneValid && isNotesValid)) {
       // Focus first error field for accessibility
       const firstError = document.querySelector('.form-field-group.error');
       if (firstError) {
@@ -281,6 +339,57 @@ document.addEventListener('DOMContentLoaded', () => {
           customTrigger.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
+      return;
+    }
+
+    // Valid — send to the serverless endpoint.
+    clearFormError();
+    const originalLabel = submitLabel ? submitLabel.textContent : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.6';
+      submitBtn.style.cursor = 'wait';
+    }
+    if (submitLabel) submitLabel.textContent = 'Sending…';
+
+    const payload = {
+      interest: realSelect ? realSelect.value : '',
+      name: nameInput.value.trim(),
+      email: emailInput.value.trim(),
+      phone: phoneInput.value.trim(),
+      notes: notesInput.value.trim(),
+      company: (document.getElementById('input-company') || {}).value || '', // honeypot
+    };
+
+    try {
+      const resp = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!resp.ok) {
+        let msg = 'Something went wrong. Please try again or email hello@famedentistry.co.uk.';
+        try { const data = await resp.json(); if (data && data.error) msg = data.error; } catch (_) {}
+        throw new Error(msg);
+      }
+
+      // Success — reveal the in-place success overlay with the animated tick.
+      const successOverlay = document.getElementById('form-success-overlay');
+      if (successOverlay) {
+        successOverlay.classList.remove('show');
+        void successOverlay.offsetWidth; // reflow to replay CSS animations
+        successOverlay.classList.add('show');
+        successOverlay.setAttribute('aria-hidden', 'false');
+      }
+    } catch (err) {
+      showFormError(err && err.message ? err.message : 'Something went wrong. Please try again.');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '';
+        submitBtn.style.cursor = '';
+      }
+      if (submitLabel) submitLabel.textContent = originalLabel || 'Begin an enquiry';
     }
   });
 

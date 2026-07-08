@@ -20,5 +20,13 @@ assets/og-template.html
 AdobeStock_512017985.jpeg
 Dr ferhan'.png
 
+# Node deps (nodemailer is installed by Vercel at build time for /api)
+node_modules/
+
 # Tailwind build deps (generated CSS ships in assets/)
 .build/node_modules/
+
+# Local env files (SMTP secrets live in Vercel env, never in the repo)
+.env
+.env.local
+.env*.local

@@ -1,0 +1,9 @@
+{
+  "name": "fame-dentistry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FAME Dentistry — static landing page with a serverless enquiry endpoint",
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}
