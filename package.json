@@ -4,6 +4,23 @@
   "private": true,
   "description": "FAME Dentistry — static landing page with a serverless enquiry endpoint",
   "dependencies": {
-    "nodemailer": "^6.9.16"
-  }
+    "nodemailer": "^6.9.16",
+    "sharp": "^0.35.3"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bishtmahesh/fame-staging-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bishtmahesh/fame-staging-website/issues"
+  },
+  "homepage": "https://github.com/bishtmahesh/fame-staging-website#readme"
 }
