@@ -46,14 +46,95 @@
   window.addEventListener('load', grow);
 })();
 
-// Scroll logic for Glassmorphism header and scroll reveal animations
+// Text and Typewriter setup
+(function () {
+  // Setup word-by-word text reveal
+  document.querySelectorAll('.text-reveal').forEach(function(el) {
+    var words = el.textContent.trim().split(/\s+/);
+    el.textContent = '';
+    words.forEach(function(word, i) {
+      var outer = document.createElement('span');
+      outer.className = 'word';
+      var inner = document.createElement('span');
+      inner.className = 'word-inner';
+      inner.textContent = word + ' ';
+      inner.style.transitionDelay = (i * 0.03) + 's';
+      outer.appendChild(inner);
+      el.appendChild(outer);
+      // Add a trailing space node outside the word-inner to allow standard text wrapping
+      el.appendChild(document.createTextNode(' '));
+    });
+  });
+
+  // Setup character-by-character typewriter
+  document.querySelectorAll('.typewriter').forEach(function(el) {
+    var text = el.textContent.trim();
+    el.textContent = '';
+    for (var i = 0; i < text.length; i++) {
+      var span = document.createElement('span');
+      span.textContent = text[i];
+      span.className = 'char';
+      span.style.transitionDelay = (i * 0.04) + 's';
+      el.appendChild(span);
+    }
+  });
+  // Setup counters
+  document.querySelectorAll('.counter').forEach(function(el) {
+    var target = parseInt(el.textContent.replace(/[^0-9]/g, ''), 10);
+    if (!isNaN(target)) {
+      el.dataset.target = target;
+      el.dataset.suffix = el.textContent.replace(/[0-9]/g, '');
+      el.textContent = '0' + el.dataset.suffix;
+    }
+  });
+})();
+
+// Scroll logic for Glassmorphism header and scroll animations
 (function () {
   var header = document.getElementById('site-header');
   var goldClass = 'border-[var(--color--gold,#c9a96e)]';
   var lastY = window.scrollY;
   
-  // Initialize scroll reveals
-  var reveals = document.querySelectorAll('.scroll-reveal');
+  // Use modern IntersectionObserver for all animations
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0
+  };
+  
+  var observer = new IntersectionObserver(function(entries, obs) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        
+        // Counter animation logic
+        if (entry.target.classList.contains('counter') && entry.target.dataset.target) {
+           var target = parseInt(entry.target.dataset.target, 10);
+           var suffix = entry.target.dataset.suffix || '';
+           var current = 0;
+           var duration = 1500;
+           var stepTime = Math.max(duration / target, 20); // cap framerate
+           var step = Math.max(Math.ceil(target / (duration / stepTime)), 1);
+           var timer = setInterval(function() {
+             current += step;
+             if (current >= target) {
+               current = target;
+               clearInterval(timer);
+             }
+             entry.target.textContent = current + suffix;
+           }, stepTime);
+        }
+        
+        obs.unobserve(entry.target); // Play once
+      }
+    });
+  }, observerOptions);
+
+  // Elements to observe
+  var animElements = document.querySelectorAll('.scroll-reveal, .typewriter, .text-reveal, .reveal-scale, .counter');
+  animElements.forEach(function(el) {
+    observer.observe(el);
+  });
   
   function onScroll() {
     var y = window.scrollY;
@@ -77,20 +158,10 @@
       }
     }
     
-    // Scroll reveals
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 80;
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      }
-    }
-    
     lastY = y;
   }
   
   window.addEventListener('scroll', onScroll, { passive: true });
-  // Initial check for reveals on page load
   onScroll();
 })();
+
