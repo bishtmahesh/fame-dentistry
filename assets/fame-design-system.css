@@ -1015,11 +1015,11 @@ button,input,select,textarea{font:inherit;}
 .insights__grid{display:grid;grid-template-columns:repeat(3,1fr);}
 .icard{background:var(--white);border-right:1px solid var(--rule);display:flex;flex-direction:column;}
 .icard:last-child{border-right:none;}
-.icard__img{height:192px;background:var(--cream);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.icard__img{aspect-ratio:4/3;height:auto;background:var(--cream);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .icard__img span{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--stone-2);}
 .icard__tag{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
 .icard__body{padding:24px 24px 32px;flex:1;display:flex;flex-direction:column;}
-.icard__title{font-weight:400 !important;font-size:20px !important;line-height:1.4 !important;color:var(--ink);margin-bottom:10px;flex:1;}
+.icard__title{font-weight:400 !important;font-size:20px !important;line-height:1.6 !important;color:var(--ink);margin-bottom:10px;flex:1;}
 .icard__exc{font-family:var(--sans);font-size:13px;line-height:1.55;color:var(--stone);margin-bottom:18px;}
 .icard__aud{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--stone-2);margin-bottom:6px;}
 .icard__read{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);}
