@@ -209,11 +209,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mobileMenuBtn && mobileMenuDropdown) {
     mobileMenuBtn.addEventListener('click', () => {
-      mobileMenuDropdown.classList.toggle('hidden');
+      const isOpen = !mobileMenuDropdown.classList.contains('opacity-0');
+      
+      if (isOpen) {
+        // Close menu
+        mobileMenuDropdown.classList.remove('opacity-100', 'translate-y-0');
+        mobileMenuDropdown.classList.add('opacity-0', 'translate-y-[-10px]');
+        setTimeout(() => mobileMenuDropdown.classList.add('invisible'), 300);
+      } else {
+        // Open menu
+        mobileMenuDropdown.classList.remove('invisible');
+        // trigger reflow
+        void mobileMenuDropdown.offsetWidth;
+        mobileMenuDropdown.classList.remove('opacity-0', 'translate-y-[-10px]');
+        mobileMenuDropdown.classList.add('opacity-100', 'translate-y-0');
+      }
       
       // Animate hamburger to X
       const svg = mobileMenuBtn.querySelector('svg');
-      if (mobileMenuDropdown.classList.contains('hidden')) {
+      if (isOpen) {
         svg.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
       } else {
         svg.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
@@ -222,8 +236,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-      if (!siteHeader.contains(e.target) && !mobileMenuDropdown.classList.contains('hidden')) {
-        mobileMenuDropdown.classList.add('hidden');
+      if (!siteHeader.contains(e.target) && !mobileMenuDropdown.classList.contains('opacity-0')) {
+        mobileMenuDropdown.classList.remove('opacity-100', 'translate-y-0');
+        mobileMenuDropdown.classList.add('opacity-0', 'translate-y-[-10px]');
+        setTimeout(() => mobileMenuDropdown.classList.add('invisible'), 300);
+        
         const svg = mobileMenuBtn.querySelector('svg');
         if (svg) svg.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
       }
