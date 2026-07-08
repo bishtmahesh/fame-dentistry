@@ -929,7 +929,7 @@ button,input,select,textarea{font:inherit;}
 .founders__grid{display:grid;grid-template-columns:1fr 1fr;}
 .fcard{background:var(--white);border-right:1px solid var(--rule);display:flex;flex-direction:column;}
 .fcard:last-child{border-right:none;}
-.fcard__image{height:480px;position:relative;overflow:hidden;}
+.fcard__image{height:600px;position:relative;overflow:hidden;}
 .fcard__image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;}
 .fcard__body{padding:36px 36px 44px; display:flex; flex-direction:column; flex:1;}
 .fcard__body .door__link{margin-top:auto;padding-top:24px;}
