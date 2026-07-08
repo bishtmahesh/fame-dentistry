@@ -931,7 +931,8 @@ button,input,select,textarea{font:inherit;}
 .fcard:last-child{border-right:none;}
 .fcard__image{height:480px;position:relative;overflow:hidden;}
 .fcard__image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;}
-.fcard__body{padding:36px 36px 44px;}
+.fcard__body{padding:36px 36px 44px; display:flex; flex-direction:column; flex:1;}
+.fcard__body .door__link{margin-top:auto;padding-top:24px;}
 .fcard__role{font-family:var(--sans);font-weight:600;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
 .fcard__name{font-family:var(--serif);font-weight:500;font-size:40px;line-height:1;letter-spacing:-.015em;color:var(--ink);margin-bottom:6px;}
 .fcard__cred{font-family:var(--sans);font-size:12px;letter-spacing:.14em;color:var(--stone);font-weight:500;margin-bottom:4px;}
