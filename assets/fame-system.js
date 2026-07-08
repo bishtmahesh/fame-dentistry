@@ -80,11 +80,36 @@
   });
   // Setup counters
   document.querySelectorAll('.counter').forEach(function(el) {
-    var target = parseInt(el.textContent.replace(/[^0-9]/g, ''), 10);
-    if (!isNaN(target)) {
+    var textNode = null;
+    for (var i = 0; i < el.childNodes.length; i++) {
+      if (el.childNodes[i].nodeType === 3 && el.childNodes[i].nodeValue.match(/[0-9]/)) {
+        textNode = el.childNodes[i];
+        break;
+      }
+    }
+    if (!textNode) {
+      if (el.textContent.match(/[0-9]/)) textNode = el;
+      else return;
+    }
+
+    var text = textNode.nodeType === 3 ? textNode.nodeValue : textNode.textContent;
+    var match = text.match(/([0-9]*\.?[0-9]+)/);
+    if (match) {
+      var target = parseFloat(match[1]);
+      var isFloat = match[1].includes('.');
+      var decimals = isFloat ? match[1].split('.')[1].length : 0;
+      
       el.dataset.target = target;
-      el.dataset.suffix = el.textContent.replace(/[0-9]/g, '');
-      el.textContent = '0' + el.dataset.suffix;
+      el.dataset.decimals = decimals;
+      el.dataset.originalText = text;
+      el.dataset.numberStr = match[1];
+      el.counterNode = textNode;
+      
+      if (textNode.nodeType === 3) {
+         textNode.nodeValue = text.replace(match[1], (0).toFixed(decimals));
+      } else {
+         el.textContent = text.replace(match[1], (0).toFixed(decimals));
+      }
     }
   });
 })();
@@ -109,19 +134,30 @@
         
         // Counter animation logic
         if (entry.target.classList.contains('counter') && entry.target.dataset.target) {
-           var target = parseInt(entry.target.dataset.target, 10);
-           var suffix = entry.target.dataset.suffix || '';
+           var target = parseFloat(entry.target.dataset.target);
+           var decimals = parseInt(entry.target.dataset.decimals, 10);
            var current = 0;
            var duration = 1500;
-           var stepTime = Math.max(duration / target, 20); // cap framerate
-           var step = Math.max(Math.ceil(target / (duration / stepTime)), 1);
+           var stepTime = 30; // ms per frame
+           var frames = duration / stepTime;
+           var step = target / frames;
+           
            var timer = setInterval(function() {
              current += step;
              if (current >= target) {
                current = target;
                clearInterval(timer);
              }
-             entry.target.textContent = current + suffix;
+             var displayVal = current.toFixed(decimals);
+             var textNode = entry.target.counterNode || entry.target;
+             var originalText = entry.target.dataset.originalText;
+             var numberStr = entry.target.dataset.numberStr;
+             
+             if (textNode.nodeType === 3) {
+                textNode.nodeValue = originalText.replace(numberStr, displayVal);
+             } else {
+                textNode.textContent = originalText.replace(numberStr, displayVal);
+             }
            }, stepTime);
         }
         
