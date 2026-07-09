@@ -849,7 +849,7 @@ button,input,select,textarea{font:inherit;}
 .sdiv{height:44px;background:rgba(255,255,255,.12);}
 .signal__copy p{font-family:var(--sans);font-weight:400;font-size:20px;line-height:1.6;color:var(--paper);padding-right:0;width:100%;}
 .signal__stat{text-align:center;padding:0 36px;}
-.signal__num{font-family:var(--serif);font-weight:300;font-size:52px;line-height:1;letter-spacing:-.044em;color:var(--paper);}
+.signal__num{font-family:var(--serif);font-weight:300;font-size:42px;line-height:1;letter-spacing:-.044em;color:var(--paper);font-variant-numeric:tabular-nums;backface-visibility:hidden;transform:translateZ(0);}
 .signal__lbl{font-family:var(--sans);font-weight:600;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:4px;}
 .signal__sub{color:rgba(248,246,242,.32);margin-top:3px;}
 .signal__sub a{color:rgba(248,246,242,.32);text-decoration:underline;}
