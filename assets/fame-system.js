@@ -234,7 +234,7 @@
 })();
 
 // Custom Select Dropdown Logic
-document.addEventListener('DOMContentLoaded', () => {
+(function initCustomSelect() {
   const customSelects = document.querySelectorAll('.custom-select-wrapper');
   
   customSelects.forEach(wrapper => {
@@ -291,4 +291,4 @@ document.addEventListener('DOMContentLoaded', () => {
       opt.classList.add('hidden');
     });
   });
-});
+})();
