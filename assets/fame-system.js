@@ -202,7 +202,7 @@
 })();
 
 
-document.addEventListener('DOMContentLoaded', () => {
+(function initMobileMenu() {
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenuDropdown = document.getElementById('mobile-menu-dropdown');
   const siteHeader = document.getElementById('site-header');
@@ -231,4 +231,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
+})();
