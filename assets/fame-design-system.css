@@ -1855,7 +1855,7 @@ h1, h2, h3, h4, h5, h6,
 .nav__link, nav a, header a,
 .eyebrow, .hero__tag, [class$="__ey"], .section-bar, .section-bar__left, .section-bar__right,
 .door__label, .tcard__num, .nps__lbl, .tmn__role, .tmn__type, .book__ey, .insights__all,
-.btn, button, [data-name="button-primary"], [class*="nav__cta"],
+.btn, button, [data-name="button-primary"], [class*="cta"], [class*="CTA"],
 .door__link, .tcard__link, .nps__link, .featured-article__read, .article__read {
   text-transform: uppercase !important;
   letter-spacing: 0.1em; /* Add a bit of spacing so uppercase looks good */
@@ -1926,6 +1926,19 @@ h1, h2, h3, h4, h5, h6,
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .counter.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Menu Animation */
+#mobile-menu-dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+#mobile-menu-dropdown.menu-open {
+  visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
