@@ -232,3 +232,63 @@
     });
   }
 })();
+
+// Custom Select Dropdown Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const customSelects = document.querySelectorAll('.custom-select-wrapper');
+  
+  customSelects.forEach(wrapper => {
+    const trigger = wrapper.querySelector('#custom-select-trigger');
+    const optionsBlock = wrapper.querySelector('#custom-select-options');
+    const triggerText = wrapper.querySelector('.custom-select-trigger-text');
+    
+    // Find the hidden select (it should be the next sibling, or somewhere nearby)
+    let realSelect = wrapper.nextElementSibling;
+    while(realSelect && realSelect.tagName !== 'SELECT') {
+       realSelect = realSelect.nextElementSibling;
+    }
+    
+    if (!trigger || !optionsBlock) return;
+    
+    // Toggle dropdown
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = optionsBlock.classList.contains('hidden');
+      
+      // Close all other dropdowns first
+      document.querySelectorAll('.custom-options').forEach(opt => opt.classList.add('hidden'));
+      
+      if (isHidden) {
+        optionsBlock.classList.remove('hidden');
+      }
+    });
+    
+    // Handle option click
+    const options = optionsBlock.querySelectorAll('.custom-option');
+    options.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        // Update trigger text
+        triggerText.textContent = option.textContent;
+        
+        // Update hidden select
+        const value = option.getAttribute('data-value');
+        if (realSelect) {
+           realSelect.value = value;
+           realSelect.dispatchEvent(new Event('change'));
+        }
+        
+        // Close dropdown
+        optionsBlock.classList.add('hidden');
+      });
+    });
+  });
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.custom-options').forEach(opt => {
+      opt.classList.add('hidden');
+    });
+  });
+});
