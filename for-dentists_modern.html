@@ -14,7 +14,7 @@
 
 <link rel="stylesheet" href="assets/tw.css">
 
-<link rel="stylesheet" href="assets/fame-design-system.css?v=1783560764837">
+<link rel="stylesheet" href="assets/fame-design-system.css?v=1783561000901">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -145,6 +145,98 @@
     </div>
   </div>
 </section>
+
+
+<!-- ── GLOBAL ENQUIRY COMPONENT ── -->
+<div class="contact-wrap">
+
+  <!-- LEFT: Image with text overlay -->
+  <div class="scroll-reveal contact-img">
+    <img src="assets/register.webp" alt="Inside FAME Dentistry Glasgow" onerror="this.style.background='#2a3447'">
+    <div class="contact-img__overlay">
+      <div class="contact-img__eyebrow typewriter">Register Your Interest · Reply from a real person</div>
+      <h1 class="contact-img__heading">Be Among the First<br><em>to Be Seen.</em></h1>
+      <p class="contact-img__sub">Share a few details below. You'll hear back from a real person — never an automated reply.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT: Form -->
+  <div class="scroll-reveal delay-200 contact-form-panel">
+    <div class="contact-form-panel__eyebrow typewriter">Enquiry form</div>
+    <h2 class="contact-form-panel__title">Begin Your Enquiry</h2>
+    <p class="contact-form-panel__sub">A real person reads every enquiry before responding. Usually within two hours during business hours.</p>
+
+    <form class="form" id="enquiry-form">
+      <div class="form__field">
+        <label class="form__label" for="enquiry-type">What brings you to FAME? <span style="font-weight:400;text-transform:none;letter-spacing:0">(select one)</span></label>
+        <select class="form__input form__select" id="enquiry-type" name="enquiry_type" required>
+          <option value="">Select one</option>
+          <option>General Dentistry</option>
+          <option>Dental Implants</option>
+          <option>Cosmetic Dentistry</option>
+          <option>Treatment Under Sedation</option>
+          <option>Hygiene</option>
+          <option>Other / Custom Enquiry</option>
+        </select>
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="name">Your name</label>
+        <input class="form__input" type="text" id="name" name="name" placeholder="Full name" required>
+      </div>
+      <div class="form__row">
+        <div class="form__field">
+          <label class="form__label" for="email">Email address</label>
+          <input class="form__input" type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="phone">Phone number</label>
+          <input class="form__input" type="tel" id="phone" name="phone" placeholder="+44 7xxx xxxxxx" required>
+        </div>
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="message">Anything else? <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--color-stone-2)">(optional)</span></label>
+        <textarea class="form__input form__textarea" id="message" name="message" placeholder="Tell us about your situation — the more context, the better we can prepare…"></textarea>
+      </div>
+      <button type="submit" class="form__submit">Begin an enquiry →</button>
+      <p class="form__note">By submitting you agree to FAME Dentistry contacting you by phone and email. Your data is handled per our <a href="#">Privacy Policy</a>. We never share your details.</p>
+    </form>
+
+    <div class="success-panel" id="success-panel">
+      <span class="success-panel__mark">✓</span>
+      <h2 class="success-panel__title">Enquiry Registered</h2>
+      <p class="success-panel__body">Thank you. You'll hear back from a real person shortly — never an automated reply.<br><br><em style="font-family:var(--font-serif);font-size:17px;color:var(--color-stone)">— FAME Dentistry, Glasgow</em></p>
+      <button class="success-panel__reset" onclick="resetForm()">Submit another enquiry</button>
+    </div>
+
+
+  </div>
+
+</div>
+
+<script>
+document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.style.display = 'none';
+  document.getElementById('success-panel').style.display = 'block';
+});
+function resetForm() {
+  document.getElementById('enquiry-form').reset();
+  document.getElementById('enquiry-form').style.display = 'flex';
+  document.getElementById('success-panel').style.display = 'none';
+}
+</script>
+<script>
+document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.style.display = 'none';
+  document.getElementById('success-panel').style.display = 'block';
+});
+function resetForm() {
+  document.getElementById('enquiry-form').reset();
+  document.getElementById('enquiry-form').style.display = 'flex';
+  document.getElementById('success-panel').style.display = 'none';
+}
+</script>
 
 <footer class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center overflow-clip relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="section-footer">
       <div class="flex flex-col items-stretch overflow-clip px-[16px] md:px-[72px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">

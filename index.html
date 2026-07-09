@@ -42,7 +42,7 @@
 
 <link rel="stylesheet" href="assets/tw.css">
 
-<link rel="stylesheet" href="assets/fame-design-system.css?v=1783560764837">
+<link rel="stylesheet" href="assets/fame-design-system.css?v=1783561000901">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -444,182 +444,97 @@
 </section>
 
 <!-- ── S09 BOOK LEAD MAGNET ── -->
-<section class="book" id="book">
-  <div class="section-bar" style="grid-column: 1 / -1; padding-left: var(--px-section); padding-right: var(--px-section); margin-top: clamp(60px, 5vw, 96px);">
-      <div class="section-bar__left typewriter">Publication</div>
-      <div class="section-bar__right typewriter">Free Patient Guide</div>
-    </div>
-  <div class="book__content">
-    <div class="my-auto">
-      <h2 class="book__title">First Impressions,<br><em>Final Decisions.</em></h2>
-      <p class="book__subtitle">A guide for patients considering complex dental treatment.</p>
-      <p class="book__body">The questions most patients wish they'd asked before choosing an implant dentist — and what the answers reveal. Mailed to your door, not emailed. A physical object with a signed letter from Dr Ferhan Ahmed enclosed.</p>
-      <a href="#form-container-block" class="book__cta">Request your copy →</a>
-    </div>
 
-  </div>
-  <div class="book__image">
-    <div style="position: relative; width: 100%; aspect-ratio: 1/1; overflow: hidden; border: 1px solid var(--rule);">
-      <img src="assets/first-impressions.webp" alt="First Impressions, Final Decisions Book" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+<!-- ── GLOBAL ENQUIRY COMPONENT ── -->
+<div class="contact-wrap">
+
+  <!-- LEFT: Image with text overlay -->
+  <div class="scroll-reveal contact-img">
+    <img src="assets/register.webp" alt="Inside FAME Dentistry Glasgow" onerror="this.style.background='#2a3447'">
+    <div class="contact-img__overlay">
+      <div class="contact-img__eyebrow typewriter">Register Your Interest · Reply from a real person</div>
+      <h1 class="contact-img__heading">Be Among the First<br><em>to Be Seen.</em></h1>
+      <p class="contact-img__sub">Share a few details below. You'll hear back from a real person — never an automated reply.</p>
     </div>
   </div>
-</section>
 
-<!-- ── S10 INSIGHTS ── -->
-<section class="insights">
-  <div class="section-bar">
-    <div class="section-bar__left typewriter">Insights</div>
-    <div class="section-bar__right typewriter">Long-Form. No Promotional Language.</div>
-  </div>
-  <div class="insights__head">
-    <h2 class="insights__title">Thinking About Dentistry <em>Differently.</em></h2>
-    <p class="insights__sub" style="color: var(--color-ink-soft); max-width: none; margin-bottom: 32px;">Published editorial perspectives and clinical insights from our founding partners.</p>
-    <a href="insights.html" class="insights__all">View all articles →</a>
-  </div>
-  <div class="insights__grid">
-    <article class="icard">
-      <div class="icard__img"><img src="assets/insight-1.webp" alt="Editorial Photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="icard__body">
-        <div class="icard__aud">For Patients · 7 min read</div>
-        <div class="icard__tag">Implants</div>
-        <h3 class="icard__title" style="line-height: 1.6;">Before You Book in Turkey: Seven Questions to Ask First.</h3>
-        <a href="#" class="icard__read">Read article →</a>
-      </div>
-    </article>
-    <article class="icard">
-      <div class="icard__img"><img src="assets/concierge-hero.webp" alt="Concierge Dentistry" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="icard__body">
-        <div class="icard__aud">For Business Leaders · 5 min read</div>
-        <div class="icard__tag">Concierge</div>
-        <h3 class="icard__title">What Concierge Dentistry Actually Means — and What It Doesn't.</h3>
-        <a href="#" class="icard__read">Read article →</a>
-      </div>
-    </article>
-    <article class="icard">
-      <div class="icard__img"><img src="assets/insight-3.webp" alt="Editorial Photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="icard__body">
-        <div class="icard__aud">For Dentists · 4 min read</div>
-        <div class="icard__tag">Clinical</div>
-        <h3 class="icard__title">Why Pre-surgical Optimisation Changes Implant Outcomes.</h3>
-        <a href="#" class="icard__read">Read article →</a>
-      </div>
-    </article>
-  </div>
-</section>
+  <!-- RIGHT: Form -->
+  <div class="scroll-reveal delay-200 contact-form-panel">
+    <div class="contact-form-panel__eyebrow typewriter">Enquiry form</div>
+    <h2 class="contact-form-panel__title">Begin Your Enquiry</h2>
+    <p class="contact-form-panel__sub">A real person reads every enquiry before responding. Usually within two hours during business hours.</p>
 
-<!-- ── S11 ENQUIRY FORM (interim exact) ── -->
-<section class="bg-[var(--paper,#F8F6F2)]" id="form-container-block">
-  <div class="flex flex-col items-start px-[16px] md:px-[72px] w-full max-w-[1440px] mx-auto">
-    <div class="flex flex-col items-start py-[60px] md:py-[110px] w-full">
-      <div class="flex flex-col gap-[36px] md:gap-[56px] items-start w-full">
-        <div class="section-bar" style="margin-bottom: 32px;">
-          <div class="section-bar__left typewriter">Register Your Interest</div>
-          <div class="section-bar__right typewriter">Reply from a real person</div>
+    <form class="form" id="enquiry-form">
+      <div class="form__field">
+        <label class="form__label" for="enquiry-type">What brings you to FAME? <span style="font-weight:400;text-transform:none;letter-spacing:0">(select one)</span></label>
+        <select class="form__input form__select" id="enquiry-type" name="enquiry_type" required>
+          <option value="">Select one</option>
+          <option>General Dentistry</option>
+          <option>Dental Implants</option>
+          <option>Cosmetic Dentistry</option>
+          <option>Treatment Under Sedation</option>
+          <option>Hygiene</option>
+          <option>Other / Custom Enquiry</option>
+        </select>
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="name">Your name</label>
+        <input class="form__input" type="text" id="name" name="name" placeholder="Full name" required>
+      </div>
+      <div class="form__row">
+        <div class="form__field">
+          <label class="form__label" for="email">Email address</label>
+          <input class="form__input" type="email" id="email" name="email" placeholder="your@email.com" required>
         </div>
-        <div class="flex flex-col lg:flex-row gap-x-[80px] gap-y-[40px] md:gap-y-[56px] items-start w-full">
-          <div class="flex flex-col lg:flex-1 gap-[24px] items-start min-w-0 w-full scroll-reveal">
-            <h2 class="font-prata leading-[1.2] text-[32px] md:text-[56px] text-[var(--ink,#1A2233)] tracking-[-0.5px] md:tracking-[-0.9px] w-full">Be Among the First to Be Seen.</h2>
-            <p class="font-inter leading-[1.65] text-[16px] md:text-[18px] text-[var(--ink,#1A2233)] w-full">Share a few details below. You'll hear back from a real person — never an automated reply.</p>
-            <div data-name="image-wrapper" class="border border-[var(--gold,#C9A96E)] border-solid h-[260px] md:h-[405px] w-full overflow-hidden">
-              <img alt="Inside FAME Dentistry, a modern dental practice on Scotland Street, Glasgow offering dental implants and cosmetic dentistry" loading="lazy" decoding="async" class="interior-reveal-image w-full h-full object-cover pointer-events-none" src="assets/register.webp">
-            </div>
-          </div>
-          <div class="bg-[var(--color-pure-white,#ffffff)] border border-[var(--gold,#C9A96E)] border-solid flex flex-col items-start min-w-0 w-full lg:w-[584px] p-[16px] sm:p-[24px] md:p-[48px] relative scroll-reveal delay-200 lg:-translate-y-[40px]" id="enquiry-form-anchor">
-            <form action="#" class="registration-form flex flex-col gap-[28px] items-start w-full" id="fame-enquiry-form" novalidate>
-              <h3 class="font-prata leading-[1.3] min-w-full text-[24px] md:text-[28px] text-[var(--ink,#1A2233)] tracking-[-0.28px] text-center mb-6">Begin Your Enquiry</h3>
-
-              <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-interest">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] cursor-pointer" id="label-interest">WHAT BRINGS YOU TO FAME? (SELECT ONE) *</label>
-                <div class="custom-select-wrapper w-full relative" id="custom-select-wrapper-block">
-                  <div class="border-b border-[#C9A96E] border-solid flex items-center justify-between pb-[12px] pt-[10px] w-full cursor-pointer" id="custom-select-trigger">
-                    <span class="custom-select-trigger-text font-inter text-[16px] md:text-[18px] text-[#1A2233] whitespace-nowrap">Select Treatment</span>
-                    <svg class="custom-select-arrow block w-[16px] h-[16px] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                  </div>
-                  <div class="custom-options absolute top-[100%] left-0 right-0 bg-[#F8F6F2] border border-[#C9A96E] z-50 py-2 mt-0 hidden" id="custom-select-options">
-                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors selected" data-value="">Select Treatment</div>
-                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="general">General Dentistry</div>
-                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="implants">Dental Implants</div>
-                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="cosmetic">Cosmetic Dentistry</div>
-                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="sedation">Treatment Under Sedation</div>
-                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="hygiene">Hygiene</div>
-                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="other">Other / Custom Enquiry</div>
-                  </div>
-                </div>
-                <select name="interest" id="real-select-interest" required style="display:none">
-                  <option value="" selected>Select Treatment</option>
-                  <option value="general">General Dentistry</option>
-                  <option value="implants">Dental Implants</option>
-                  <option value="cosmetic">Cosmetic Dentistry</option>
-                  <option value="sedation">Treatment Under Sedation</option>
-                  <option value="hygiene">Hygiene</option>
-                  <option value="other">Other / Custom Enquiry</option>
-                </select>
-                <span class="field-error-message text-xs text-[#a83c3c] font-medium tracking-[0.05em] mt-1.5 hidden" id="error-interest">Please select an option.</span>
-              </div>
-
-              <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-name">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] cursor-pointer" for="input-name" id="label-name">YOUR NAME *</label>
-                <div class="form-input-wrapper w-full relative">
-                  <input type="text" id="input-name" name="name" required placeholder="First name, last name" class="form-input w-full border-b border-[var(--color-ash-mist,#c7c7c7)] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--ink,#1A2233)] placeholder:text-[var(--stone-2,#9C968A)] placeholder:opacity-45 outline-none focus:border-[var(--gold,#C9A96E)] focus:border-b-[2px] transition-all duration-300">
-                </div>
-                <span class="field-error-message text-xs text-[#a83c3c] font-medium tracking-[0.05em] mt-1.5 hidden" id="error-name">Please enter your name.</span>
-              </div>
-
-              <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-email">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] cursor-pointer" for="input-email" id="label-email">EMAIL ADDRESS *</label>
-                <div class="form-input-wrapper w-full relative">
-                  <input type="email" id="input-email" name="email" required placeholder="you@example.com" class="form-input w-full border-b border-[var(--color-ash-mist,#c7c7c7)] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--ink,#1A2233)] placeholder:text-[var(--stone-2,#9C968A)] placeholder:opacity-45 outline-none focus:border-[var(--gold,#C9A96E)] focus:border-b-[2px] transition-all duration-300">
-                </div>
-                <span class="field-error-message text-xs text-[#a83c3c] font-medium tracking-[0.05em] mt-1.5 hidden" id="error-email">Please enter a valid email address.</span>
-              </div>
-
-              <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-phone">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] cursor-pointer" for="input-phone" id="label-phone">PHONE NUMBER *</label>
-                <div class="form-input-wrapper w-full relative">
-                  <input type="tel" id="input-phone" name="phone" required placeholder="e.g. +44 7700 900000" class="form-input w-full border-b border-[var(--color-ash-mist,#c7c7c7)] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--ink,#1A2233)] placeholder:text-[var(--stone-2,#9C968A)] placeholder:opacity-45 outline-none focus:border-[var(--gold,#C9A96E)] focus:border-b-[2px] transition-all duration-300">
-                </div>
-                <span class="field-error-message text-xs text-[#a83c3c] font-medium tracking-[0.05em] mt-1.5 hidden" id="error-phone">Please enter a valid phone number.</span>
-              </div>
-
-              <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-notes">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] cursor-pointer" for="input-notes" id="label-notes">ANYTHING ELSE? (OPTIONAL)</label>
-                <div class="form-input-wrapper w-full relative">
-                  <textarea id="input-notes" name="notes" rows="2" placeholder="A specific concern, a timing preference, or how you heard about us." class="form-input block w-full border-b border-[var(--color-ash-mist,#c7c7c7)] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] leading-[1.5] text-[var(--ink,#1A2233)] placeholder:text-[var(--stone-2,#9C968A)] placeholder:opacity-45 outline-none focus:border-[var(--gold,#C9A96E)] focus:border-b-[2px] transition-all duration-300 resize-none overflow-hidden"></textarea>
-                </div>
-              </div>
-
-              <input type="text" id="input-company" name="company" style="display:none" tabindex="-1" autocomplete="off">
-
-              <button type="submit" class="bg-[var(--ink,#1A2233)] flex font-inter font-semibold gap-[12px] items-center justify-center overflow-clip px-[28px] py-[16px] relative text-white whitespace-nowrap w-full cursor-pointer" id="btn-submit-enquiry">
-                <span class="relative text-[16px] leading-none tracking-[2.16px]  uppercase">Begin an enquiry</span>
-                <span class="relative text-[14px]">→</span>
-              </button>
-            </form>
-
-            <div class="form-success-overlay" id="form-success-overlay" aria-hidden="true">
-              <div class="form-success-inner">
-                <svg class="success-tick" viewBox="0 0 80 80" width="80" height="80" aria-hidden="true">
-                  <circle class="success-tick-circle" cx="40" cy="40" r="36" fill="none" stroke="var(--gold,#C9A96E)" stroke-width="2.5"></circle>
-                  <path class="success-tick-check" fill="none" stroke="var(--gold,#C9A96E)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M24 41.5 L35 52.5 L57 29"></path>
-                </svg>
-                <h3 class="font-prata text-[26px] md:text-[30px] text-[var(--ink,#1A2233)] tracking-[-0.4px] mt-7">Enquiry Registered</h3>
-                <p class="font-inter text-[16px] md:text-[18px] leading-[1.6] text-[var(--ink,#1A2233)] mt-3 max-w-[380px]">Thank you. You'll hear back from a real person shortly — never an automated reply.</p>
-                <p class="font-inter font-medium text-[16px] tracking-[1.92px] text-[var(--gold,#C9A96E)] mt-6 uppercase">— FAME Dentistry, Glasgow</p>
-                <button type="button" id="btn-success-refresh" class="bg-[var(--ink,#1A2233)] flex font-inter font-semibold gap-[10px] items-center justify-center px-[28px] py-[16px] text-white whitespace-nowrap mt-8 cursor-pointer">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 12a9 9 0 1 1-2.64-6.36"></path>
-                    <polyline points="21 3 21 9 15 9"></polyline>
-                  </svg>
-                  <span class="text-[16px] leading-none tracking-[2.16px]  uppercase">Submit another enquiry</span>
-                </button>
-              </div>
-            </div>
-          </div>
+        <div class="form__field">
+          <label class="form__label" for="phone">Phone number</label>
+          <input class="form__input" type="tel" id="phone" name="phone" placeholder="+44 7xxx xxxxxx" required>
         </div>
       </div>
+      <div class="form__field">
+        <label class="form__label" for="message">Anything else? <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--color-stone-2)">(optional)</span></label>
+        <textarea class="form__input form__textarea" id="message" name="message" placeholder="Tell us about your situation — the more context, the better we can prepare…"></textarea>
+      </div>
+      <button type="submit" class="form__submit">Begin an enquiry →</button>
+      <p class="form__note">By submitting you agree to FAME Dentistry contacting you by phone and email. Your data is handled per our <a href="#">Privacy Policy</a>. We never share your details.</p>
+    </form>
+
+    <div class="success-panel" id="success-panel">
+      <span class="success-panel__mark">✓</span>
+      <h2 class="success-panel__title">Enquiry Registered</h2>
+      <p class="success-panel__body">Thank you. You'll hear back from a real person shortly — never an automated reply.<br><br><em style="font-family:var(--font-serif);font-size:17px;color:var(--color-stone)">— FAME Dentistry, Glasgow</em></p>
+      <button class="success-panel__reset" onclick="resetForm()">Submit another enquiry</button>
     </div>
+
+
   </div>
-</section>
+
+</div>
+
+<script>
+document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.style.display = 'none';
+  document.getElementById('success-panel').style.display = 'block';
+});
+function resetForm() {
+  document.getElementById('enquiry-form').reset();
+  document.getElementById('enquiry-form').style.display = 'flex';
+  document.getElementById('success-panel').style.display = 'none';
+}
+</script>
+<script>
+document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.style.display = 'none';
+  document.getElementById('success-panel').style.display = 'block';
+});
+function resetForm() {
+  document.getElementById('enquiry-form').reset();
+  document.getElementById('enquiry-form').style.display = 'flex';
+  document.getElementById('success-panel').style.display = 'none';
+}
+</script>
 
 <!-- ── FOOTER ── -->
 <footer class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center overflow-clip relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="section-footer">
