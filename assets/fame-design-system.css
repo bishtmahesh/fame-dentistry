@@ -1855,7 +1855,7 @@ h1, h2, h3, h4, h5, h6,
 .nav__link, nav a, header a,
 .eyebrow, .hero__tag, [class$="__ey"], .section-bar, .section-bar__left, .section-bar__right,
 .door__label, .tcard__num, .nps__lbl, .tmn__role, .tmn__type, .book__ey, .insights__all,
-.btn, button, [data-name="button-primary"], [class*="cta"], [class*="CTA"],
+.btn, button, [data-name="button-primary"],
 .door__link, .tcard__link, .nps__link, .featured-article__read, .article__read {
   text-transform: uppercase !important;
   letter-spacing: 0.1em; /* Add a bit of spacing so uppercase looks good */
