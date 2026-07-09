@@ -1338,7 +1338,7 @@ button,input,select,textarea{font:inherit;}
 
 .referral-form-section{padding:clamp(60px, 5vw, 96px) var(--px-section);background:transparent;}
 .referral-form-section__inner{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:40px;align-items:start;}
-.referral-form-section__content{max-width:720px;}
+.referral-form-section__content{max-width:100%;}
 .referral-form-section__eyebrow{margin-bottom:28px;}
 .referral-form-section__title{margin-bottom:24px;}
 .referral-form-section__body{font-variation-settings:\"wght\" 460;;color:var(--color-stone);margin-bottom:32px;}
@@ -1825,11 +1825,11 @@ h1, h2, h3, h4, h5, h6,
 [class$="__title"], 
 .display-xxl, .display-xl, .display-lg, .heading-md {
   text-transform: capitalize !important;
-  line-height: 1.1 !important;
+  line-height: 1.2 !important;
 }
 
 .font-prata {
-  line-height: 1.1 !important;
+  line-height: 1.2 !important;
 }
 
 [class$="__sub"], [class$="__lede"], [class$="__copy"], [class$="__p"], .book__subtitle {
