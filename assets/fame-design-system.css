@@ -1019,7 +1019,7 @@ button,input,select,textarea{font:inherit;}
 .icard__img span{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--stone-2);}
 .icard__tag{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
 .icard__body{padding:24px 24px 32px;flex:1;display:flex;flex-direction:column;}
-.icard__title{font-weight:400 !important;font-size:20px !important;line-height:1.2 !important;color:var(--ink);margin-bottom:10px;flex:1;}
+.icard__title{font-weight:400 !important;font-size:20px !important;line-height:1.2 !important;color:var(--ink);margin-bottom:12px !important;}
 .icard__exc{font-family:var(--sans);font-size:13px;line-height:1.55;color:var(--stone);margin-bottom:18px;}
 .icard__aud{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--stone-2);margin-bottom:6px;}
 .icard__read{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);}
@@ -1868,6 +1868,8 @@ h1, h2, h3, h4, h5, h6,
 .display-xxl, .display-xl, .display-lg, .heading-md {
   margin-bottom: 16px !important;
 }
+/* Override: blog/insight cards get a tighter, consistent gap */
+.icard__title { margin-bottom: 12px !important; }
 
 [class$="__sub"], [class$="__lede"] {
   margin-top: 0 !important;
@@ -1931,17 +1933,7 @@ h1, h2, h3, h4, h5, h6,
   transform: translateY(0);
 }
 
-/* Mobile Menu Animation */
-#mobile-menu-dropdown {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-}
-#mobile-menu-dropdown.menu-open {
-  max-height: 100vh;
-  opacity: 1;
-}
+/* Mobile Menu Animation — see bottom of file for full rule */
 
 
 /* Desktop Floating/Hanging Navbar */
@@ -1974,3 +1966,47 @@ h1, h2, h3, h4, h5, h6,
 .h-\[40px\] { height: 40px !important; }
 .w-\[44px\] { width: 44px !important; }
 .h-\[44px\] { height: 44px !important; }
+
+/* ─── MOBILE FIXES ─── */
+
+/* 1. Push the footer up so it clears the fixed bottom CTA bar (~74px tall) */
+@media (max-width: 1023px) {
+  footer[data-name="section-footer"] {
+    padding-bottom: 84px !important;
+  }
+}
+
+/* 2. Smooth mobile dropdown menu */
+#mobile-menu-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition:
+    max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity    0.32s ease,
+    transform  0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.42s;
+  will-change: max-height, opacity, transform;
+}
+#mobile-menu-dropdown.menu-open {
+  max-height: 100vh;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity    0.28s ease,
+    transform  0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0s;
+}
+
+/* 3. Ensure sticky header transitions are GPU-accelerated on mobile */
+@media (max-width: 1023px) {
+  #site-header {
+    will-change: background-color;
+    transition: background-color 0.3s ease, border-color 0.3s ease !important;
+  }
+}
+
