@@ -1942,3 +1942,26 @@ h1, h2, h3, h4, h5, h6,
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/* Desktop Floating/Hanging Navbar */
+@media (min-width: 1024px) {
+  #site-header {
+    transition: top 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                width 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-radius 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+  
+  #site-header.header-scrolled {
+    top: 24px !important;
+    width: calc(100% - 48px) !important;
+    border-radius: 100px !important;
+    background-color: rgba(248, 246, 242, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    box-shadow: 0 20px 40px rgba(26, 34, 51, 0.08), 0 1px 3px rgba(26, 34, 51, 0.05) !important;
+    border-color: rgba(201, 169, 110, 0.2) !important;
+  }
+}
