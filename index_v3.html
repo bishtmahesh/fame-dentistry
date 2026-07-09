@@ -387,24 +387,24 @@
               <h3 class="font-prata leading-[1.3] min-w-full text-[24px] md:text-[28px] text-[var(--ink,#1A2233)] tracking-[-0.28px] text-center mb-6">Begin Your Enquiry</h3>
 
               <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-interest">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" id="label-interest">What brings you to FAME?  (select one)  *</label>
+                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" id="label-interest">WHAT BRINGS YOU TO FAME? (SELECT ONE) *</label>
                 <div class="custom-select-wrapper w-full relative" id="custom-select-wrapper-block">
-                  <div class="border-b border-[#c7c7c7] border-solid flex items-center justify-between pb-[12px] pt-[10px] w-full cursor-pointer" id="custom-select-trigger">
-                    <span class="custom-select-trigger-text font-inter text-[16px] md:text-[18px] text-[var(--stone-2,#9C968A)] opacity-45 whitespace-nowrap">Select one</span>
-                    <img alt="" class="custom-select-arrow block w-[12px] h-[6px]" src="assets/select-arrow.svg">
+                  <div class="border-b border-[#C9A96E] border-solid flex items-center justify-between pb-[12px] pt-[10px] w-full cursor-pointer" id="custom-select-trigger">
+                    <span class="custom-select-trigger-text font-inter text-[16px] md:text-[18px] text-[#1A2233] whitespace-nowrap">Select Treatment</span>
+                    <svg class="custom-select-arrow block w-[16px] h-[16px] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
                   </div>
-                  <div class="custom-options absolute top-[100%] left-0 right-0 bg-[#f8f6f2] border border-[#c9a96e] rounded shadow-lg z-50 py-1 mt-1" id="custom-select-options">
-                    <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer selected" data-value="">Select one</div>
-                    <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="general">General Dentistry</div>
-                    <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="implants">Dental Implants</div>
-                    <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="cosmetic">Cosmetic Dentistry</div>
-                    <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="sedation">Treatment Under Sedation</div>
-                    <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="hygiene">Hygiene</div>
-                    <div class="custom-option px-5 py-3.5 font-inter text-[14px] md:text-[16px] text-gray-600 hover:bg-[#e7e0d4] hover:text-black cursor-pointer" data-value="other">Other / Custom Enquiry</div>
+                  <div class="custom-options absolute top-[100%] left-0 right-0 bg-[#F8F6F2] border border-[#C9A96E] z-50 py-2 mt-0 hidden" id="custom-select-options">
+                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors selected" data-value="">Select Treatment</div>
+                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="general">General Dentistry</div>
+                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="implants">Dental Implants</div>
+                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="cosmetic">Cosmetic Dentistry</div>
+                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="sedation">Treatment Under Sedation</div>
+                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="hygiene">Hygiene</div>
+                    <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="other">Other / Custom Enquiry</div>
                   </div>
                 </div>
                 <select name="interest" id="real-select-interest" required style="display:none">
-                  <option value="" selected>Select one</option>
+                  <option value="" selected>Select Treatment</option>
                   <option value="general">General Dentistry</option>
                   <option value="implants">Dental Implants</option>
                   <option value="cosmetic">Cosmetic Dentistry</option>
@@ -416,7 +416,7 @@
               </div>
 
               <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-name">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" for="input-name" id="label-name">Your name  *</label>
+                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" for="input-name" id="label-name">YOUR NAME *</label>
                 <div class="form-input-wrapper w-full relative">
                   <input type="text" id="input-name" name="name" required placeholder="First name, last name" class="form-input w-full border-b border-[var(--color-ash-mist,#c7c7c7)] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--ink,#1A2233)] placeholder:text-[var(--stone-2,#9C968A)] placeholder:opacity-45 outline-none focus:border-[var(--gold,#C9A96E)] focus:border-b-[2px] transition-all duration-300">
                 </div>
@@ -424,7 +424,7 @@
               </div>
 
               <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-email">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" for="input-email" id="label-email">Email address  *</label>
+                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" for="input-email" id="label-email">EMAIL ADDRESS *</label>
                 <div class="form-input-wrapper w-full relative">
                   <input type="email" id="input-email" name="email" required placeholder="you@example.com" class="form-input w-full border-b border-[var(--color-ash-mist,#c7c7c7)] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--ink,#1A2233)] placeholder:text-[var(--stone-2,#9C968A)] placeholder:opacity-45 outline-none focus:border-[var(--gold,#C9A96E)] focus:border-b-[2px] transition-all duration-300">
                 </div>
@@ -432,7 +432,7 @@
               </div>
 
               <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-phone">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" for="input-phone" id="label-phone">Phone number  *</label>
+                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" for="input-phone" id="label-phone">PHONE NUMBER *</label>
                 <div class="form-input-wrapper w-full relative">
                   <input type="tel" id="input-phone" name="phone" required placeholder="e.g. +44 7700 900000" class="form-input w-full border-b border-[var(--color-ash-mist,#c7c7c7)] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] text-[var(--ink,#1A2233)] placeholder:text-[var(--stone-2,#9C968A)] placeholder:opacity-45 outline-none focus:border-[var(--gold,#C9A96E)] focus:border-b-[2px] transition-all duration-300">
                 </div>
@@ -440,7 +440,7 @@
               </div>
 
               <div class="flex flex-col gap-[10px] items-start w-full form-field-group" id="field-group-notes">
-                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" for="input-notes" id="label-notes">Anything else?  (optional)</label>
+                <label class="font-inter font-medium text-[14px] md:text-[16px] text-[var(--ink,#1A2233)] tracking-[1px] md:tracking-[1.28px] uppercase cursor-pointer" for="input-notes" id="label-notes">ANYTHING ELSE? (OPTIONAL)</label>
                 <div class="form-input-wrapper w-full relative">
                   <textarea id="input-notes" name="notes" rows="2" placeholder="A specific concern, a timing preference, or how you heard about us." class="form-input block w-full border-b border-[var(--color-ash-mist,#c7c7c7)] bg-transparent pb-[12px] pt-[10px] font-inter text-[16px] md:text-[18px] leading-[1.5] text-[var(--ink,#1A2233)] placeholder:text-[var(--stone-2,#9C968A)] placeholder:opacity-45 outline-none focus:border-[var(--gold,#C9A96E)] focus:border-b-[2px] transition-all duration-300 resize-none overflow-hidden"></textarea>
                 </div>
