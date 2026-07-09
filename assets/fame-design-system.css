@@ -1932,15 +1932,14 @@ h1, h2, h3, h4, h5, h6,
 
 /* Mobile Menu Animation */
 #mobile-menu-dropdown {
-  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
 }
 #mobile-menu-dropdown.menu-open {
-  visibility: visible;
+  max-height: 100vh;
   opacity: 1;
-  transform: translateY(0);
 }
 
 
