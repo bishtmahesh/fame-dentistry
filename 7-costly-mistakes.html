@@ -27,15 +27,79 @@
 <link rel="stylesheet" href="assets/fame-design-system.css?v=1783569044103">
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "7 Costly and Potentially Disastrous Mistakes People Make When Deciding Where To Get Dental Implants",
-  "author": { "@type": "Person", "name": "Dr Ferhan Ahmed", "jobTitle": "Implant Specialist & Founder, FAME Dentistry" },
-  "publisher": { "@type": "Organization", "name": "FAME Dentistry", "logo": { "@type": "ImageObject", "url": "https://famedentistry.co.uk/assets/logo.webp" } },
-  "mainEntityOfPage": "https://famedentistry.co.uk/7-costly-mistakes",
-  "image": "https://famedentistry.co.uk/assets/mistakes-article.webp"
-}
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "7 Costly and Potentially Disastrous Mistakes People Make When Deciding Where To Get Dental Implants",
+    "author": { "@type": "Person", "name": "Dr Ferhan Ahmed", "jobTitle": "Implant Specialist & Founder, FAME Dentistry" },
+    "publisher": { "@type": "Organization", "name": "FAME Dentistry", "logo": { "@type": "ImageObject", "url": "https://famedentistry.co.uk/assets/logo.webp" } },
+    "mainEntityOfPage": "https://famedentistry.co.uk/7-costly-mistakes",
+    "image": "https://famedentistry.co.uk/assets/mistakes-article.webp"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I get my dental implants done in a single day?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While 'same day teeth' is possible for a temporary restoration, the final, permanent restoration properly requires several months. Short-cutting the implant healing process can lead to long-lasting complications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are dental implants cheaper abroad?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While the initial headline price might seem lower, overseas treatment often lacks the same diagnostic rigour (such as 3D CBCT scanning). Additionally, follow-up care and any required adjustments add substantial travel costs and inconvenience over the following 18 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do some dentists charge much less for implants?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If a quote seems remarkably low, it often omits non-optional extras that you will discover later in the process. We advise patients to ask directly for a comprehensive, written treatment plan upfront."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I ask my implant dentist before proceeding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You should ask how many implants they have placed, their complication rate, their protocol for aftercare, and what percentage of their patients are referred by other dentists."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a high Google review rating mean the practice is right for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While good reviews are a baseline, they can sometimes be curated or encouraged. A more reliable indicator of exceptional clinical quality is a practice's referral rate from other dentists, as peers put their own reputation on the line when they refer a patient."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after my implant surgery is completed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The relationship should just be beginning. The best practices provide structured aftercare protocols, a named patient coordinator, and clear communication about what to expect during your healing and recovery process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I meet the specialist who will perform my surgery during the first consultation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. It is vital that you meet and build a relationship directly with the clinician who will perform your surgery. Your consultation should be a dedicated time to discuss your specific needs, understand the diagnostic findings, and review your written treatment plan together."
+        }
+      }
+    ]
+  }
+]
 </script>
 </head>
 <body>
@@ -177,8 +241,6 @@
     .guide-sidebar {
       grid-column: 1;
       grid-row: 1;
-      position: sticky;
-      top: 120px;
       margin-bottom: 0;
     }
     .guide-main {
@@ -193,15 +255,16 @@
     <!-- Right Sidebar (Sticky) -->
     <aside class="guide-sidebar">
       
-      <!-- Author Block -->
-      <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(26,34,51,0.1);">
-        <p style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink,#1A2233);margin-bottom:16px;">Author</p>
-        <div style="display:flex;align-items:center;gap:16px;">
-          <img src="assets/ferhan-portrait.webp" alt="Dr Ferhan Ahmed" style="width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:top;">
-          <div>
-            <p style="margin:0;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;color:var(--ink,#1A2233);">Dr Ferhan Ahmed</p>
-            <p style="margin:0;font-family:'Inter',sans-serif;font-size:14px;color:var(--stone,#6b6560);">Implant Specialist &amp; Founder</p>
-          </div>
+      <!-- Lead Magnet (Prefer PDF) -->
+      <div id="article-lead-magnet" style="background:var(--ink,#1A2233);padding:28px 32px;margin-bottom:24px;">
+        <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold,#C9A96E);margin-bottom:10px;">Prefer the PDF?</p>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.6;color:rgba(248,246,242,0.85);margin-bottom:18px;">Read the full guide below, or enter your email and we'll send you a copy to keep.</p>
+        <form id="lead-magnet-form" class="flex flex-col gap-[12px]" onsubmit="event.preventDefault(); document.getElementById('lead-magnet-form').style.display='none'; document.getElementById('lead-magnet-success').style.display='block';">
+          <input type="email" required placeholder="Your email address" class="w-full bg-transparent border border-[var(--gold,#C9A96E)] px-[16px] py-[12px] font-inter text-[14px] text-[var(--paper,#F8F6F2)] outline-none">
+          <button type="submit" class="w-full bg-[var(--gold,#C9A96E)] text-[var(--ink,#1A2233)] font-inter font-semibold text-[13px] tracking-[0.08em] uppercase px-[20px] py-[12px] hover:bg-[var(--paper,#F8F6F2)] transition-colors duration-300 cursor-pointer">Get PDF</button>
+        </form>
+        <div id="lead-magnet-success" style="display:none;">
+          <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--gold,#C9A96E);margin:0;">Thanks! We've sent the guide to your inbox.</p>
         </div>
       </div>
 
@@ -219,16 +282,15 @@
         </ol>
       </div>
 
-      <!-- Lead Magnet (Prefer PDF) -->
-      <div id="article-lead-magnet" style="background:var(--ink,#1A2233);padding:28px 32px;">
-        <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold,#C9A96E);margin-bottom:10px;">Prefer the PDF?</p>
-        <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.6;color:rgba(248,246,242,0.85);margin-bottom:18px;">Read the full guide below, or enter your email and we'll send you a copy to keep.</p>
-        <form id="lead-magnet-form" class="flex flex-col gap-[12px]" onsubmit="event.preventDefault(); document.getElementById('lead-magnet-form').style.display='none'; document.getElementById('lead-magnet-success').style.display='block';">
-          <input type="email" required placeholder="Your email address" class="w-full bg-transparent border border-[var(--gold,#C9A96E)] px-[16px] py-[12px] font-inter text-[14px] text-[var(--paper,#F8F6F2)] outline-none">
-          <button type="submit" class="w-full bg-[var(--gold,#C9A96E)] text-[var(--ink,#1A2233)] font-inter font-semibold text-[13px] tracking-[0.08em] uppercase px-[20px] py-[12px] hover:bg-[var(--paper,#F8F6F2)] transition-colors duration-300 cursor-pointer">Get PDF</button>
-        </form>
-        <div id="lead-magnet-success" style="display:none;">
-          <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--paper,#F8F6F2);font-weight:500;">Thank you. Your guide is on its way to your inbox.</p>
+      <!-- Author Block -->
+      <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(26,34,51,0.1);">
+        <p style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink,#1A2233);margin-bottom:16px;">Author</p>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <img src="assets/ferhan-portrait.webp" alt="Dr Ferhan Ahmed" style="width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:top;">
+          <div>
+            <p style="margin:0;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;color:var(--ink,#1A2233);">Dr Ferhan Ahmed</p>
+            <p style="margin:0;font-family:'Inter',sans-serif;font-size:14px;color:var(--stone,#6b6560);">Implant Specialist &amp; Founder</p>
+          </div>
         </div>
       </div>
       
@@ -309,6 +371,40 @@
         <p style="margin-bottom:16px;">This publicly stated intention shapes everything we do at FAME Dentistry, from how we hire and train our team to how we deliver your care — from your very first phone call to your final follow-up. The principles in this guide aren't just advice we offer patients. They are the standard we hold ourselves to every day.</p>
         <p style="margin-bottom:24px;">If you'd like to have a conversation about whether implants are right for you, and whether FAME Dentistry is the right place for you to have them, I'd like that very much.</p>
         <a href="contact.html" class="btn btn--gold-outline" style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;">Arrange a Consultation →</a>
+      </div>
+
+      <div style="margin-top:80px;">
+        <h3 class="font-prata" style="font-size:32px;font-weight:400;color:var(--ink,#1A2233);margin-bottom:40px;">Frequently Asked Questions</h3>
+        <div class="faq__items" style="border-top:1px solid rgba(26,34,51,0.1);">
+          <details class="faq__item">
+            <summary class="faq__q" style="font-size:18px;">Can I get my dental implants done in a single day?<div class="faq__toggle"></div></summary>
+            <div class="faq__a">While 'same day teeth' is possible for a temporary restoration, the final, permanent restoration properly requires several months. Short-cutting the implant healing process can lead to long-lasting complications.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q" style="font-size:18px;">Are dental implants cheaper abroad?<div class="faq__toggle"></div></summary>
+            <div class="faq__a">While the initial headline price might seem lower, overseas treatment often lacks the same diagnostic rigour (such as 3D CBCT scanning). Additionally, follow-up care and any required adjustments add substantial travel costs and inconvenience over the following 18 months.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q" style="font-size:18px;">Why do some dentists charge much less for implants?<div class="faq__toggle"></div></summary>
+            <div class="faq__a">If a quote seems remarkably low, it often omits non-optional extras that you will discover later in the process. We advise patients to ask directly for a comprehensive, written treatment plan upfront.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q" style="font-size:18px;">What should I ask my implant dentist before proceeding?<div class="faq__toggle"></div></summary>
+            <div class="faq__a">You should ask how many implants they have placed, their complication rate, their protocol for aftercare, and what percentage of their patients are referred by other dentists.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q" style="font-size:18px;">Does a high Google review rating mean the practice is right for me?<div class="faq__toggle"></div></summary>
+            <div class="faq__a">While good reviews are a baseline, they can sometimes be curated or encouraged. A more reliable indicator of exceptional clinical quality is a practice's referral rate from other dentists, as peers put their own reputation on the line when they refer a patient.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q" style="font-size:18px;">What happens after my implant surgery is completed?<div class="faq__toggle"></div></summary>
+            <div class="faq__a">The relationship should just be beginning. The best practices provide structured aftercare protocols, a named patient coordinator, and clear communication about what to expect during your healing and recovery process.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q" style="font-size:18px;">Will I meet the specialist who will perform my surgery during the first consultation?<div class="faq__toggle"></div></summary>
+            <div class="faq__a">Yes. It is vital that you meet and build a relationship directly with the clinician who will perform your surgery. Your consultation should be a dedicated time to discuss your specific needs, understand the diagnostic findings, and review your written treatment plan together.</div>
+          </details>
+        </div>
       </div>
 
     </div>
