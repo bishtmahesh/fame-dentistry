@@ -634,6 +634,7 @@ body { background-color: var(--color--off-white, #f8f6f2); }
   will-change: opacity, transform;
 }
 .scroll-reveal.active { opacity: 1; transform: translateY(0); }
+@media(max-width:1023px){.scroll-reveal{opacity:1;transform:translateY(0);transition:none;}}
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
@@ -807,10 +808,12 @@ details[open] .faq__toggle::after{opacity:0;}
 html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
 body{font-family:var(--sans);font-variation-settings:\"wght\" 460;;color:var(--ink);background:var(--paper);}
 /* Box every top-level section (background included) at 1440px, matching v4's boxed lookbook layout. */
-body>section,body>div.cta-bar,body>div.contact-wrap,body>div.alliance,body>div.signal{max-width:1440px;margin-left:auto;margin-right:auto;}
+body>section,body>div.cta-bar,body>div.contact-wrap,body>div.signal{max-width:1440px;margin-left:auto;margin-right:auto;}
 /* ---- Copied from the live site: hero/register animations + form styling ---- */
 .scroll-reveal{opacity:0;transform:translateY(30px);transition:opacity 1.4s cubic-bezier(.16,1,.3,1),transform 1.4s cubic-bezier(.16,1,.3,1);will-change:opacity,transform;}
 .scroll-reveal.active{opacity:1;transform:translateY(0);}
+/* On mobile, disable the reveal animation — elements are always visible to prevent blank-gap layout issues */
+@media(max-width:1023px){.scroll-reveal{opacity:1;transform:translateY(0);transition:none;}}
 .scroll-reveal.has-word-reveal { opacity: 1; transform: none; transition: none; }
 .scroll-reveal .word { display: inline-block; overflow: hidden; vertical-align: top; }
 .scroll-reveal .word-inner { display: inline-block; transform: translateY(100%); opacity: 0; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -1082,9 +1085,10 @@ button,input,select,textarea{font:inherit;}
 .fp__success p{font-family:var(--sans);font-size:13px;color:rgba(248,246,242,.45);line-height:1.6;}
 
 /* ── S12 ALLIANCE ── */
-.alliance{padding:clamp(48px, 5vw, 80px) var(--px-section);}
-.alliance__inner{max-width:1440px;margin:0 auto;}
-.alliance__marquee{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.alliance{width:100%;max-width:none;margin-left:0;margin-right:0;padding:0;overflow:hidden;}
+.alliance__inner{max-width:1440px;margin:0 auto;padding:clamp(48px, 5vw, 80px) var(--px-section);}
+.alliance__inner .section-bar{padding-top:clamp(28px, 3vw, 48px);margin-bottom:clamp(28px, 3vw, 48px);}
+.alliance__marquee{display:flex;overflow:hidden;width:100vw;margin-left:calc(50% - 50vw);padding:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
 .alliance__logos{display:flex;align-items:center;flex-wrap:nowrap;gap:64px;padding-right:64px;flex-shrink:0;animation:allianceMarquee 32s linear infinite;}
 .alliance__logo{font-family:var(--serif);font-weight:400;font-size:28px;letter-spacing:.02em;white-space:nowrap;}
 @keyframes allianceMarquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
