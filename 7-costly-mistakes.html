@@ -126,33 +126,117 @@
 
 <section class="hero-radial-glow bg-[var(--paper,#F8F6F2)]">
   <div class="flex flex-col items-start px-[16px] md:px-[72px] w-full max-w-[1440px] mx-auto">
-    <div class="flex flex-col items-start pt-[32px] md:pt-[56px] pb-[40px] md:pb-[56px] w-full">
-      <div class="section-bar mb-[32px] md:mb-[48px]">
-        <div class="section-bar__left typewriter">Implants &nbsp;·&nbsp; Patient Guide</div>
-        <div class="section-bar__right typewriter">By Dr Ferhan Ahmed</div>
+    <div class="flex flex-col items-start pt-[32px] md:pt-[56px] w-full mb-0">
+      <div class="flex flex-col items-start w-full">
+        <div class="section-bar order-1 mb-[32px] md:mb-[48px]">
+          <div class="section-bar__left typewriter">Implants &nbsp;·&nbsp; Patient Guide</div>
+          <div class="section-bar__right typewriter">By Dr Ferhan Ahmed</div>
+        </div>
+        <h1 class="font-prata leading-[1.2] text-[32px] md:text-[56px] text-[var(--ink,#1A2233)] tracking-[-0.5px] md:tracking-[-1px] w-full lg:w-[900px] scroll-reveal order-2 mb-[20px] md:mb-[32px]">7 Costly Mistakes People Make <em>Before Getting Implants.</em></h1>
+        <div class="flex flex-wrap gap-y-[24px] md:gap-y-[32px] items-center justify-between w-full scroll-reveal delay-200 order-3 mb-[32px] md:mb-[48px]">
+          <p class="font-inter leading-[1.65] text-[16px] md:text-[18px] text-[var(--stone,#6b6560)] w-full lg:w-[580px]">By Dr Ferhan Ahmed — Implant Specialist &amp; Founder, FAME Dentistry, Glasgow</p>
+          <a href="contact.html" data-name="button-primary" class="bg-[var(--ink,#1A2233)] flex font-inter font-semibold gap-[12px] items-center justify-center px-[28px] py-[16px] text-[var(--paper,#F8F6F2)] whitespace-nowrap w-full md:w-auto text-center no-underline hover:opacity-90 transition-opacity duration-300">
+            <span class="text-[14px] leading-none tracking-[2px] uppercase">Enquire Now</span>
+            <span class="text-[14px]">→</span>
+          </a>
+        </div>
+        <div class="w-full flex flex-col order-4 mb-[32px] md:mb-[48px]">
+          <div data-name="image-wrapper" class="border border-[var(--gold,#C9A96E)] border-solid h-[300px] sm:h-[420px] md:h-[590px] w-full scroll-reveal delay-400 mb-0">
+            <div class="overflow-hidden pointer-events-none h-full w-full">
+              <img alt="FAME Dentistry Dental Implants Guide" fetchpriority="high" decoding="async" class="hero-reveal-image w-full h-full object-cover object-center" src="assets/mistakes-article.webp">
+            </div>
+          </div>
+        </div>
       </div>
-      <h1 class="font-prata leading-[1.2] text-[32px] md:text-[56px] text-[var(--ink,#1A2233)] tracking-[-0.5px] md:tracking-[-1px] w-full lg:w-[900px] mb-[20px] md:mb-[24px]">7 Costly and Potentially Disastrous Mistakes People Make <em>When Deciding Where To Get Dental Implants.</em></h1>
-      <p class="font-inter leading-[1.65] text-[16px] md:text-[18px] text-[var(--stone,#6b6560)] w-full lg:w-[680px]">By Dr Ferhan Ahmed — Implant Specialist &amp; Founder, FAME Dentistry, Glasgow</p>
     </div>
   </div>
 </section>
 
-<section style="background:var(--paper,#F8F6F2);padding:0 var(--px-section,72px) 40px;">
-  <div style="max-width:760px;margin:0 auto;">
-    <div id="article-lead-magnet" style="background:var(--ink,#1A2233);padding:28px 32px;margin-bottom:56px;">
-      <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold,#C9A96E);margin-bottom:10px;">Prefer the PDF?</p>
-      <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;color:rgba(248,246,242,0.85);margin-bottom:18px;">Read the full guide below, or enter your email and we'll send you a copy to keep.</p>
-      <form id="lead-magnet-form" class="flex" onsubmit="event.preventDefault(); document.getElementById('lead-magnet-form').style.display='none'; document.getElementById('lead-magnet-success').style.display='block';">
-        <input type="email" required placeholder="Your email address" class="flex-1 bg-transparent border border-[var(--gold,#C9A96E)] border-r-0 px-[16px] py-[12px] font-inter text-[15px] text-[var(--paper,#F8F6F2)] outline-none">
-        <button type="submit" class="shrink-0 bg-[var(--gold,#C9A96E)] text-[var(--ink,#1A2233)] font-inter font-semibold text-[13px] tracking-[0.08em] uppercase px-[20px] py-[12px] hover:bg-[var(--paper,#F8F6F2)] transition-colors duration-300 cursor-pointer">Get PDF</button>
-      </form>
-      <div id="lead-magnet-success" style="display:none;">
-        <p style="font-family:'Inter',sans-serif;font-size:15px;color:var(--paper,#F8F6F2);font-weight:500;">Thank you. Your guide is on its way to your inbox.</p>
+<style>
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .guide-sidebar {
+    width: 100%;
+    order: -1;
+  }
+  .guide-main {
+    width: 100%;
+  }
+  @media(min-width: 1024px) {
+    .guide-layout {
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 64px;
+      align-items: start;
+    }
+    .guide-sidebar {
+      grid-column: 1;
+      grid-row: 1;
+      position: sticky;
+      top: 120px;
+      margin-bottom: 0;
+    }
+    .guide-main {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+</style>
+<section style="background:var(--paper,#F8F6F2);padding:0 var(--px-section,72px) 80px;">
+  <div class="guide-layout">
+    
+    <!-- Right Sidebar (Sticky) -->
+    <aside class="guide-sidebar">
+      
+      <!-- Author Block -->
+      <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(26,34,51,0.1);">
+        <p style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink,#1A2233);margin-bottom:16px;">Author</p>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <img src="assets/ferhan-portrait.webp" alt="Dr Ferhan Ahmed" style="width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:top;">
+          <div>
+            <p style="margin:0;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;color:var(--ink,#1A2233);">Dr Ferhan Ahmed</p>
+            <p style="margin:0;font-family:'Inter',sans-serif;font-size:14px;color:var(--stone,#6b6560);">Implant Specialist &amp; Founder</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="article-prose" style="font-family:'Inter',sans-serif;font-size:17px;line-height:1.75;color:var(--ink,#1A2233);">
+      <!-- TOC -->
+      <div style="background:var(--cream,#E8E0D0);padding:24px 32px;margin-bottom:24px;">
+        <p style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink,#1A2233);margin-bottom:16px;">In this guide</p>
+        <ol style="margin:0;padding-left:20px;font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:var(--ink,#1A2233);">
+          <li><a href="#mistake-1" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(26,34,51,0.2);">Judging a practice by its own marketing</a></li>
+          <li><a href="#mistake-2" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(26,34,51,0.2);">Being seduced by offers that seem too good to be true</a></li>
+          <li><a href="#mistake-3" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(26,34,51,0.2);">Dismissing the small things during your first visit</a></li>
+          <li><a href="#mistake-4" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(26,34,51,0.2);">Trying to combine your implants with a holiday abroad</a></li>
+          <li><a href="#mistake-5" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(26,34,51,0.2);">Assuming that one implant dentist is much like another</a></li>
+          <li><a href="#mistake-6" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(26,34,51,0.2);">Not asking what the commitment looks like after</a></li>
+          <li><a href="#mistake-7" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(26,34,51,0.2);">Making a decision before you're ready</a></li>
+        </ol>
+      </div>
 
+      <!-- Lead Magnet (Prefer PDF) -->
+      <div id="article-lead-magnet" style="background:var(--ink,#1A2233);padding:28px 32px;">
+        <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold,#C9A96E);margin-bottom:10px;">Prefer the PDF?</p>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.6;color:rgba(248,246,242,0.85);margin-bottom:18px;">Read the full guide below, or enter your email and we'll send you a copy to keep.</p>
+        <form id="lead-magnet-form" class="flex flex-col gap-[12px]" onsubmit="event.preventDefault(); document.getElementById('lead-magnet-form').style.display='none'; document.getElementById('lead-magnet-success').style.display='block';">
+          <input type="email" required placeholder="Your email address" class="w-full bg-transparent border border-[var(--gold,#C9A96E)] px-[16px] py-[12px] font-inter text-[14px] text-[var(--paper,#F8F6F2)] outline-none">
+          <button type="submit" class="w-full bg-[var(--gold,#C9A96E)] text-[var(--ink,#1A2233)] font-inter font-semibold text-[13px] tracking-[0.08em] uppercase px-[20px] py-[12px] hover:bg-[var(--paper,#F8F6F2)] transition-colors duration-300 cursor-pointer">Get PDF</button>
+        </form>
+        <div id="lead-magnet-success" style="display:none;">
+          <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--paper,#F8F6F2);font-weight:500;">Thank you. Your guide is on its way to your inbox.</p>
+        </div>
+      </div>
+      
+    </aside>
+
+    <!-- Left Column (Article) -->
+    <div class="guide-main">
+      <div class="article-prose" style="font-family:'Inter',sans-serif;font-size:17px;line-height:1.75;color:var(--ink,#1A2233);">
       <p style="margin-bottom:20px;">I'm Dr Ferhan Ahmed. Thank you for taking the time to read this guide.</p>
       <p style="margin-bottom:20px;">I want to start with something you may not expect a dentist to say: the most important decision you will make in this entire process has nothing to do with the procedure itself. It's the decision about who you trust to carry it out.</p>
       <p style="margin-bottom:20px;">Get that right, and almost everything else follows. Get it wrong, and the consequences — financial, physical, and emotional — can be significant and long-lasting.</p>
@@ -161,7 +245,7 @@
       <p style="margin-bottom:20px;">This guide is my attempt to share what I've learned — plainly, honestly and with your best interests as the only agenda.</p>
       <p style="margin-bottom:48px;">I hope it gives you the clarity and the confidence to make a decision that's exactly right for you.</p>
 
-      <h2 class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;">Mistake #1</h2>
+      <h2 id="mistake-1" class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;scroll-margin-top:120px;">Mistake #1</h2>
       <h3 class="font-prata" style="font-size:28px;font-weight:400;color:var(--ink,#1A2233);margin-bottom:20px;line-height:1.3;">Judging a practice by its own marketing.</h3>
       <p style="margin-bottom:20px;">A beautiful website. Impressive before-and-after photographs. A string of glowing five-star reviews. These are now the baseline in private dentistry but they sometimes tell you far less than you might imagine.</p>
       <p style="margin-bottom:20px;">Anyone can commission a professional photoshoot. Reviews can be encouraged, curated, and in some cases entirely manufactured. Marketing is, by definition, a practice telling its own story and then telling that story in its most favourable light.</p>
@@ -170,7 +254,7 @@
       <p style="margin-bottom:20px;">A high referral rate from other dental professionals is the closest thing to an independent endorsement that dentistry has to offer. It's peer review, not self-promotion.</p>
       <p style="margin-bottom:48px;">So alongside anything you read on a practice's website, ask directly: "What percentage of your implant patients are referred to you by other dentists?" Listen carefully to the answer to that question — and the confidence with which it's answered will tell you a great deal.</p>
 
-      <h2 class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;">Mistake #2</h2>
+      <h2 id="mistake-2" class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;scroll-margin-top:120px;">Mistake #2</h2>
       <h3 class="font-prata" style="font-size:28px;font-weight:400;color:var(--ink,#1A2233);margin-bottom:20px;line-height:1.3;">Being seduced by offers that seem too good to be true.</h3>
       <p style="margin-bottom:20px;">In recent years, the competition for patients in private dentistry has led to increasingly aggressive advertising. Headline prices designed to catch attention. Time-limited offers conceived to trigger a fear of missing out. And those promises of "same day teeth" and transformations delivered in a single appointment.</p>
       <p style="margin-bottom:20px;">Let me be direct about "same day teeth". It taps into the universal human need for instant gratification and a modern craving for convenience. In reality, it's a smoke-and-mirrors promise. Yes, temporary, serviceable teeth in a day is achievable. But the final, permanent restoration — done properly — will take several months. There are no shortcuts worth taking in implant surgery, and any claims otherwise should be taken as warning signals about the integrity of the dentist you are dealing with.</p>
@@ -178,7 +262,7 @@
       <blockquote style="border-left:3px solid var(--gold,#C9A96E);padding:4px 0 4px 24px;margin:0 0 20px;font-style:italic;color:var(--stone,#6b6560);">The very best implant dentists don't need to compete on price or urgency. They are busy because their patients recommend them — and that constant flow of word-of-mouth introductions means they can focus entirely on the quality of their work, rather than patient acquisition.</blockquote>
       <p style="margin-bottom:48px;">A useful question to ask any practice you're considering: "What percentage of your new patients come to you through word-of-mouth recommendations?" A good dentist will proudly answer that question very specifically. If the answer is low or vague, ask yourself why.</p>
 
-      <h2 class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;">Mistake #3</h2>
+      <h2 id="mistake-3" class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;scroll-margin-top:120px;">Mistake #3</h2>
       <h3 class="font-prata" style="font-size:28px;font-weight:400;color:var(--ink,#1A2233);margin-bottom:20px;line-height:1.3;">Dismissing the small things during your first visit.</h3>
       <p style="margin-bottom:20px;">There's a principle I've come to believe deeply: the same mindset that forgets your name at reception is the mindset that will be in the room when your surgery takes place.</p>
       <p style="margin-bottom:20px;">Attention to detail is not something a team switches on for clinical procedures and switches off for everything else. It is either a culture — embedded in every interaction, every day — or it isn't.</p>
@@ -186,7 +270,7 @@
       <blockquote style="border-left:3px solid var(--gold,#C9A96E);padding:4px 0 4px 24px;margin:0 0 20px;font-style:italic;color:var(--stone,#6b6560);">None of these things are minor. They are evidence. They tell you whether this practice considers the patient experience to be as important as the clinical outcome. In the very best practices, those two things are inseparable.</blockquote>
       <p style="margin-bottom:48px;">You are about to invest significant time, money, and trust in a team of people. Observing how that team behaves when they think it doesn't count will be a great indicator of exactly how they'll behave when it does.</p>
 
-      <h2 class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;">Mistake #4</h2>
+      <h2 id="mistake-4" class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;scroll-margin-top:120px;">Mistake #4</h2>
       <h3 class="font-prata" style="font-size:28px;font-weight:400;color:var(--ink,#1A2233);margin-bottom:20px;line-height:1.3;">Trying to combine your implants with a holiday abroad.</h3>
       <p style="margin-bottom:20px;">The headline prices for dental treatment overseas are genuinely attention-grabbing. For some types of dentistry, this option may well make sense. For implant surgery specifically, however, I'd encourage you to look very carefully before going down this route.</p>
       <p style="margin-bottom:20px;">The first issue is like-for-like comparison. Worldwide, there are over 300 different implant systems in use. The price difference between them — and the difference in long-term outcomes — can be significant. When an overseas price seems dramatically lower, it's worth asking what system is being used and whether your records and X-rays will be compatible with a UK practice if you ever need follow-up treatment.</p>
@@ -194,7 +278,7 @@
       <p style="margin-bottom:20px;">The third issue is what happens next. Implant surgery is not a one-visit procedure. There are follow-ups, adjustments and, in some cases, complications that require prompt attention. If your dentist is in another country, that follow-up care becomes an issue you have to manage yourself, along with additional cost and substantial inconvenience.</p>
       <p style="margin-bottom:48px;">What appears to be a saving on day one can look very different eighteen months later.</p>
 
-      <h2 class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;">Mistake #5</h2>
+      <h2 id="mistake-5" class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;scroll-margin-top:120px;">Mistake #5</h2>
       <h3 class="font-prata" style="font-size:28px;font-weight:400;color:var(--ink,#1A2233);margin-bottom:20px;line-height:1.3;">Assuming that one implant dentist is much like another.</h3>
       <p style="margin-bottom:20px;">As with every skilled profession, the range of ability in implant dentistry is wider than most people realise. Two dentists with the same qualifications, treating the same patient with the same clinical needs, may approach the case differently and produce meaningfully different outcomes.</p>
       <p style="margin-bottom:20px;">Experience is the key variable. But experience in implant dentistry can't just be measured by years in practice — it means years of doing implants, on a weekly basis. This consistency and volume is the only way advanced technical ability is gained. A dentist with thirty years in general practice may place fewer implants in a career than a specialist places in a single month.</p>
@@ -202,7 +286,7 @@
       <blockquote style="border-left:3px solid var(--gold,#C9A96E);padding:4px 0 4px 24px;margin:0 0 20px;font-style:italic;color:var(--stone,#6b6560);">The answers you're looking for: hundreds of cases, every week, and a transparent and confident response to the complication question. Evasion or vagueness on any of those three points is a warning signal you should pay attention to.</blockquote>
       <p style="margin-bottom:48px;">It's also worth knowing that many of the most experienced implant specialists receive a significant proportion of their patients through referrals from general dentists who recognise the limits of their own expertise. If the practice you're considering is primarily a referral destination for other dental professionals, that is one of the strongest indicators of genuine specialisation available to you.</p>
 
-      <h2 class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;">Mistake #6</h2>
+      <h2 id="mistake-6" class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;scroll-margin-top:120px;">Mistake #6</h2>
       <h3 class="font-prata" style="font-size:28px;font-weight:400;color:var(--ink,#1A2233);margin-bottom:20px;line-height:1.3;">Not asking what the practice's commitment to you looks like after your procedure.</h3>
       <p style="margin-bottom:20px;">Most of the questions patients think to ask are about what happens before and during treatment. Very few think to ask about what happens after — and yet that is precisely where the character of a practice is most clearly revealed.</p>
       <p style="margin-bottom:20px;">Once the procedure is complete and the invoice is paid, some practices consider their job done. The service provided is transactional in nature. If you have questions, you might get a generic response. If you have complications, you'll discover how well the practice actually values your long-term wellbeing.</p>
@@ -210,7 +294,7 @@
       <blockquote style="border-left:3px solid var(--gold,#C9A96E);padding:4px 0 4px 24px;margin:0 0 20px;font-style:italic;color:var(--stone,#6b6560);">Ask specifically: "What does your aftercare process look like? Who is my point of contact during recovery? What is your protocol if I have concerns or complications?" A great practice will answer these questions in detail even before you ask.</blockquote>
       <p style="margin-bottom:48px;">You are not buying a procedure. You are entering a relationship — and as such, you should put in the appropriate effort to choosing who you will have that relationship with.</p>
 
-      <h2 class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;">Mistake #7</h2>
+      <h2 id="mistake-7" class="font-prata" style="font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A96E);font-family:'Inter',sans-serif;margin-bottom:8px;scroll-margin-top:120px;">Mistake #7</h2>
       <h3 class="font-prata" style="font-size:28px;font-weight:400;color:var(--ink,#1A2233);margin-bottom:20px;line-height:1.3;">Making a decision before you're ready — or feeling pressured to do so.</h3>
       <p style="margin-bottom:20px;">Dental implant surgery is a significant commitment — financially, medically, and personally. The decision about which practice to trust with that commitment deserves proper consideration, and any practice worth choosing will tell you exactly that.</p>
       <p style="margin-bottom:20px;">If you ever sense that someone is hovering with a card machine, if you're presented with a "limited time" price, or any kind of urgency to "commit today", it's advisable to take a step back. A good medical specialist wants you to take the time to be certain, because uncertain patients often make difficult recoveries.</p>
