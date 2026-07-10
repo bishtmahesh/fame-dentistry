@@ -287,6 +287,36 @@ button, input, select, textarea { font: inherit; }
 .img--tariq-frame { transform: scale(1.15); }
 .fcard:hover .img--tariq-frame { transform: scale(1.22); }
 
+/* Extend the same restrained hover-zoom to images not covered above */
+.implants-intro__image img,
+.cosmetic-intro__image img,
+.philosophy__image img,
+.practice-story__image img,
+.featured-article__image img,
+.book__image img,
+.t-col-img img {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.implants-intro__image:hover img,
+.cosmetic-intro__image:hover img,
+.philosophy__image:hover img,
+.practice-story__image:hover img,
+.featured-article:hover .featured-article__image img,
+.book__image:hover img,
+.t-col-img:hover img {
+  transform: scale(1.06);
+}
+
+/* Extend the same restrained hover-lift to card-like blocks not covered above */
+.check, .pstep, .flow-step {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.check:hover, .pstep:hover, .flow-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 160, 89, 0.35);
+}
+
 /* — Body — */
 body {
   font-family: var(--font-inter);
