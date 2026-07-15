@@ -127,3 +127,57 @@ Read the entire "FAME Dentistry · Website Design Proposal · V11" PDF (via pdfp
 - A dismissable "Enquire" pill may appear after the reader scrolls most of the page (not yet built).
 - WhatsApp tap-to-message only on the Concierge mobile surface, as a secondary route — never the primary CTA.
 - No app-install pop-ups, no cookie banner blocking first view.
+
+## Copywriting — Ownership, Tone & Process (July 2026)
+
+### Ownership
+All copy is written by Remedo. The client's role is review and approval only — they do not write copy. No line goes live without explicit client sign-off.
+
+### Formal copy sign-off workflow
+1. Remedo writes copy based on the approved proposal brief (V7/V11)
+2. Copy shared in a dedicated review document — not inside Figma or buried in HTML
+3. Client reviews line by line, approves or gives notes
+4. Revisions made and re-shared if needed
+5. Explicit approval received before copy goes into staging build
+
+**This step was skipped before the July 2026 staging build — treatment card copy was never signed off, which caused the V5 reversion complaint. Do not skip this in future.**
+
+### Three copy quality tests (run every line through these before publishing)
+
+1. **The Generic Test** — Could this sentence appear on any other UK dental website? If yes, rewrite it. Every line must be specific to FAME.
+2. **The Audience Test** — Does this line speak directly to one of FAME's three audiences: business leader, implant/cosmetic patient, or referring dentist? Copy that tries to address all three at once is diluted. Split it or sharpen it.
+3. **The Verifiability Test** — Does this claim stand up to scrutiny? Avoid adjectives. Use specifics: "200+ referring dentists", "9.4/10 NPS", "20 years", "dual MBChB · BDS". If a claim cannot be dated and verified, remove it.
+
+### Tone by section (never mix registers within a single page)
+
+| Section | Tone | Sounds Like | Never Sounds Like |
+|---|---|---|---|
+| Hero | Editorial, confident, spare | A private bank opening statement | A dental clinic ad |
+| Signal Bar | Peer-to-peer, factual | A colleague telling another colleague | A marketing boast |
+| Three Doors | Direct, audience-aware | Speaking to one person in the room | A generic welcome |
+| Treatments | Warm, authoritative, plain English | A specialist explaining to a smart patient | A service menu |
+| Concierge | Restrained, peer-level | A private members' club | A hotel upsell |
+| Founders | Credentialled, human | A journal bio | A staff profile page |
+| NPS | Transparent, verifiable | A published audit | A star rating widget |
+| Testimonials | Verbatim, named, real | Quoted speech | Anonymous endorsement |
+| For Dentists | Clinical peer register | Colleague to colleague | Consumer marketing |
+
+### Words and phrases that are never used in FAME copy
+
+- luxury / luxurious / luxury experience
+- award-winning / award-winner / award-recognised
+- leading (as a standalone superlative — "Glasgow's leading")
+- premier / VIP / exclusive membership / bespoke package
+- transform your smile / life-changing results / Hollywood smile
+- cutting-edge / state-of-the-art / world-class
+- Book now (always use "Enquire")
+- Free consultation / no obligation
+- Any price claim or "from £X" in hero or above-the-fold copy
+- Unnamed testimonials ("Sarah, 52, Glasgow") — always full name + role
+
+### Open copy decisions (July 2026 — pending client confirmation on call)
+
+- **Signal Bar body copy** — Recommended: *"Most of our complex implant patients are referred to us by other dentists."* Current staging copy is a placeholder. V11 is explicit: no stats, no big number — the sentence is the proof. Awaiting Ferhan confirmation.
+- **Treatment cards** — Live on staging as of commit 5959d7d. Awaiting formal client sign-off.
+- **Concierge bullets** — Updated to V11 spec. Live on staging.
+- **Testimonial #2** — Fixed to Dr. Anna Whitelaw, General Dentist, St Andrews. Live on staging.
