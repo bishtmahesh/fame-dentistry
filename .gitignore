@@ -1,32 +1,33 @@
 # OS
 .DS_Store
+Thumbs.db
 
-# Reference library (separate repo) and design notes
-awesome-design-md/
-DESIGN.md
+# Large binary files — not for git
+*.pdf
+*.dmg
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.zip
 
-# Old iterations / backups (not part of the live site)
-v1/
-v2/
-v3/
-v4/
-index_prev_backup.html
+# Raw photos (not in /assets)
+DSC*.jpg
+DSC*.JPG
+DSC*.png
 
-# Local OG render template (the generated og-image.jpg is what ships)
-assets/og-template.html
-.vercel
-
-# Raw stock source (optimized version lives in assets/)
-AdobeStock_512017985.jpeg
-Dr ferhan'.png
-
-# Node deps (nodemailer is installed by Vercel at build time for /api)
+# Node
 node_modules/
 
-# Tailwind build deps (generated CSS ships in assets/)
-.build/node_modules/
+# Editor
+.vscode/
+.idea/
 
-# Local env files (SMTP secrets live in Vercel env, never in the repo)
-.env
-.env.local
-.env*.local
+# Backup HTML files (dev use only, not deployed)
+*_backup*.html
+*_prev*.html
+*_modern*.html
+*_v3*.html
+*_v4*.html
+*_head*.html
+live.html
