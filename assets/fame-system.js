@@ -267,9 +267,14 @@
       
       // Close all other dropdowns first
       document.querySelectorAll('.custom-options').forEach(opt => opt.classList.add('hidden'));
+      document.querySelectorAll('.custom-select-wrapper').forEach(wrap => wrap.classList.remove('open'));
       
       if (isHidden) {
         optionsBlock.classList.remove('hidden');
+        wrapper.classList.add('open');
+      } else {
+        optionsBlock.classList.add('hidden');
+        wrapper.classList.remove('open');
       }
     });
     
@@ -291,6 +296,7 @@
         
         // Close dropdown
         optionsBlock.classList.add('hidden');
+        wrapper.classList.remove('open');
       });
     });
   });
@@ -299,6 +305,9 @@
   document.addEventListener('click', () => {
     document.querySelectorAll('.custom-options').forEach(opt => {
       opt.classList.add('hidden');
+    });
+    document.querySelectorAll('.custom-select-wrapper').forEach(wrap => {
+      wrap.classList.remove('open');
     });
   });
 })();
