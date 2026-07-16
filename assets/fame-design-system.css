@@ -1058,8 +1058,8 @@ button,input,select,textarea{font:inherit;}
 .book__ey{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
 .book__title{font-weight:300;margin-bottom:14px;}
 .book__title em{font-style:italic;color:var(--gold);}
-.book__subtitle{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--stone);margin-bottom:24px;}
-.book__body{font-variation-settings:\"wght\" 460;;color:var(--stone);margin-bottom:36px;max-width:440px;}
+.book__subtitle{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;color:var(--stone);margin-bottom:24px;max-width:520px;}
+.book__body{font-variation-settings:"wght" 460;color:var(--stone);margin-bottom:36px;max-width:520px;}
 .book__cta{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.06em;background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:13px 26px;transition:all 180ms;width:fit-content;}
 .book__cta:hover{background:var(--gold);border-color:var(--gold);}
 .book__note{font-family:var(--sans);font-size:11px;color:var(--stone-2);margin-top:14px;}
