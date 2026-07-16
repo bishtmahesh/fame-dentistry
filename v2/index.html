@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A private dental practice with a concierge service for the business community on Scotland Street, Glasgow — opening summer 2026. Founded by Dr Ferhan Ahmed, MBChB · BDS.">
+  <meta name="author" content="FAME Dentistry">
+  
+  <title>FAME Dentistry — Glasgow</title>
+  
+  <!-- Premium Google Fonts: Prata (Editorial Serif) & Inter (Modern Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Shimmering Gold Scroll Progress Indicator (Coutts style) -->
+  <div class="scroll-progress" id="scroll-progress-bar"></div>
+
+  <!-- Section 1: Header (Grid Cell 1) -->
+  <header class="section-header grid-cell-header" id="section-header">
+    <div class="container-large header-container">
+      <div class="header-layout">
+        <a href="#" class="brand-logo" id="header-logo">FAME</a>
+        <span class="blueprint-tag-header">[BOARD_REF: 01 // HEADER_NAV]</span>
+        <nav class="header-nav" id="header-navigation">
+          <a href="#section-register" class="nav-link" id="nav-link-dentists">For Dentists</a>
+          <a href="#section-register" class="btn-outline" id="btn-enquire">Enquire</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="grid-layout-frame">
+    
+    <!-- Section 2: Hero Section (Grid Cell 2 & 3) -->
+    <section class="section-hero" id="section-hero">
+      <div class="container-large no-padding-mobile">
+        <div class="hero-grid-wrapper">
+          
+          <!-- Hero Content Cell -->
+          <div class="grid-cell hero-content-cell scroll-reveal">
+            <span class="blueprint-tag">[BOARD_REF: 02 // HERO_STAGE]</span>
+            <div class="hero-content" id="hero-header-content">
+              <p class="monospace-eyebrow scroll-reveal delay-1" id="hero-eyebrow">
+                Opening Summer 2026 · Scotland Street · Glasgow · By introduction and enquiry
+              </p>
+              <div class="divider-gold scroll-reveal delay-2" id="hero-gold-divider"></div>
+              <h1 class="hero-title scroll-reveal delay-3" id="hero-heading">
+                Decidedly different dentistry. Opening this summer on Scotland Street.
+              </h1>
+              <p class="body-text scroll-reveal delay-4" id="hero-desc">
+                A private dental practice with a concierge service for the business community on Scotland Street, Glasgow — opening summer 2026. Founded by Dr Ferhan Ahmed, MBChB · BDS.
+              </p>
+              <a href="#section-register" class="btn-navy scroll-reveal delay-5" id="hero-cta-btn">
+                <span>Register your interest</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Hero Image Cell -->
+          <div class="grid-cell hero-image-cell">
+            <span class="blueprint-tag">[BOARD_REF: 03 // VISUAL_SCHEMATIC: FACADE_EXTERIOR]</span>
+            <div class="hero-image-card scroll-reveal" id="hero-monumental-image">
+              <div class="image-wrapper">
+                <img src="assets/hero_exterior.png" alt="Fame Dental Clinic Exterior Architectural Photography" class="card-image" id="img-hero-exterior">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Register Your Interest Form (Grid Cell 4 & 5) -->
+    <section class="section-register" id="section-register">
+      <div class="container-large no-padding-mobile">
+        <div class="register-grid-wrapper">
+          
+          <!-- Left Column Content Cell -->
+          <div class="grid-cell register-head-cell scroll-reveal">
+            <span class="blueprint-tag">[BOARD_REF: 04 // REGISTRATION_STAGE]</span>
+            <div class="register-head">
+              <p class="monospace-eyebrow" id="register-eyebrow">Register your interest</p>
+              <h2 class="section-title" id="register-heading">Be among the first to be seen.</h2>
+              <p class="body-text" id="register-desc">
+                Share a few details below. You'll hear back from a real person — never an automated reply.
+              </p>
+              
+              <div class="register-image-card">
+                <div class="image-wrapper">
+                  <img src="assets/register_interior.png" alt="Fame Dentistry Travertine Reception Lobby" class="card-image" id="img-register-interior">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column Form Cell -->
+          <div class="grid-cell register-form-cell scroll-reveal">
+            <span class="blueprint-tag">[BOARD_REF: 05 // ENQUIRY_FORM]</span>
+            <div class="form-container" id="form-container-block">
+              <form action="#" class="registration-form" id="fame-enquiry-form" novalidate>
+                
+                <!-- Dropdown Field -->
+                <div class="field-interest form-field-group" id="field-group-interest">
+                  <label class="form-field-label" id="label-interest">What brings you to FAME?  (select one)  *</label>
+                  <div class="custom-select-wrapper" id="custom-select-wrapper-block">
+                    <div class="custom-select" id="custom-select-trigger">
+                      <span class="custom-select-trigger-text">Select one</span>
+                      <span class="custom-select-arrow">▾</span>
+                    </div>
+                    <div class="custom-options" id="custom-select-options">
+                      <div class="custom-option selected" data-value="">Select one</div>
+                      <div class="custom-option" data-value="general">General & Preventive Care</div>
+                      <div class="custom-option" data-value="cosmetic">Cosmetic Dentistry</div>
+                      <div class="custom-option" data-value="implants">Dental Implants & Reconstructive</div>
+                      <div class="custom-option" data-value="dentist-referral">Dentist Referring a Patient</div>
+                      <div class="custom-option" data-value="other">Other / Custom Enquiry</div>
+                    </div>
+                  </div>
+                  <!-- Hidden real select for form data -->
+                  <select name="interest" id="real-select-interest" required style="display: none;">
+                    <option value="" selected>Select one</option>
+                    <option value="general">General & Preventive Care</option>
+                    <option value="cosmetic">Cosmetic Dentistry</option>
+                    <option value="implants">Dental Implants & Reconstructive</option>
+                    <option value="dentist-referral">Dentist Referring a Patient</option>
+                    <option value="other">Other / Custom Enquiry</option>
+                  </select>
+                  <span class="field-error-message" id="error-interest">Please select an option.</span>
+                </div>
+
+                <!-- Name Input -->
+                <div class="field-name form-field-group" id="field-group-name">
+                  <label class="form-field-label" for="input-name" id="label-name">Your name  *</label>
+                  <div class="form-input-wrapper">
+                    <input type="text" id="input-name" name="name" required placeholder="First name, last name" class="form-input">
+                  </div>
+                  <span class="field-error-message" id="error-name">Please enter your name.</span>
+                </div>
+
+                <!-- Email Input -->
+                <div class="field-email form-field-group" id="field-group-email">
+                  <label class="form-field-label" for="input-email" id="label-email">Email address  *</label>
+                  <div class="form-input-wrapper">
+                    <input type="email" id="input-email" name="email" required placeholder="you@example.com" class="form-input">
+                  </div>
+                  <span class="field-error-message" id="error-email">Please enter a valid email address.</span>
+                </div>
+
+                <!-- Phone Input -->
+                <div class="field-phone form-field-group" id="field-group-phone">
+                  <label class="form-field-label" for="input-phone" id="label-phone">Phone number  (optional)</label>
+                  <div class="form-input-wrapper">
+                    <input type="tel" id="input-phone" name="phone" placeholder="Number" class="form-input">
+                  </div>
+                </div>
+
+                <!-- Notes Input -->
+                <div class="field-notes form-field-group" id="field-group-notes">
+                  <label class="form-field-label" for="input-notes" id="label-notes">Anything else?  (optional)</label>
+                  <div class="form-input-wrapper">
+                    <textarea id="input-notes" name="notes" placeholder="A specific concern, a timing preference, or how you heard about us." class="form-input form-textarea"></textarea>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-navy" id="btn-submit-enquiry">
+                  <span>Begin an enquiry</span>
+                  <span class="arrow">→</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: The Founder (Grid Cell 6 & 7) -->
+    <section class="section-founder" id="section-founder">
+      <div class="container-large no-padding-mobile">
+        <div class="founder-grid-wrapper">
+          
+          <!-- Left Column Portrait Cell -->
+          <div class="grid-cell founder-portrait-cell scroll-reveal">
+            <span class="blueprint-tag">[BOARD_REF: 06 // VISUAL_SCHEMATIC: DR_AHMED]</span>
+            <div class="founder-portrait-card">
+              <div class="image-wrapper">
+                <img src="assets/founder_portrait.png" alt="Dr Ferhan Ahmed Portrait" class="card-image" id="img-founder">
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column Content Cell -->
+          <div class="grid-cell founder-content-cell scroll-reveal">
+            <span class="blueprint-tag">[BOARD_REF: 07 // FOUNDER_FILE: CREDENTIALS]</span>
+            <div class="founder-content">
+              <p class="monospace-eyebrow" id="founder-eyebrow">The founder</p>
+              <h2 class="section-title" id="founder-heading">Dr Ferhan Ahmed</h2>
+              
+              <div class="founder-creds" id="founder-credentials">
+                <p class="monospace-eyebrow credential-item" id="cred-degrees">MBChB · BDS</p>
+                <p class="monospace-eyebrow credential-item" id="cred-specialties">Implant Surgery · International Lecturer · Mentor</p>
+              </div>
+              
+              <p class="body-text" id="founder-paragraph-1">
+                One of a small number of UK dentists with both medical and dental qualifications. International speaker and mentor to implant dentists across the UK and Europe.
+              </p>
+              <p class="body-text" id="founder-paragraph-2">
+                Currently practising in Edinburgh, where patients needing immediate care are welcome until FAME opens on Scotland Street, Glasgow this summer.
+              </p>
+              
+              <div class="text-style-quote" id="founder-quote-block">
+                <div class="quote-bar"></div>
+                <blockquote class="founder-quote" id="founder-quote-text">
+                  “I went back to study medicine because I wanted to understand the whole patient, not just the teeth. Twenty years later, that philosophy still shapes every procedure I do and every conversation I have with my patients.”
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: A Note from Ferhan (Grid Cell 8) -->
+    <section class="section-note" id="section-note">
+      <div class="container-large no-padding-mobile">
+        <div class="note-grid-wrapper">
+          
+          <div class="grid-cell note-content-cell scroll-reveal">
+            <span class="blueprint-tag">[BOARD_REF: 08 // FOUNDER_FILE: CORRESPONDENCE]</span>
+            <div class="note-layout">
+              <blockquote class="note-quote" id="note-quote-heading">
+                “Most of our <span class="note-italic-highlight">implant patients</span> and the advanced dental work we undertake is referred to us by other dentists.”
+              </blockquote>
+              
+              <div class="note-body-grid">
+                <p class="monospace-eyebrow note-author-eyebrow" id="note-eyebrow">A note from Ferhan</p>
+                <div class="note-body">
+                  <p class="body-text" id="note-paragraph-1">
+                    I've spent twenty years thinking about what dentistry could feel like if it were designed around the patient rather than around the practitioner's day. FAME is the practice I've been working towards my entire career.
+                  </p>
+                  <p class="body-text" id="note-paragraph-2">
+                    If something here resonates, register above. I read every enquiry personally before our PA replies.
+                  </p>
+                  <p class="signature" id="note-signature">— Ferhan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Section 6: Footer (Grid Cell 9 & 10) -->
+  <footer class="section-footer" id="section-footer">
+    <div class="container-large no-padding-mobile">
+      <div class="footer-grid-wrapper">
+        
+        <!-- Footer Info Cell -->
+        <div class="grid-cell footer-brand-cell">
+          <span class="blueprint-tag">[BOARD_REF: 09 // FOOTER_BRAND]</span>
+          <div class="footer-brand" id="footer-brand-info">
+            <p class="brand-logo" id="footer-logo">FAME</p>
+            <p class="footer-address" id="footer-text-address">
+              Corner of Scotland Street and Shields Road, Glasgow
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer Directories Cell -->
+        <div class="grid-cell footer-dirs-cell">
+          <span class="blueprint-tag">[BOARD_REF: 10 // FOOTER_DIRECTORIES]</span>
+          <div class="footer-layout">
+            
+            <div class="footer-grid">
+              <!-- Column 1 -->
+              <div class="footer-col" id="footer-col-care">
+                <p class="monospace-eyebrow footer-col-title" id="footer-title-care">Need care now?</p>
+                <div class="footer-list" id="footer-list-care">
+                  <p class="footer-list-item" id="footer-care-item-1">Dr Ahmed in Edinburgh</p>
+                  <p class="footer-list-item" id="footer-care-item-2">[phone number]</p>
+                </div>
+              </div>
+              
+              <!-- Column 2 -->
+              <div class="footer-col" id="footer-col-dentists">
+                <p class="monospace-eyebrow footer-col-title" id="footer-title-dentists">For Dentists</p>
+                <div class="footer-list" id="footer-list-dentists">
+                  <a href="#section-register" class="footer-list-item link-hover-line" id="footer-dentists-item-1">Refer a patient</a>
+                </div>
+              </div>
+              
+              <!-- Column 3 -->
+              <div class="footer-col" id="footer-col-contact">
+                <p class="monospace-eyebrow footer-col-title" id="footer-title-contact">Contact</p>
+                <div class="footer-list" id="footer-list-contact">
+                  <a href="mailto:enquiries@famedentistry.co.uk" class="footer-list-item link-hover-line" id="footer-contact-item-1">enquiries@famedentistry.co.uk</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Footer Row -->
+            <div class="footer-bottom" id="footer-bottom-row">
+              <p class="footer-bottom-item" id="footer-copyright">
+                © 2026 FAME Dentistry · By introduction and enquiry
+              </p>
+              <p class="footer-bottom-item" id="footer-regulatory">
+                Regulated by the General Dental Council & CQC
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Form Success -->
+  <div class="toast-notification" id="toast-success">
+    <div class="toast-content">
+      <p class="toast-title monospace-eyebrow">Enquiry Registered</p>
+      <p class="toast-message">Thank you. You will hear back from a real person shortly.</p>
+    </div>
+    <button class="toast-close" id="toast-close-btn">×</button>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; }
+    body {
+      background: #1a2233;
+      background-image: radial-gradient(circle at 78% 22%, rgba(201,169,110,0.16) 0%, rgba(26,34,51,0) 58%);
+      color: #f8f6f2;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    .frame {
+      position: absolute;
+      inset: 28px;
+      border: 1px solid rgba(201,169,110,0.55);
+    }
+    .inner {
+      position: absolute;
+      inset: 28px;
+      padding: 64px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+    .headline {
+      font-family: 'Prata', serif;
+      font-size: 84px;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: #f8f6f2;
+      max-width: 880px;
+    }
+    .sub {
+      font-size: 26px;
+      color: rgba(248,246,242,0.82);
+      margin-top: 22px;
+      letter-spacing: 0.2px;
+    }
+    .footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-family: 'Prata', serif;
+      font-size: 34px;
+      letter-spacing: 1px;
+      color: #c9a96e;
+    }
+    .wordmark span { color: #f8f6f2; }
+    .credentials {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.7);
+      text-align: right;
+    }
+    .rule {
+      width: 64px;
+      height: 2px;
+      background: #c9a96e;
+      margin: 28px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="inner">
+    <div>
+      <div class="eyebrow">Private Dental Practice · Glasgow</div>
+      <div class="rule"></div>
+    </div>
+    <div>
+      <div class="headline">Decidedly Different Dentistry.</div>
+      <div class="sub">Opening Summer 2026 · Scotland Street, Glasgow</div>
+    </div>
+    <div class="footer">
+      <div class="wordmark">FAME <span>Dentistry</span></div>
+      <div class="credentials">Dr Ferhan Ahmed<br />BDS · MFDS · MBChB</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 /* 
   FAME DENTISTRY — Landing Page Style System
-  Design Style: V3: Modern Asymmetric Editorial Lookbook
-  Tokens: Sandstone (#f3eee6), Alabaster (#fcfaf6), Midnight Slate Navy (#1A2233), Champagne Gold (#c5a059)
+  Design Style: V2: Architectural Grid Blueprint
+  Tokens: Sandstone, Slate Navy (#1A2233), Champagne Gold, and Wabi-Sabi Monospace Cataloging
 */
 
 :root {
@@ -9,7 +9,7 @@
   --color-alabaster-base: #fcfaf6;
   --color-sand-section: #f3eee6;
   --color-sand-highlight: #e7e0d4;
-  --color-obsidian-dark: #1A2233; /* Deep elite slate navy */
+  --color-obsidian-dark: #1A2233; /* Sophisticated deep slate navy */
   --color-obsidian-soft: #25314a; /* Hover state slate navy */
   --color-champagne-gold: #c5a059;
   --color-gold-translucent: rgba(197, 160, 89, 0.22);
@@ -19,107 +19,20 @@
   --color-error: #a83c3c;
   
   /* Fonts */
-  --font-serif: 'Prata', Georgia, serif;
+  --font-serif: 'Prata', 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Inter', sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
   
-  /* Transitions & Animation speeds */
+  /* Transitions */
   --transition-smooth: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-medium: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   --transition-fast: 0.25s ease;
 }
 
-/* Reset & Core Standards */
+/* Reset & Basics */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-style: normal !important;
-}
-
-/* V3 Typography Scale (Stripe-Inspired) */
-h1, .display-xxl {
-  font-family: var(--font-serif) !important;
-  font-size: clamp(40px, 5vw, 56px) !important;
-  font-weight: 300 !important;
-  line-height: 1.05 !important;
-  letter-spacing: -1.4px !important;
-  margin-bottom: 24px;
-}
-
-h2, .display-xl, .doors__title, .treatments__title, .concierge__title, .founders__title, .nps__title, .testimonials__title, .book__title, .insights__title, .enquiry-flow__title {
-  font-family: var(--font-serif) !important;
-  font-size: clamp(32px, 4vw, 48px) !important;
-  font-weight: 300 !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.96px !important;
-  margin-bottom: 20px;
-}
-
-h3, .display-lg, .door__q, .tcard__title, .fcard__name {
-  font-family: var(--font-serif) !important;
-  font-size: 32px !important;
-  font-weight: 400 !important;
-  line-height: 1.1 !important;
-  letter-spacing: -0.64px !important;
-  margin-bottom: 16px;
-}
-
-h4, .heading-md {
-  font-family: var(--font-sans) !important;
-  font-size: 20px !important;
-  font-weight: 500 !important;
-  line-height: 1.4 !important;
-  letter-spacing: -0.2px !important;
-  margin-bottom: 12px;
-}
-
-p, .body-lg, .door__p, .tcard__desc, .citem__t, .fcard__bio, .nps__copy, .nps__verbatim p, .tmn__quote, .book__body, .icard__exc, .concierge__lede {
-  font-family: var(--font-sans) !important;
-  font-size: 17px !important;
-  font-weight: 400 !important;
-  line-height: 1.6 !important;
-  letter-spacing: 0px !important;
-}
-
-small, .caption, .eyebrow, .doors__sub, .door__label, .door__num, .tcard__num, .fcard__role, .nps__lbl, .tmn__role, .tmn__type, .book__ey, .insights__all {
-  font-family: var(--font-sans) !important;
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  line-height: 1.5 !important;
-  letter-spacing: 2px !important;
-  text-transform: uppercase !important;
-}
-
-/* Modern Layout Overrides (Stripe/Spotify Inspired Geometry) */
-[data-name="button-primary"], [id^="btn-"], .btn, button {
-  border-radius: 9999px !important;
-  box-shadow: 0 4px 14px 0 rgba(26, 34, 51, 0.2) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-[data-name="button-primary"]:hover, [id^="btn-"]:hover, .btn:hover, button:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 24px 0 rgba(26, 34, 51, 0.3) !important;
-}
-
-/* Modern Card Geometries */
-.door, .tcard, .fcard, .citem, .icard, .nps__card {
-  border-radius: 16px !important;
-  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.06) !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  background-color: var(--color-pure-white);
-  border: 1px solid rgba(197, 160, 89, 0.1) !important;
-  overflow: hidden;
-}
-.door:hover, .tcard:hover, .fcard:hover, .citem:hover, .icard:hover, .nps__card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12) !important;
-  border-color: rgba(197, 160, 89, 0.35) !important;
-}
-
-/* Ensure embedded images respect the radius */
-.tcard__img, .fcard__img, .icard__img {
-  border-radius: 16px 16px 0 0 !important;
 }
 
 html {
@@ -178,27 +91,19 @@ body::before {
   box-shadow: 0 1px 10px rgba(197, 160, 89, 0.4);
 }
 
-/* Layout Utilities & Container Definitions */
+/* Layout Utilities & Widescreen Grid bounds */
 .container-large {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 64px;
+  padding: 0 64px; /* Generous breathing borders */
   width: 100%;
 }
 
-.padding-section-large {
-  padding: clamp(100px, 12vw, 160px) 0;
-}
-
-.padding-section-small {
-  padding: clamp(60px, 8vw, 100px) 0;
-}
-
-/* Typography Scale */
+/* Monospace Eyebrows (Le Labo & Coutts style) */
 .monospace-eyebrow {
   font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 13px; /* Unified size */
+  font-weight: 700; /* Unified bold weight */
   letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--color-champagne-gold);
@@ -225,13 +130,13 @@ body::before {
   color: var(--color-slate-gray);
 }
 
-/* Premium Buttons Styling */
+/* Buttons */
 .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 42px; /* Fixed absolute height */
-  padding: 0 30px; /* Precise padding from navigation */
+  height: 42px; /* Fixed height for visual consistency */
+  padding: 0 30px; /* Exact width padding from enquire button */
   line-height: 1;
   border: 1px solid var(--color-obsidian-dark);
   border-radius: 4px;
@@ -256,20 +161,20 @@ body::before {
 .btn-navy {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center to match Enquire outline button format */
   gap: 12px;
   height: 42px; /* Identical fixed height */
-  padding: 0 30px; /* Identical horizontal cushions */
+  padding: 0 30px; /* Identical width padding */
   line-height: 1;
   background-color: var(--color-obsidian-dark);
   color: var(--color-pure-white);
   border: 1px solid var(--color-obsidian-dark);
   border-radius: 4px;
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 11px; /* Identical font size */
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.24em; /* Identical letter spacing */
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition-smooth), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -295,16 +200,83 @@ body::before {
 }
 
 /* ==========================================================================
-   Section 1: Header
+   V2: Architectural Blueprint Grid Framework
    ========================================================================== */
+
+/* Interlocking Cell Grid wrapper alignments */
+.hero-grid-wrapper,
+.register-grid-wrapper,
+.founder-grid-wrapper,
+.footer-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Grid Cell Core Definition (Soho meets Le Labo & Coutts) */
+.grid-cell {
+  position: relative;
+  border: 1px solid var(--color-gold-translucent);
+  padding: clamp(60px, 8vw, 100px) clamp(32px, 5vw, 64px);
+  background-color: var(--color-alabaster-base);
+  margin: -0.5px; /* Border collapse to simulate thin single wireframe divider lines */
+  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s ease;
+  z-index: 1;
+}
+
+.grid-cell:hover {
+  background-color: rgba(197, 160, 89, 0.025); /* Elegant sand-gold highlight shimmer */
+  border-color: var(--color-champagne-gold);
+  z-index: 5; /* Elevates active cell borders above adjacent grid elements */
+  box-shadow: 0 25px 60px rgba(197, 160, 89, 0.05);
+}
+
+/* Le Labo Blueprint monospaced tag labels */
+.blueprint-tag {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-champagne-gold);
+  opacity: 0.65;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.blueprint-tag-header {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-champagne-gold);
+  opacity: 0.65;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* Header Cell Frame */
 .section-header {
-  background-color: rgba(252, 250, 246, 0.95);
+  background-color: var(--color-sand-section);
   border-bottom: 1px solid var(--color-gold-translucent);
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
+  background-color: rgba(243, 238, 230, 0.95);
   transition: all var(--transition-fast);
+}
+
+.header-container {
+  border-left: 1px solid var(--color-gold-translucent);
+  border-right: 1px solid var(--color-gold-translucent);
+  margin-bottom: -1px;
 }
 
 .header-layout {
@@ -315,21 +287,22 @@ body::before {
 }
 
 .brand-logo {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.46em;
+  color: var(--color-obsidian-dark);
   text-decoration: none;
+  text-transform: uppercase;
+  margin-right: -0.46em;
   position: relative;
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
+  transition: letter-spacing 0.8s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
 }
 
-.logo-image {
-  height: 46px;
-  width: auto;
-  display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.brand-logo:hover .logo-image {
-  transform: scale(1.04);
+.brand-logo:hover {
+  letter-spacing: 0.58em;
+  color: var(--color-champagne-gold);
 }
 
 .header-nav {
@@ -370,26 +343,84 @@ body::before {
   width: 100%;
 }
 
-/* ==========================================================================
-   Section 2: Hero Section (Modern Asymmetric Split)
-   ========================================================================== */
-.section-hero {
-  background-color: var(--color-sand-section); /* Cozy breathing sandstone banner background */
-  border-bottom: 1px solid var(--color-gold-translucent);
+/* Editorial Gold Highlights */
+.title-italic-highlight,
+.note-italic-highlight {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-champagne-gold);
+  font-weight: 400;
 }
 
-.hero-layout-asymmetric {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr; /* Spacious asymmetry */
+/* Image Card Box System */
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--color-sand-section);
+  border: 1px solid var(--color-gold-translucent);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+/* Image Hover Shimmers & Gold Glows */
+.hero-image-card,
+.register-image-card,
+.founder-portrait-card {
+  transition: transform var(--transition-smooth), box-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.8s ease;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.hero-image-card:hover .card-image,
+.register-image-card:hover .card-image,
+.founder-portrait-card:hover .card-image {
+  transform: scale(1.025);
+}
+
+.hero-image-card:hover,
+.register-image-card:hover,
+.founder-portrait-card:hover {
+  box-shadow: 0 40px 90px rgba(197, 160, 89, 0.15); /* Warm gold ambient back-glow */
+  border-color: rgba(197, 160, 89, 0.25);
+}
+
+/* ==========================================================================
+   Section 2: Hero Grid Sizing
+   ========================================================================== */
+.section-hero {
+  background-color: var(--color-alabaster-base);
+}
+
+.hero-grid-wrapper {
+  grid-template-columns: 1.15fr 0.85fr; /* Asymmetric grid columns */
+}
+
+.hero-content-cell {
+  background-color: var(--color-alabaster-base);
+}
+
+.hero-image-cell {
+  background-color: var(--color-sand-section); /* Contrast cell background */
+  display: flex;
   align-items: center;
-  gap: 64px;
+  justify-content: center;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  max-width: 650px;
+  max-width: 900px;
+}
+
+#hero-eyebrow {
+  position: relative;
+  top: 10px; /* relative shift down closer to gold divider */
 }
 
 .divider-gold {
@@ -407,150 +438,81 @@ body::before {
   color: var(--color-obsidian-dark);
 }
 
-.hero-cta-wrapper {
-  margin-top: 12px;
-}
-
-/* Large Floating Architectural Image frame with offsets */
-.hero-image-card-asymmetric {
-  position: relative;
+.hero-image-card {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.06);
   width: 100%;
-  transform: rotate(0.5deg) translateY(10px);
-  transition: transform var(--transition-smooth);
 }
 
-.image-wrapper-editorial {
-  overflow: hidden;
-  border-radius: 4px;
-  border: 1px solid var(--color-champagne-gold);
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.08);
-  background-color: var(--color-alabaster-base);
-}
-
-.hero-image-card-asymmetric .image-wrapper-editorial {
-  aspect-ratio: 4 / 5;
-}
-
-.card-image {
+.hero-image-card .image-wrapper {
+  aspect-ratio: auto;
+  height: 55vh;
+  min-height: 440px;
+  max-height: 600px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-smooth);
-}
-
-.hero-image-card-asymmetric:hover {
-  transform: rotate(0deg) translateY(0);
-}
-
-.hero-image-card-asymmetric:hover .card-image {
-  transform: scale(1.03);
-}
-
-/* Monospace technical labels */
-.image-caption-tag {
-  margin-top: 16px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: var(--color-champagne-gold);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-transform: uppercase;
-}
-
-.caption-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: var(--color-champagne-gold);
-  display: inline-block;
 }
 
 /* ==========================================================================
-   Section 3: Register & Luxury Apothecary Form
+   Section 3: Register & Form Cells
    ========================================================================== */
 .section-register {
   background-color: var(--color-alabaster-base);
-  border-bottom: 1px solid var(--color-gold-translucent);
 }
 
-.register-split-asymmetric {
-  display: grid;
-  grid-template-columns: 1fr 1.05fr; /* Distinct columns for asymmetric weight */
-  gap: 80px;
-  align-items: flex-start;
+.register-grid-wrapper {
+  grid-template-columns: 1fr 1fr;
 }
 
-.register-head-editorial {
+.register-head-cell {
+  background-color: var(--color-alabaster-base);
+}
+
+.register-form-cell {
+  background-color: var(--color-sand-section); /* Form card cell contrast */
+}
+
+.register-head {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
 
-.register-image-card-editorial {
-  margin-top: 40px;
+.register-head .register-image-card {
+  margin-top: 48px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03);
 }
 
-.register-image-card-editorial .image-wrapper-editorial {
+.register-head .register-image-card .image-wrapper {
   aspect-ratio: 16 / 10;
-  transform: rotate(-0.5deg);
-  transition: transform var(--transition-smooth);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.05);
 }
 
-.register-image-card-editorial:hover .image-wrapper-editorial {
-  transform: rotate(0deg);
-}
-
-.register-image-card-editorial:hover .card-image {
-  transform: scale(1.025);
-}
-
-/* Floating Luxury Apothecary Enquiry Card */
-.form-container-editorial {
+/* Forms (Hims & Ro style minimal luxury inside cell) */
+.form-container {
   background-color: var(--color-pure-white);
   border: 1px solid var(--color-gold-translucent);
   border-radius: 8px;
   padding: 56px;
-  box-shadow: 0 30px 80px rgba(197, 160, 89, 0.08); /* Soft gold ambient glow */
-  position: relative;
-  transition: box-shadow var(--transition-medium);
-}
-
-.form-container-editorial:hover {
-  box-shadow: 0 40px 90px rgba(197, 160, 89, 0.12);
-}
-
-.form-title {
-  font-family: var(--font-serif);
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: -0.015em;
-  color: var(--color-obsidian-dark);
-  margin-bottom: 36px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.03);
 }
 
 .registration-form {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 36px;
 }
 
-/* Floating Input Groups */
 .form-field-group {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 12px 16px;
-  margin: -12px -16px;
+  padding: 16px 20px;
+  margin: -16px -20px;
   border-radius: 6px;
-  transition: background-color var(--transition-fast);
+  transition: background-color 0.4s ease;
 }
 
 .form-field-group:focus-within,
 .form-field-group.focused-select {
-  background-color: rgba(197, 160, 89, 0.03); /* Soft active sandstone glow */
+  background-color: rgba(197, 160, 89, 0.035); /* Elegant warm hover glow */
 }
 
 .form-field-label {
@@ -560,7 +522,7 @@ body::before {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-slate-gray);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   transition: color var(--transition-fast);
 }
 
@@ -594,8 +556,8 @@ body::before {
   border-bottom: 1px solid var(--color-ash-mist);
   background: transparent;
   padding: 12px 0 14px 0;
-  font-family: var(--font-sans);
-  font-size: 16px;
+  font-family: var(--font-serif);
+  font-size: 20px;
   color: var(--color-obsidian-dark);
   transition: all var(--transition-fast);
   outline: none;
@@ -604,7 +566,8 @@ body::before {
 .form-input::placeholder {
   color: var(--color-slate-gray);
   opacity: 0.45;
-  font-size: 16px;
+  font-family: var(--font-serif);
+  font-size: 20px;
 }
 
 .form-input:focus {
@@ -617,10 +580,15 @@ body::before {
 
 .form-textarea {
   resize: vertical;
-  min-height: 90px;
+  min-height: 80px;
+  font-size: 18px;
 }
 
-/* Bespoke Select Dropdown styling */
+.form-textarea::placeholder {
+  font-size: 18px;
+}
+
+/* Custom Dropdown select */
 .custom-select-wrapper {
   position: relative;
   user-select: none;
@@ -645,8 +613,8 @@ body::before {
 }
 
 .custom-select-trigger-text {
-  font-family: var(--font-sans);
-  font-size: 16px;
+  font-family: var(--font-serif);
+  font-size: 20px;
   color: var(--color-obsidian-dark);
   opacity: 0.45;
   transition: opacity var(--transition-fast);
@@ -690,8 +658,8 @@ body::before {
 
 .custom-option {
   padding: 14px 20px;
-  font-family: var(--font-sans);
-  font-size: 15px;
+  font-family: var(--font-serif);
+  font-size: 18px;
   color: var(--color-slate-gray);
   transition: all var(--transition-fast);
 }
@@ -704,10 +672,10 @@ body::before {
 .custom-option.selected {
   background-color: var(--color-sand-highlight);
   color: var(--color-obsidian-dark);
-  font-weight: 600;
+  font-weight: 500;
 }
 
-/* Error configurations */
+/* Error states */
 .form-field-group.error .form-input {
   border-bottom-color: var(--color-error);
 }
@@ -731,40 +699,36 @@ body::before {
 }
 
 /* ==========================================================================
-   Section 4: The Founder (Editorial Portrait & Quote overlap)
+   Section 4: The Founder
    ========================================================================== */
 .section-founder {
-  background-color: var(--color-sand-section);
-  border-bottom: 1px solid var(--color-gold-translucent);
+  background-color: var(--color-alabaster-base);
 }
 
-.founder-grid-asymmetric {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr; /* Asymmetrical split */
-  gap: 80px;
+.founder-grid-wrapper {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.founder-portrait-cell {
+  background-color: var(--color-sand-section); /* portrait background contrast */
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.founder-portrait-card-editorial {
+.founder-portrait-card {
   width: 100%;
 }
 
-.founder-portrait-card-editorial .image-wrapper-editorial {
+.founder-portrait-card .image-wrapper {
   aspect-ratio: 4 / 5;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
-  transform: rotate(-0.5deg);
-  transition: transform var(--transition-smooth);
 }
 
-.founder-portrait-card-editorial:hover .image-wrapper-editorial {
-  transform: rotate(0deg);
+.founder-content-cell {
+  background-color: var(--color-alabaster-base);
 }
 
-.founder-portrait-card-editorial:hover .card-image {
-  transform: scale(1.03);
-}
-
-.founder-content-editorial {
+.founder-content {
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -781,16 +745,13 @@ body::before {
 
 .credential-item {
   color: var(--color-obsidian-dark);
-  font-weight: 700;
+  font-weight: 600;
 }
 
-/* Beautiful overlapping quote block */
-.text-style-quote-editorial {
+.text-style-quote {
   display: flex;
   gap: 24px;
   margin-top: 20px;
-  position: relative;
-  z-index: 2;
 }
 
 .quote-bar {
@@ -800,30 +761,53 @@ body::before {
 }
 
 .founder-quote {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-style: italic;
-  font-size: 22px;
-  line-height: 1.5;
+  font-size: clamp(20px, 2.5vw, 25px);
+  line-height: 1.45;
   color: var(--color-obsidian-dark);
-  letter-spacing: -0.01em;
 }
 
 /* ==========================================================================
-   Section 5: Note Section (Rich Obsidian Navy Full Panel)
+   Section 5: Dark Note Cell (Immersive Obsidian Navy Grid)
    ========================================================================== */
 .section-note {
   background-color: var(--color-obsidian-dark);
-  color: var(--color-pure-white);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.note-layout-asymmetric {
+.note-grid-wrapper {
+  grid-template-columns: 1fr;
+}
+
+.note-content-cell {
+  background-color: var(--color-obsidian-dark);
+  color: var(--color-pure-white);
+  border-color: rgba(255, 255, 255, 0.12); /* Subtle dark border lines */
+}
+
+/* Subtle background accent graphic line inside cell */
+.note-content-cell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8%;
+  bottom: 0;
+  width: 1px;
+  background: rgba(197, 160, 89, 0.08);
+}
+
+.note-content-cell:hover {
+  background-color: #1f2738; /* Soft shimmering slate glow */
+  border-color: var(--color-champagne-gold);
+}
+
+.note-layout {
   display: flex;
   flex-direction: column;
   gap: 56px;
 }
 
-.note-quote-editorial {
+.note-quote {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: clamp(26px, 3.8vw, 36px);
@@ -835,15 +819,9 @@ body::before {
   padding-left: 32px;
 }
 
-.note-italic-highlight {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--color-champagne-gold);
-}
-
-.note-body-grid-editorial {
+.note-body-grid {
   display: grid;
-  grid-template-columns: 0.45fr 1.55fr; /* Staggered split */
+  grid-template-columns: 0.45fr 1.55fr;
   gap: 80px;
   border-top: 1px solid rgba(255,255,255,0.12);
   padding-top: 48px;
@@ -853,41 +831,41 @@ body::before {
   color: var(--color-champagne-gold);
 }
 
-.note-body-editorial {
+.note-body {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
 
-.note-body-editorial .body-text {
-  color: rgba(252, 250, 246, 0.85); /* Breath alabaster on dark note */
+.note-body .body-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(17px, 2.2vw, 19px);
 }
 
-.signature-editorial {
+.note-body .signature {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 26px;
   color: var(--color-champagne-gold);
-  margin-top: 10px;
 }
 
 /* ==========================================================================
-   Section 6: Footer (Bespoke Staggered Directory)
+   Section 6: Footer cells
    ========================================================================== */
 .section-footer {
   background-color: var(--color-sand-section);
 }
 
-.footer-layout-editorial {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+.footer-grid-wrapper {
+  grid-template-columns: 1.2fr 2.8fr;
 }
 
-.footer-grid-editorial {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr; /* High-end spread directories */
-  gap: 48px;
+.footer-brand-cell {
+  background-color: var(--color-sand-section);
+}
+
+.footer-dirs-cell {
+  background-color: var(--color-sand-section);
 }
 
 .footer-brand {
@@ -896,8 +874,8 @@ body::before {
   gap: 16px;
 }
 
-.footer-brand .logo-image {
-  height: 40px;
+.footer-brand .brand-logo {
+  font-size: 24px;
 }
 
 .footer-address {
@@ -908,6 +886,18 @@ body::before {
   line-height: 1.6;
 }
 
+.footer-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+}
+
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -916,7 +906,7 @@ body::before {
 
 .footer-col-title {
   color: var(--color-obsidian-dark);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 10px;
 }
 
@@ -959,7 +949,7 @@ body::before {
   width: 100%;
 }
 
-.footer-bottom-editorial {
+.footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -979,11 +969,11 @@ body::before {
 }
 
 /* ==========================================================================
-   Toast Success System
+   Toast Alerts & Dynamic Scroll-Reveals
    ========================================================================== */
 .toast-notification {
   position: fixed;
-  bottom: 64px;
+  bottom: -100px;
   right: 64px;
   background-color: var(--color-obsidian-dark);
   color: var(--color-pure-white);
@@ -994,20 +984,13 @@ body::before {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(40px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+  transition: all var(--transition-smooth);
   z-index: 200;
   max-width: 420px;
-  pointer-events: none;
 }
 
 .toast-notification.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
+  bottom: 64px;
 }
 
 .toast-content {
@@ -1042,23 +1025,11 @@ body::before {
   color: var(--color-pure-white);
 }
 
-@media (max-width: 768px) {
-  .toast-notification {
-    right: 16px !important;
-    left: 16px !important;
-    bottom: 16px !important;
-    max-width: none !important;
-    padding: 16px 20px !important;
-  }
-}
-
-/* ==========================================================================
-   Scroll-Reveal Animations
-   ========================================================================== */
+/* Staggered Delay Scroll Reveals */
 .scroll-reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(40px);
+  transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1), transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scroll-reveal.active {
@@ -1072,44 +1043,55 @@ body::before {
 .delay-4 { transition-delay: 0.4s; }
 .delay-5 { transition-delay: 0.5s; }
 
+/* Soho-House Cinematic Clip-path entrance reveal for the monumental visual card */
+@keyframes cinematicReveal {
+  0% {
+    clip-path: polygon(6% 8%, 94% 8%, 94% 92%, 6% 92%);
+    opacity: 0;
+    transform: scale(1.03) translateY(20px);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.hero-image-card {
+  opacity: 0;
+  animation: cinematicReveal 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+}
+
 /* ==========================================================================
-   Responsive Architecture & Breakpoint Engines
+   Responsive Sizing Grid Engines
    ========================================================================== */
+
 @media (max-width: 1200px) {
   .container-large {
     padding: 0 40px;
   }
   
-  .hero-layout-asymmetric,
-  .register-split-asymmetric,
-  .founder-grid-asymmetric {
-    grid-template-columns: 1fr; /* Natural structural wrapping on tablet bounds */
-    gap: 56px;
+  .hero-grid-wrapper,
+  .register-grid-wrapper,
+  .founder-grid-wrapper,
+  .footer-grid-wrapper {
+    grid-template-columns: 1fr; /* Collapse modular grid on tablets/mobile */
   }
   
-  .hero-image-card-asymmetric {
-    order: -1; /* Exterior visual moves above text content on smaller sizes */
+  .hero-image-cell {
+    order: -1; /* Exterior visual moves above heading */
+  }
+  
+  .hero-image-card .image-wrapper {
+    height: 50vh;
+    min-height: 380px;
+  }
+  
+  .founder-portrait-card {
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  .hero-image-card-asymmetric .image-wrapper-editorial {
-    aspect-ratio: 16 / 10;
-  }
-  
-  .register-image-card-editorial {
-    max-width: 600px;
-    margin: 40px auto 0 auto;
-  }
-  
-  .founder-portrait-card-editorial {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .footer-grid-editorial {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    width: 100%;
   }
 }
 
@@ -1118,15 +1100,33 @@ body::before {
     padding: 0 24px;
   }
   
-  .padding-section-large {
-    padding: 80px 0;
+  /* Disable container borders for clean mobile card flows */
+  .container-large.no-padding-mobile {
+    padding: 0;
   }
   
-  .form-container-editorial {
+  .grid-cell {
+    padding: 60px 24px;
+  }
+  
+  .blueprint-tag {
+    top: 16px;
+    left: 24px;
+  }
+  
+  .header-layout {
+    height: 80px;
+  }
+  
+  .header-nav {
+    gap: 24px;
+  }
+  
+  .form-container {
     padding: 40px 24px;
   }
   
-  .note-body-grid-editorial {
+  .note-body-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -1138,7 +1138,7 @@ body::before {
   }
   
   .header-nav {
-    gap: 20px;
+    gap: 12px;
   }
   
   .nav-link {
@@ -1146,23 +1146,32 @@ body::before {
     letter-spacing: 0.1em;
   }
   
-  .btn-outline,
-  .btn-navy {
-    padding: 0 20px;
-    height: 38px;
+  .btn-outline {
+    padding: 0 16px;
+    height: 36px;
     font-size: 10px;
     letter-spacing: 0.15em;
   }
   
-  .hero-title {
-    font-size: 34px;
+  .btn-navy {
+    padding: 0 20px;
+    height: 36px;
+    font-size: 10px;
+    letter-spacing: 0.15em;
   }
   
-  .form-title {
-    font-size: 24px;
+  .hero-image-card .image-wrapper {
+    height: 40vh;
+    min-height: 280px;
   }
   
-  .footer-grid-editorial {
+  .footer-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .custom-select-trigger-text,
+  .form-input,
+  .form-input::placeholder {
+    font-size: 17px;
   }
 }

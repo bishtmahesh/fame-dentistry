@@ -19,9 +19,9 @@
   --color-error: #a83c3c;
   
   /* Fonts */
-  --font-serif: 'Prata', Georgia, serif;
+  --font-serif: 'Prata', 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', Courier, monospace;
   
   /* Transitions & Animation speeds */
   --transition-smooth: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -34,92 +34,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-style: normal !important;
-}
-
-/* V3 Typography Scale (Stripe-Inspired) */
-h1, .display-xxl {
-  font-family: var(--font-serif) !important;
-  font-size: clamp(40px, 5vw, 56px) !important;
-  font-weight: 300 !important;
-  line-height: 1.05 !important;
-  letter-spacing: -1.4px !important;
-  margin-bottom: 24px;
-}
-
-h2, .display-xl, .doors__title, .treatments__title, .concierge__title, .founders__title, .nps__title, .testimonials__title, .book__title, .insights__title, .enquiry-flow__title {
-  font-family: var(--font-serif) !important;
-  font-size: clamp(32px, 4vw, 48px) !important;
-  font-weight: 300 !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.96px !important;
-  margin-bottom: 20px;
-}
-
-h3, .display-lg, .door__q, .tcard__title, .fcard__name {
-  font-family: var(--font-serif) !important;
-  font-size: 32px !important;
-  font-weight: 400 !important;
-  line-height: 1.1 !important;
-  letter-spacing: -0.64px !important;
-  margin-bottom: 16px;
-}
-
-h4, .heading-md {
-  font-family: var(--font-sans) !important;
-  font-size: 20px !important;
-  font-weight: 500 !important;
-  line-height: 1.4 !important;
-  letter-spacing: -0.2px !important;
-  margin-bottom: 12px;
-}
-
-p, .body-lg, .door__p, .tcard__desc, .citem__t, .fcard__bio, .nps__copy, .nps__verbatim p, .tmn__quote, .book__body, .icard__exc, .concierge__lede {
-  font-family: var(--font-sans) !important;
-  font-size: 17px !important;
-  font-weight: 400 !important;
-  line-height: 1.6 !important;
-  letter-spacing: 0px !important;
-}
-
-small, .caption, .eyebrow, .doors__sub, .door__label, .door__num, .tcard__num, .fcard__role, .nps__lbl, .tmn__role, .tmn__type, .book__ey, .insights__all {
-  font-family: var(--font-sans) !important;
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  line-height: 1.5 !important;
-  letter-spacing: 2px !important;
-  text-transform: uppercase !important;
-}
-
-/* Modern Layout Overrides (Stripe/Spotify Inspired Geometry) */
-[data-name="button-primary"], [id^="btn-"], .btn, button {
-  border-radius: 9999px !important;
-  box-shadow: 0 4px 14px 0 rgba(26, 34, 51, 0.2) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-[data-name="button-primary"]:hover, [id^="btn-"]:hover, .btn:hover, button:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 24px 0 rgba(26, 34, 51, 0.3) !important;
-}
-
-/* Modern Card Geometries */
-.door, .tcard, .fcard, .citem, .icard, .nps__card {
-  border-radius: 16px !important;
-  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.06) !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  background-color: var(--color-pure-white);
-  border: 1px solid rgba(197, 160, 89, 0.1) !important;
-  overflow: hidden;
-}
-.door:hover, .tcard:hover, .fcard:hover, .citem:hover, .icard:hover, .nps__card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12) !important;
-  border-color: rgba(197, 160, 89, 0.35) !important;
-}
-
-/* Ensure embedded images respect the radius */
-.tcard__img, .fcard__img, .icard__img {
-  border-radius: 16px 16px 0 0 !important;
 }
 
 html {

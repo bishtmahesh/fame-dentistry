@@ -1,24 +1,39 @@
 # OS
 .DS_Store
+Thumbs.db
 
-# Reference library (separate repo) and design notes
+# Large binary files — not for git
+*.pdf
+*.dmg
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.zip
+
+# Raw photos (not in /assets)
+DSC*.jpg
+DSC*.JPG
+DSC*.png
+
+# Node
+node_modules/
+
+# Vercel CLI project link
+.vercel/
+
+# Reference-only external repo, not part of the deployed site
 awesome-design-md/
-DESIGN.md
 
-# Old iterations / backups (not part of the live site)
-v1/
-v2/
-v3/
-v4/
-index_prev_backup.html
+# Editor
+.vscode/
+.idea/
 
-# Local OG render template (the generated og-image.jpg is what ships)
-assets/og-template.html
-.vercel
-
-# Raw stock source (optimized version lives in assets/)
-AdobeStock_512017985.jpeg
-Dr ferhan'.png
-
-# Tailwind build deps (generated CSS ships in assets/)
-.build/node_modules/
+# Backup HTML files (dev use only, not deployed)
+*_backup*.html
+*_prev*.html
+*_modern*.html
+*_v3*.html
+*_v4*.html
+*_head*.html
+live.html
