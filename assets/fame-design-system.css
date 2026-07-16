@@ -1859,6 +1859,36 @@ button,input,select,textarea{font:inherit;}
   box-shadow: none;
 }
 
+/* S04 4-Column Layout */
+.treatments__layout-4col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 600px) {
+  .treatments__layout-4col {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .treatments__layout-4col {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+}
+.treatments__layout-4col .tcard {
+  background: #f4f2ee; /* Very soft warm gray */
+  border: none;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+}
+
 /* S05 Layout Update */
 .concierge--cards-right {
   display: grid;
