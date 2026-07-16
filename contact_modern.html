@@ -92,16 +92,31 @@
     <p class="contact-form-panel__sub">A real person reads every enquiry before responding. Usually within two hours during business hours.</p>
 
     <form class="form" id="enquiry-form">
-      <div class="form__field">
+      <div class="form__field form-field-group" id="field-group-interest">
         <label class="form__label" for="enquiry-type">What brings you to FAME? <span style="font-weight:400;text-transform:none;letter-spacing:0">(select one)</span></label>
-        <select class="form__input form__select" id="enquiry-type" name="enquiry_type" required>
+        <div class="custom-select-wrapper w-full relative" id="custom-select-wrapper-block">
+          <div class="border-b border-[#C9A96E] border-solid flex items-center justify-between pb-[12px] pt-[10px] w-full cursor-pointer" id="custom-select-trigger">
+            <span class="custom-select-trigger-text font-inter text-[16px] md:text-[18px] text-[#1A2233] whitespace-nowrap">Select one</span>
+            <svg class="custom-select-arrow block w-[16px] h-[16px] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          </div>
+          <div class="custom-options absolute top-[100%] left-0 right-0 bg-[#F8F6F2] border border-[#C9A96E] z-50 py-2 mt-0 hidden" id="custom-select-options">
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors selected" data-value="">Select one</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="General Dentistry">General Dentistry</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Dental Implants">Dental Implants</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Cosmetic Dentistry">Cosmetic Dentistry</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Treatment Under Sedation">Treatment Under Sedation</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Hygiene">Hygiene</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Other / Custom Enquiry">Other / Custom Enquiry</div>
+          </div>
+        </div>
+        <select class="form__input form__select" id="enquiry-type" name="enquiry_type" required style="display:none">
           <option value="">Select one</option>
-          <option>General Dentistry</option>
-          <option>Dental Implants</option>
-          <option>Cosmetic Dentistry</option>
-          <option>Treatment Under Sedation</option>
-          <option>Hygiene</option>
-          <option>Other / Custom Enquiry</option>
+          <option value="General Dentistry">General Dentistry</option>
+          <option value="Dental Implants">Dental Implants</option>
+          <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+          <option value="Treatment Under Sedation">Treatment Under Sedation</option>
+          <option value="Hygiene">Hygiene</option>
+          <option value="Other / Custom Enquiry">Other / Custom Enquiry</option>
         </select>
       </div>
       <div class="form__field">
@@ -172,16 +187,31 @@ function resetForm() {
     <p class="contact-form-panel__sub">A real person reads every enquiry before responding. Usually within two hours during business hours.</p>
 
     <form class="form" id="enquiry-form">
-      <div class="form__field">
+      <div class="form__field form-field-group" id="field-group-interest">
         <label class="form__label" for="enquiry-type">What brings you to FAME? <span style="font-weight:400;text-transform:none;letter-spacing:0">(select one)</span></label>
-        <select class="form__input form__select" id="enquiry-type" name="enquiry_type" required>
+        <div class="custom-select-wrapper w-full relative" id="custom-select-wrapper-block">
+          <div class="border-b border-[#C9A96E] border-solid flex items-center justify-between pb-[12px] pt-[10px] w-full cursor-pointer" id="custom-select-trigger">
+            <span class="custom-select-trigger-text font-inter text-[16px] md:text-[18px] text-[#1A2233] whitespace-nowrap">Select one</span>
+            <svg class="custom-select-arrow block w-[16px] h-[16px] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          </div>
+          <div class="custom-options absolute top-[100%] left-0 right-0 bg-[#F8F6F2] border border-[#C9A96E] z-50 py-2 mt-0 hidden" id="custom-select-options">
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors selected" data-value="">Select one</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="General Dentistry">General Dentistry</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Dental Implants">Dental Implants</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Cosmetic Dentistry">Cosmetic Dentistry</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Treatment Under Sedation">Treatment Under Sedation</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Hygiene">Hygiene</div>
+            <div class="custom-option px-5 py-[14px] font-inter text-[14px] md:text-[16px] text-[#1A2233] hover:text-[#C9A96E] hover:bg-transparent cursor-pointer transition-colors" data-value="Other / Custom Enquiry">Other / Custom Enquiry</div>
+          </div>
+        </div>
+        <select class="form__input form__select" id="enquiry-type" name="enquiry_type" required style="display:none">
           <option value="">Select one</option>
-          <option>General Dentistry</option>
-          <option>Dental Implants</option>
-          <option>Cosmetic Dentistry</option>
-          <option>Treatment Under Sedation</option>
-          <option>Hygiene</option>
-          <option>Other / Custom Enquiry</option>
+          <option value="General Dentistry">General Dentistry</option>
+          <option value="Dental Implants">Dental Implants</option>
+          <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+          <option value="Treatment Under Sedation">Treatment Under Sedation</option>
+          <option value="Hygiene">Hygiene</option>
+          <option value="Other / Custom Enquiry">Other / Custom Enquiry</option>
         </select>
       </div>
       <div class="form__field">
