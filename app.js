@@ -34,10 +34,77 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     2. Custom Dropdown Select Component
-     Handled by assets/fame-system.js (initCustomSelect) to avoid two scripts
-     fighting over the same 'open' class on #custom-select-wrapper-block.
+     2. Custom Dropdown Select Component (Apothecary style)
      ========================================================================== */
+  const customSelectWrapper = document.getElementById('custom-select-wrapper-block');
+  const customTrigger = document.getElementById('custom-select-trigger');
+  const triggerText = customTrigger ? customTrigger.querySelector('.custom-select-trigger-text') : null;
+  const customOptionsContainer = document.getElementById('custom-select-options');
+  const customOptions = customOptionsContainer ? customOptionsContainer.querySelectorAll('.custom-option') : [];
+  const realSelect = document.getElementById('real-select-interest') || document.getElementById('enquiry-type');
+  const fieldGroupInterest = document.getElementById('field-group-interest');
+  
+  if (customSelectWrapper && customTrigger && triggerText && customOptionsContainer) {
+    // Toggle Options Menu
+    customTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = customSelectWrapper.classList.toggle('open');
+      if (fieldGroupInterest) {
+        if (isOpen) {
+          fieldGroupInterest.classList.add('focused-select');
+        } else {
+          fieldGroupInterest.classList.remove('focused-select');
+        }
+      }
+    });
+
+    // Handle Option Selection
+    customOptions.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const val = option.getAttribute('data-value');
+        const text = option.textContent;
+        
+        // Update hidden native select
+        if (realSelect) {
+          realSelect.value = val;
+          realSelect.dispatchEvent(new Event('change'));
+        }
+        
+        // Update custom trigger label
+        triggerText.textContent = text;
+        
+        // Toggle placeholder styling opacity
+        if (val === '') {
+          triggerText.style.opacity = '0.45'; // keep original placeholder opacity
+        } else {
+          triggerText.style.opacity = '1';
+          // Clear error if selected valid option
+          if (fieldGroupInterest) {
+            fieldGroupInterest.classList.remove('error');
+          }
+        }
+        
+        // Toggle selected class among list
+        customOptions.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+        
+        // Close dropdown
+        customSelectWrapper.classList.remove('open');
+        if (fieldGroupInterest) {
+          fieldGroupInterest.classList.remove('focused-select');
+        }
+      });
+    });
+
+    // Close dropdown on outside click
+    document.addEventListener('click', () => {
+      customSelectWrapper.classList.remove('open');
+      if (fieldGroupInterest) {
+        fieldGroupInterest.classList.remove('focused-select');
+      }
+    });
+  }
 
   // Pre-select dentist referral when dentist CTAs are clicked
   const selectDentistReferral = (e) => {
