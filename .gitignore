@@ -15,6 +15,18 @@ Thumbs.db
 DSC*.jpg
 DSC*.JPG
 DSC*.png
+DSC*.webp
+AdobeStock_*.jpeg
+AdobeStock_*.jpg
+DJI_*.jpg
+DJI_*.webp
+DJI_*(*).jpg
+Payvand Images/
+Payvand Images-*.zip
+
+# Editor/tooling folders not part of the site
+.vercel/
+awesome-design-md/
 
 # Node
 node_modules/
