@@ -139,7 +139,7 @@ small, .caption, .eyebrow, .door__label, .door__num, .tcard__num, .fcard__role, 
 }
 
 /* Modern Card Geometries */
-.door, .tcard, .fcard, .citem, .icard, .nps__card, .type-card, .step, .tmn, .proof {
+.door, .tcard, .fcard, .citem, .icard, .nps__card, .type-card, .step, .tmn, .proof, .trt, .tg-card, .check {
   border-radius: var(--card-radius) !important;
   box-shadow: none !important;
   margin: var(--space-1) !important;
@@ -148,7 +148,7 @@ small, .caption, .eyebrow, .door__label, .door__num, .tcard__num, .fcard__role, 
   border: 1px solid rgba(197, 160, 89, 0.1) !important;
   overflow: hidden;
 }
-.door:hover, .tcard:hover, .fcard:hover, .citem:hover, .icard:hover, .nps__card:hover, .type-card:hover, .step:hover, .tmn:hover, .proof:hover {
+.door:hover, .tcard:hover, .fcard:hover, .citem:hover, .icard:hover, .nps__card:hover, .type-card:hover, .step:hover, .tmn:hover, .proof:hover, .trt:hover, .tg-card:hover, .check:hover {
   transform: translateY(-4px) !important;
   box-shadow: none !important;
   border-color: rgba(197, 160, 89, 0.35) !important;
@@ -1306,7 +1306,7 @@ button,input,select,textarea{font:inherit;}
 
 .practice-story{padding:clamp(60px, 5vw, 96px) var(--px-section);background:var(--color-cream);}
 .practice-story__inner{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:120px;align-items:center;}
-.practice-story__image{height:540px;position:relative;overflow:hidden;}
+.practice-story__image{height:820px;position:relative;overflow:hidden;}
 .practice-story__content{}
 .practice-story__eyebrow{margin-bottom:28px;}
 .practice-story__title{margin-bottom:28px;}
@@ -1432,7 +1432,7 @@ button,input,select,textarea{font:inherit;}
 .what-is__header{max-width:720px;margin-bottom:64px;}
 .what-is__title{margin-bottom:20px;}
 .what-is__body{font-variation-settings:\"wght\" 460;;color:var(--color-stone);}
-.checks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--color-cream-deep);}
+.checks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);background:transparent;}
 .check{background:var(--color-white);padding:40px 36px;}
 .check__num{font-family:var(--font-serif);font-style:italic;font-size:40px;color:var(--color-gold);display:block;margin-bottom:16px;}
 .check__title{font-weight:500;color:var(--color-ink);margin-bottom:12px;}
@@ -1565,9 +1565,8 @@ button,input,select,textarea{font:inherit;}
 .cos-treatments__inner{max-width:1440px;margin:0 auto;}
 .cos-treatments__header{margin-bottom:64px;}
 .cos-treatments__title{ /* removed typo */ }
-.cos-treatments__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-cream-deep);}
-.trt{background:var(--color-white);padding:48px 40px;border-right:1px solid var(--color-cream-deep);display:flex;flex-direction:column;}
-.trt:last-child{border-right:none;}
+.cos-treatments__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);border:none;}
+.trt{background:var(--color-white);padding:48px 40px;display:flex;flex-direction:column;}
 .trt__label{font-family:var(--font-sans);font-weight:600;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--color-gold);margin-bottom:20px;}
 .trt__title{font-weight:500;color:var(--color-ink);margin-bottom:16px;}
 .trt__body{font-variation-settings:\"wght\" 460;;color:var(--color-stone);flex:1;margin-bottom:32px;}
@@ -1642,7 +1641,7 @@ button,input,select,textarea{font:inherit;}
 .treatments-grid__inner{max-width:1440px;margin:0 auto;}
 .treatments-grid__header{max-width:none;margin-bottom:64px;}
 .treatments-grid__title{margin-bottom:20px;white-space:nowrap;font-size:clamp(16px, 5.5vw, 48px) !important;}
-.tg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--color-cream-deep);}
+.tg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);background:transparent;}
 .tg-card{background:var(--color-white);padding:40px 36px;}
 .tg-card__num{font-family:var(--font-serif);font-style:italic;font-size:40px;color:var(--color-gold);display:block;margin-bottom:16px;}
 .tg-card__title{font-weight:500;color:var(--color-ink);margin-bottom:12px;}
