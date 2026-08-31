@@ -38,7 +38,7 @@
 </template>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/tw.css">
 
@@ -76,6 +76,19 @@
   ]
 }
 </script>
+<style>
+  /* Home 1 variant: all fonts set to Cormorant Garamond (overrides Prata/Inter site defaults).
+     Many design-system rules target headings via classes like .doors__title, .tcard__title
+     with !important, which beat any chain of plain type selectors regardless of length —
+     a single class selector always outranks type selectors in CSS specificity. Using the
+     page's #page id wrapper guarantees this override wins against those class rules. */
+  #page, #page * {
+    font-family: 'Cormorant Garamond' !important;
+  }
+  #page h1, #page h2, #page h3, #page h4, #page h5, #page h6 {
+    font-weight: 400 !important;
+  }
+</style>
 </head>
 <body>
 <div id="page" class="bg-[var(--paper,#F8F6F2)] flex flex-col relative w-full lg:w-[1440px] mx-auto min-h-screen items-stretch" data-name="FAME Editorial">
@@ -183,7 +196,7 @@
           <div class="section-bar__left typewriter">Practice</div>
           <div class="section-bar__right typewriter">Accepting New Patients</div>
         </div>
-        <h1 class="font-prata leading-[1.2] text-[36px] md:text-[64px] text-[var(--ink,#1A2233)] tracking-[-0.5px] md:tracking-[-1px] w-full scroll-reveal order-2 mb-[24px] md:mb-0">The dentists other dentists<br>refer their most complex<br>patients to.</h1>
+        <h1 class="font-playfair leading-[1.2] text-[36px] md:text-[64px] text-[var(--ink,#1A2233)] tracking-[-0.5px] md:tracking-[-1px] w-full scroll-reveal order-2 mb-[24px] md:mb-0" style="font-family: 'Cormorant Garamond' !important; font-weight: 400 !important;">The dentists other dentists<br>refer their most complex<br>patients to.</h1>
         <div class="flex flex-wrap gap-y-[24px] md:gap-y-[32px] items-center justify-between w-full scroll-reveal delay-200 order-3 mb-[32px] md:mb-[48px]">
           <p class="font-inter leading-[1.65] text-[16px] md:text-[18px] text-[var(--ink,#1A2233)] w-full lg:w-[580px]">Glasgow's dedicated implant and cosmetic dental practice on Scotland Street. Founded by Dr Ferhan Ahmed, BDS · MFDS · MBChB.</p>
           <a href="#form-container-block" data-name="button-primary" class="bg-[var(--ink,#1A2233)] flex font-inter font-semibold gap-[12px] items-center justify-center px-[28px] py-[16px] text-white whitespace-nowrap w-full md:w-auto text-center no-underline">
