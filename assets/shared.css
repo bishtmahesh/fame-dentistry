@@ -1,19 +1,19 @@
 /* ── FAME Dentistry · Shared Stylesheet ─────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --color-ink:#1A2233;--color-ink-soft:#33405A;--color-paper:#F8F6F2;--color-paper-2:#F1EDE3;
   --color-cream:#E8E0D0;--color-cream-deep:#DED3BC;--color-stone:#6E6A60;--color-stone-2:#9C968A;
   --color-rule:#D9D2C4;--color-rule-soft:#E7E1D4;--color-white:#FFFFFF;--color-gold:#C9A96E;
   --color-gold-soft:#C9A96E;--color-teal:#2A617F;--color-green:#37855F;
-  --font-serif:'Prata',Georgia,serif;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','Courier New',monospace;
+  --font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'Inter',system-ui,sans-serif;
   --page-gutter:80px;--nav-height:72px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
 /* Box every top-level section (background included) at 1440px, matching v4's boxed lookbook layout. */
 body>section,body>div.cta-bar,body>div.contact-wrap,body>div.alliance{max-width:1440px;margin-left:auto;margin-right:auto;}
-body{font-family:var(--sans);font-variation-settings:\"wght\" 460;;font-weight:400;color:var(--color-ink);background:var(--color-paper);line-height:1.5;}
+body{font-family:var(--font-sans);font-weight:400;color:var(--color-ink);background:var(--color-paper);line-height:1.5;}
 img{display:block;width:100%;}
 a{color:inherit;text-decoration:none;}
 button{cursor:pointer;border:none;background:none;font:inherit;}
@@ -22,7 +22,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;}
 .eyebrow{font-family:var(--font-mono);font-weight:700;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--color-gold);}
 .eyebrow--gold{color:var(--color-gold);}
 .eyebrow--paper{color:var(--color-gold);}
-.display{font-family:var(--font-serif);font-weight:300;letter-spacing:-.044em;line-height:1;color:var(--color-ink);}
+.display{font-family:var(--font-serif);font-weight:400;letter-spacing:-.044em;line-height:1;color:var(--color-ink);}
 .display em{font-style:italic;color:var(--color-gold);}
 .lede{font-family:var(--font-serif);font-style:italic;font-weight:300;line-height:1.4;color:var(--color-ink-soft);}
 
@@ -56,7 +56,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;}
 .nav__links{display:flex;align-items:center;gap:36px;}
 .nav__link{font-family:var(--font-sans);font-weight:400;font-size:14px;color:var(--color-ink-soft);letter-spacing:.02em;transition:color 180ms;}
 .nav__link:hover,.nav__link--active{color:var(--color-gold);}
-.nav__cta{font-family:var(--font-sans);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-gold);border:1px solid var(--color-gold);padding:10px 22px;transition:all 180ms;}
+.nav__cta{font-family:var(--font-sans);font-weight:400;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-gold);border:1px solid var(--color-gold);padding:10px 22px;transition:all 180ms;}
 .nav__cta:hover{background:var(--color-gold);color:var(--color-paper);}
 
 /* ── Page Hero ── */
@@ -70,7 +70,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;}
 /* ── CTA Bar (footer) ── */
 .cta-bar{padding:80px var(--page-gutter);background:var(--color-ink);border-bottom:1px solid rgba(255,255,255,.1);}
 .cta-bar__inner{max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:40px;}
-.cta-bar__headline{font-family:var(--font-serif);font-weight:300;font-size:48px;line-height:1.1;letter-spacing:-.015em;color:var(--color-paper);}
+.cta-bar__headline{font-family:var(--font-serif);font-weight:400;font-size:48px;line-height:1.1;letter-spacing:-.015em;color:var(--color-paper);}
 .cta-bar__headline em{font-style:italic;color:var(--color-gold);}
 
 /* ── Footer ── */

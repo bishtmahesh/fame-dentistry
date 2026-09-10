@@ -83,7 +83,7 @@
     '    </div>',
     '    <label style="display:flex;align-items:flex-start;gap:10px;margin-bottom:2px;cursor:pointer;">',
     '      <input type="checkbox" checked required style="margin-top:3px;width:16px;height:16px;accent-color:var(--color-gold);flex-shrink:0;cursor:pointer;">',
-    '      <span class="form__note" style="margin:0;">By submitting you agree to FAME Dentistry contacting you by phone and email. Your data is handled per our <a href="javascript:void(0)" style="pointer-events: none; cursor: default; color: inherit; text-decoration: none;">Privacy Policy</a>. We never share your details.</span>',
+    '      <span class="form__note" style="margin:0;">By submitting you agree to FAME Dentistry contacting you by phone and email. Your data is handled per our <a href="privacy-policy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a>. We never share your details.</span>',
     '    </label>',
     '    <button type="submit" class="form__submit">Begin an enquiry →</button>',
     '  </form>',
