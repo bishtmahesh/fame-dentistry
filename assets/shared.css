@@ -6,7 +6,7 @@
   --color-cream:#E8E0D0;--color-cream-deep:#DED3BC;--color-stone:#6E6A60;--color-stone-2:#9C968A;
   --color-rule:#D9D2C4;--color-rule-soft:#E7E1D4;--color-white:#FFFFFF;--color-gold:#C9A96E;
   --color-gold-soft:#C9A96E;--color-teal:#2A617F;--color-green:#37855F;
-  --font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'Inter',system-ui,sans-serif;
+  --font-serif:'Cormorant Garamond',serif;--font-sans:'Inter',system-ui,sans-serif;--font-mono:'Inter',system-ui,sans-serif;
   --page-gutter:80px;--nav-height:72px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}

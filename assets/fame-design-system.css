@@ -54,7 +54,7 @@
 }
 
 :root {
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Inter', system-ui, sans-serif;
   --color-pure-white: #ffffff;
 }
@@ -235,12 +235,12 @@ small, .caption, .eyebrow, .door__label, .door__num, .tcard__num, .fcard__role, 
   --color-ink: var(--color-obsidian-dark);
 
   /* Font stacks */
-  --font-prata: 'Cormorant Garamond', Georgia, serif;
+  --font-prata: 'Cormorant Garamond', serif;
   --font-inter: 'Inter', system-ui, sans-serif;
   --font-mono: 'Inter', system-ui, sans-serif;
 
   /* Serif aliases used by legacy classes */
-  --serif: 'Cormorant Garamond', Georgia, serif;
+  --serif: 'Cormorant Garamond', serif;
   --sans: 'Inter', system-ui, sans-serif;
   --mono: 'Inter', system-ui, sans-serif;
 }
@@ -811,7 +811,7 @@ details[open] .faq__toggle::after{opacity:0;}
   --ink:#1A2233;--ink-soft:#33405A;--paper:#F8F6F2;--paper-2:#F1EDE3;
   --cream:#E8E0D0;--cream-deep:#DED3BC;--stone:#6E6A60;--stone-2:#9C968A;
   --rule:#D9D2C4;--white:#FFFFFF;--gold:#C9A96E;--gold-soft:#C9A96E;
-  --serif:'Cormorant Garamond',Georgia,serif;
+  --serif:'Cormorant Garamond',serif;
   --sans:'Inter',system-ui,sans-serif;
   --mono:'Inter',system-ui,sans-serif;
 }
