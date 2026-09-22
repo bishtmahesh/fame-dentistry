@@ -13,7 +13,7 @@
     '    <div style="margin-top:20px;padding:16px 18px;background:rgba(26,34,51,0.8);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:4px;border:1px solid rgba(248,246,242,0.18);">',
     '      <p style="font-family:\'Inter\',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#C9A96E;margin-bottom:12px;">Visit &amp; Contact</p>',
     '      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;">',
-    '        <a href="https://maps.google.com/?q=373+Scotland+St,+Glasgow+G5+8QB" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;font-family:\'Inter\',sans-serif;font-size:13px;line-height:1.4;color:rgba(248,246,242,0.9);text-decoration:none;white-space:nowrap;">',
+    '        <a href="https://maps.google.com/?q=373+Scotland+St,+Glasgow+G5+8QB" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;font-family:\'Inter\',sans-serif;font-size:13px;line-height:1.4;color:rgba(248,246,242,0.9);text-decoration:none;min-width:0;">',
     '          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>',
     '          <span>373 Scotland St, Kinning Park, Glasgow G5 8QB</span>',
     '        </a>',
