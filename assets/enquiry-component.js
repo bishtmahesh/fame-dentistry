@@ -8,7 +8,7 @@
     '<div class="scroll-reveal contact-img">',
     '  <img src="assets/fame-exterior-now-open.webp" alt="FAME Dentistry practice entrance, Glasgow" onerror="this.style.background=\'#2a3447\'">',
     '  <div class="contact-img__overlay">',
-    '    <h2 class="contact-img__heading">Accepting New Patients</h2>',
+    '    <h2 class="contact-img__heading">Be Among the First to Be Seen.</h2>',
     '    <p class="contact-img__sub">Share a few details below. You\'ll hear back from a real person. Never an automated reply.</p>',
     '    <div style="margin-top:20px;padding:16px 18px;background:rgba(26,34,51,0.8);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:4px;border:1px solid rgba(248,246,242,0.18);">',
     '      <p style="font-family:\'Inter\',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#C9A96E;margin-bottom:12px;">Visit &amp; Contact</p>',
