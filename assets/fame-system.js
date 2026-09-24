@@ -175,25 +175,7 @@
   function onScroll() {
     var y = window.scrollY;
     
-    // Dynamic Glassmorphism toggle
-    if (header) {
-      if (y > 20) {
-        header.classList.add('header-scrolled');
-      } else {
-        header.classList.remove('header-scrolled');
-      }
-      
-      var scrollingUp = y < lastY;
-      // Show the gold line only while scrolling up (and not at the very top)
-      if (scrollingUp && y > 10) {
-        header.classList.remove('border-transparent');
-        header.classList.add(goldClass);
-      } else {
-        header.classList.remove(goldClass);
-        header.classList.add('border-transparent');
-      }
-    }
-    
+    // Header is a static sticky bar: no scroll-driven style changes
     lastY = y;
   }
   

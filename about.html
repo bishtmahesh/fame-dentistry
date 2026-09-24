@@ -36,7 +36,7 @@
 
 <link rel="stylesheet" href="assets/tw.css">
 
-<link rel="stylesheet" href="assets/fame-design-system.css?v=1787380977">
+<link rel="stylesheet" href="assets/fame-design-system.css?v=1790280264">
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="application/ld+json">
 {
@@ -73,15 +73,16 @@
 <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div id="page" class="bg-[var(--paper,#F8F6F2)] flex flex-col items-start relative w-full lg:w-[1440px] mx-auto min-h-screen" data-name="FAME Editorial">
 
-<div id="site-header" class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center sticky top-0 z-50 shrink-0 w-full max-w-[1440px] mx-auto border-b border-solid border-transparent transition-colors duration-300" data-name="section-header">
+<div id="site-header" role="banner" class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center sticky top-0 z-50 shrink-0 w-full max-w-[1440px] mx-auto border-b border-solid border-transparent transition-colors duration-300" data-name="section-header">
       <div class="flex flex-col items-center px-[16px] lg:px-[40px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">
         <div class="flex h-[76px] md:h-[100px] items-center justify-between relative shrink-0 w-full" data-name="header-layout">
           <a href="index.html" class="h-[64px] md:h-[88px] relative shrink-0 w-[150px] md:w-[210px] block" id="header-logo">
             <img alt="FAME Dentistry - dental and implant practice in Glasgow" class="absolute inset-0 max-w-none object-contain object-left w-full h-full" src="assets/logo.webp">
           </a>
-          <div class="hidden lg:flex gap-[28px] items-center relative shrink-0" data-name="header-nav">
+          <div class="hidden lg:flex gap-[28px] items-center relative shrink-0" data-name="header-nav" role="navigation" aria-label="Main">
             <a href="index.html" class="font-inter font-normal leading-normal relative shrink-0 text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] whitespace-nowrap no-underline cursor-pointer hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 uppercase">Home</a>
             <div class="relative group">
               <a href="about.html" class="font-inter font-normal leading-normal relative shrink-0 text-[16px] text-[var(--color--ink-navy,#1a2233)] text-[var(--color--gold,#c9a96e)] tracking-[1.2px] whitespace-nowrap no-underline cursor-pointer hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 uppercase">About<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:4px;margin-bottom:2px" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a>
@@ -104,30 +105,23 @@
                 </div>
               </div>
             </div>
-            <a href="concierge.html" class="font-inter font-normal leading-normal relative shrink-0 text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] whitespace-nowrap no-underline cursor-pointer hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 uppercase">Concierge</a>
-            <a href="insights.html" class="font-inter font-normal leading-normal relative shrink-0 text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] whitespace-nowrap no-underline cursor-pointer hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 uppercase">Insights</a>
+            <a href="concierge.html" class="font-inter font-normal leading-normal relative shrink-0 text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] whitespace-nowrap no-underline cursor-pointer hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 uppercase">Concierge for Business</a>
             <a href="for-dentists.html" class="font-inter font-normal leading-normal relative shrink-0 text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] whitespace-nowrap no-underline cursor-pointer hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 uppercase">For Dentists</a>
           </div>
           
           <div class="hidden lg:flex items-center justify-end shrink-0">
-            <a href="tel:01414877770" style="width: 44px !important; height: 44px !important; min-width: 44px !important; border-radius: 50% !important;" class="flex items-center justify-center overflow-clip rounded-full relative shrink-0 text-decoration-none border border-[var(--color--ink-navy,#1a2233)] mr-4 hover:bg-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--off-white,#f8f6f2)] transition-colors duration-300 group">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--color--ink-navy,#1a2233)] group-hover:text-[var(--color--off-white,#f8f6f2)] transition-colors duration-300"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </a>
             <a href="contact.html" class="bg-[var(--color--ink-navy,#1a2233)] flex items-center justify-center overflow-clip px-[24px] h-[44px] relative shrink-0 text-decoration-none" id="btn-enquire" data-name="button-primary">
               <p class="font-inter font-normal not-italic relative shrink-0 text-[14px] text-[var(--color--off-white,#f8f6f2)] tracking-[2.16px] uppercase whitespace-nowrap leading-none m-0 p-0">Enquire Now</p>
             </a>
           </div>
           
           <div class="flex items-center gap-[4px] lg:hidden">
-            <a href="tel:01414877770" style="width: 40px !important; height: 40px !important; min-width: 40px !important; border-radius: 50% !important;" class="flex items-center justify-center overflow-clip rounded-full relative shrink-0 text-decoration-none border border-[var(--color--ink-navy,#1a2233)] mr-2 hover:bg-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--off-white,#f8f6f2)] transition-colors duration-300 group" id="btn-enquire-mobile-nav">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--color--ink-navy,#1a2233)] group-hover:text-[var(--color--off-white,#f8f6f2)] transition-colors duration-300"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </a>
-            <button id="mobile-menu-btn" class="w-[40px] h-[40px] p-0 text-[var(--color--ink-navy,#1a2233)] focus:outline-none flex items-center justify-center cursor-pointer transition-transform duration-300">
+            <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu-dropdown" class="w-[40px] h-[40px] p-0 text-[var(--color--ink-navy,#1a2233)] focus:outline-none flex items-center justify-center cursor-pointer transition-transform duration-300">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
           </div>
 
-        <div id="mobile-menu-dropdown" class="lg:hidden w-full absolute top-full left-0 bg-[var(--color--off-white,#f8f6f2)] border-b border-[var(--color--gold,#c9a96e)] shadow-[0_10px_30px_rgba(0,0,0,0.1)] z-40">
+        <div id="mobile-menu-dropdown" role="navigation" aria-label="Mobile" class="lg:hidden w-full absolute top-full left-0 bg-[var(--color--off-white,#f8f6f2)] border-b border-[var(--color--gold,#c9a96e)] shadow-[0_10px_30px_rgba(0,0,0,0.1)] z-40">
           <div class="flex flex-col py-4 px-[16px] md:px-[72px] max-h-[80vh] overflow-y-auto">
             <a href="index.html" class="py-3 font-inter font-normal text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] uppercase border-b border-[rgba(201,169,110,0.2)] hover:text-[var(--color--gold,#c9a96e)] transition-colors">Home</a>
             <div class="py-3 font-inter font-normal text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] uppercase border-b border-[rgba(201,169,110,0.2)]">
@@ -147,8 +141,7 @@
                 <a href="restorative.html" class="text-[14px] text-[var(--color--ink-navy,#1a2233)] uppercase hover:text-[var(--color--gold,#c9a96e)] transition-colors">Restorative</a>
               </div>
             </div>
-            <a href="concierge.html" class="py-3 font-inter font-normal text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] uppercase border-b border-[rgba(201,169,110,0.2)] hover:text-[var(--color--gold,#c9a96e)] transition-colors">Concierge</a>
-            <a href="insights.html" class="py-3 font-inter font-normal text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] uppercase border-b border-[rgba(201,169,110,0.2)] hover:text-[var(--color--gold,#c9a96e)] transition-colors">Insights</a>
+            <a href="concierge.html" class="py-3 font-inter font-normal text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] uppercase border-b border-[rgba(201,169,110,0.2)] hover:text-[var(--color--gold,#c9a96e)] transition-colors">Concierge for Business</a>
             <a href="for-dentists.html" class="py-3 font-inter font-normal text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] uppercase border-b border-[rgba(201,169,110,0.2)] hover:text-[var(--color--gold,#c9a96e)] transition-colors">For Dentists</a>
             <a href="contact.html" class="py-3 font-inter font-normal text-[16px] text-[var(--color--ink-navy,#1a2233)] tracking-[1.2px] uppercase hover:text-[var(--color--gold,#c9a96e)] transition-colors">Contact</a>
           </div>
@@ -157,6 +150,7 @@
         </div>
       </div>
     </div>
+<main id="main-content" tabindex="-1">
 
 <section class="hero-radial-glow bg-[var(--paper,#F8F6F2)]">
   <div class="flex flex-col items-start px-[16px] md:px-[72px] w-full max-w-[1440px] mx-auto">
@@ -281,9 +275,10 @@
 
 <!-- ── GLOBAL ENQUIRY COMPONENT ── -->
 <div class="contact-wrap" data-enquiry-component></div>
-<script src="assets/enquiry-component.js"></script>
+<script src="assets/enquiry-component.js?v=1790280264"></script>
 
 
+</main>
 <footer class="bg-[var(--color--off-white,#f8f6f2)] flex flex-col items-center overflow-clip relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="section-footer">
       <div class="flex flex-col items-start overflow-clip px-[16px] md:px-[72px] relative shrink-0 w-full max-w-[1440px] mx-auto" data-name="container-large">
         <div class="flex flex-col items-start overflow-clip pb-[32px] md:pb-[44px] pt-[60px] md:pt-[90px] relative shrink-0 w-full" data-name="padding-section-small">
@@ -303,7 +298,7 @@
                 <p class="font-inter font-normal leading-normal relative shrink-0 text-[16px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1.2px] whitespace-normal uppercase">Practice</p>
                 <div class="flex flex-col gap-[10px] items-start overflow-clip relative shrink-0 w-full">
                   <a href="about.html" class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[16px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 no-underline uppercase">About FAME</a>
-                  <a href="concierge.html" class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[16px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 no-underline uppercase">About Concierge</a>
+                  <a href="concierge.html" class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[16px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 no-underline uppercase">About Concierge for Business</a>
                   <a href="nps-methodology.html" class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[16px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 no-underline uppercase">NPS &amp; Methodology</a>
                   <a href="press.html" class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[16px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 no-underline uppercase">Press / Media</a>
                   <a href="contact.html" class="font-inter font-normal leading-[1.5] not-italic relative shrink-0 text-[16px] md:text-[16px] text-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--gold,#c9a96e)] transition-colors duration-300 no-underline uppercase">Contact</a>
@@ -355,7 +350,7 @@
                 <p class="font-inter font-normal leading-normal relative shrink-0 text-[16px] md:text-[16px] text-[var(--color--gold,#c9a96e)] tracking-[1.2px] whitespace-normal uppercase">Newsletter</p>
                 <p class="font-inter font-normal text-[13px] leading-[1.5] text-[var(--color--ink-navy,#1a2233)] opacity-70 w-full">Practice updates and news. No spam.</p>
                 <form class="flex w-full" onsubmit="event.preventDefault(); return false;">
-                  <input type="email" placeholder="you@example.com" disabled class="flex-1 min-w-0 bg-transparent border border-[var(--color--gold,#c9a96e)] border-r-0 px-[12px] py-[10px] font-inter text-[13px] text-[var(--color--ink-navy,#1a2233)] outline-none opacity-50 cursor-not-allowed">
+                  <input type="email" aria-label="Email address for newsletter" autocomplete="email" placeholder="you@example.com" disabled class="flex-1 min-w-0 bg-transparent border border-[var(--color--gold,#c9a96e)] border-r-0 px-[12px] py-[10px] font-inter text-[13px] text-[var(--color--ink-navy,#1a2233)] outline-none opacity-50 cursor-not-allowed">
                   <button type="submit" disabled class="shrink-0 bg-[var(--color--ink-navy,#1a2233)] text-[var(--color--off-white,#f8f6f2)] font-inter font-normal text-[12px] tracking-[0.06em] uppercase px-[16px] py-[10px] opacity-50 cursor-not-allowed">Subscribe</button>
                 </form>
                 <div class="flex items-center gap-[14px] mt-[4px]">
@@ -422,9 +417,10 @@
 </script>
 
 </div>
-<script src="assets/fame-system.js?v=1783559983955"></script>
+<script src="assets/fame-system.js?v=1790278772"></script>
 <div class="fixed bottom-0 left-0 w-full bg-[var(--color--off-white,#f8f6f2)] border-t border-[rgba(201,169,110,0.3)] p-3 flex gap-3 z-[9999] lg:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
   <a href="for-dentists.html" class="flex-1 bg-transparent border border-[var(--color--ink-navy,#1a2233)] text-[var(--color--ink-navy,#1a2233)] flex items-center justify-center py-[14px] font-inter text-[12px] leading-none m-0 p-0 font-normal tracking-widest uppercase transition-colors hover:bg-[var(--color--ink-navy,#1a2233)] hover:text-[var(--color--off-white,#f8f6f2)]">For Dentists</a>
   <a href="contact.html" class="flex-1 bg-[var(--color--ink-navy,#1a2233)] text-[var(--color--off-white,#f8f6f2)] border border-[var(--color--ink-navy,#1a2233)] flex items-center justify-center py-[14px] font-inter text-[12px] leading-none m-0 p-0 font-normal tracking-widest uppercase transition-colors hover:bg-[var(--color--gold,#c9a96e)] hover:border-[var(--color--gold,#c9a96e)]">Enquire Now</a>
 </div>
+<script src="assets/a11y.js?v=1790280264" defer></script>
 </body></html>
