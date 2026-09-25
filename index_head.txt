@@ -21,15 +21,15 @@
 </template>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#1A2233;--ink-soft:#33405A;--paper:#F8F6F2;--paper-2:#F1EDE3;
   --cream:#E8E0D0;--cream-deep:#DED3BC;--stone:#6E6A60;--stone-2:#9C968A;
   --rule:#D9D2C4;--white:#FFFFFF;--gold:#C9A96E;--gold-soft:#C9A96E;
-  --serif:'Prata',Georgia,serif;
+  --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Inter',system-ui,sans-serif;
-  --mono:'JetBrains Mono','Courier New',monospace;
+  --mono:'Inter',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
@@ -324,7 +324,7 @@ button,input,select,textarea{font:inherit;}
 </style>
 <link rel="stylesheet" href="assets/tw.css">
 <style>
-  .font-prata { font-family: 'Prata', serif; }
+  .font-prata { font-family: 'Cormorant Garamond', serif; }
   .font-inter { font-family: 'Inter', sans-serif; }
   :root {
     --color--navy: #1a2233;

@@ -26,7 +26,7 @@ Core claim: "The dentists other dentists refer to." NPS is a live, dated, verifi
 
 ## Typography
 
-- **Display/headlines**: Cormorant Garamond, 36–96pt, weight 300/400, line-height 1.05. *(Live site currently ships Prata instead — flagged as an open deviation, not yet reconciled with the client.)*
+- **Display/headlines**: Cormorant Garamond, 36–96pt, weight 300/400, line-height 1.05.
 - **Body/interface**: Inter, 16–22pt, weight 300/400, line-height 1.6.
 
 ## Tone by audience (never mix within a page)

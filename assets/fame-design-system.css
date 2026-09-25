@@ -2145,3 +2145,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .scroll-reveal, .reveal-scale, .text-reveal, .typewriter { opacity: 1 !important; transform: none !important; }
   .alliance__track, .alliance__marquee { animation: none !important; }
 }
+
+/* CTA weight: outline buttons and text-link CTAs slightly heavier */
+.btn--outline,.btn--gold-outline,.nav__cta,.nav-cta-link{font-weight:500 !important;}
+.door__link,.tcard__link,.nps__link,.who-card--links .who-card__list a,.card__link,.read-more{font-weight:600 !important;}

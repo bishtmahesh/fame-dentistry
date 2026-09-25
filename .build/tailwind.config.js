@@ -5,6 +5,6 @@ module.exports = {
     '../restorative.html', '../concierge.html', '../insights.html', '../for-dentists.html',
     '../contact.html',
   ],
-  theme: { extend: { fontFamily: { mono: ["'JetBrains Mono'", "'Courier New'", 'monospace'] } } },
+  theme: { extend: { fontFamily: { mono: ["'Inter'", 'system-ui', 'sans-serif'] } } },
   plugins: [],
 }
