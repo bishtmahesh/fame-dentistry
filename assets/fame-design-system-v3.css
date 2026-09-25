@@ -18,9 +18,9 @@
   --color-ash-mist: #c7c7c7;
   --color-pure-white: #ffffff;
   
-  --font-serif: 'Prata', serif;
+  --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: 'Inter', system-ui, sans-serif;
   
   --px-section: clamp(20px, 5vw, 72px);
   --py-section: clamp(80px, 10vw, 160px);
