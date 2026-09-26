@@ -2149,3 +2149,74 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* CTA weight: outline buttons and text-link CTAs slightly heavier */
 .btn--outline,.btn--gold-outline,.nav__cta,.nav-cta-link{font-weight:500 !important;}
 .door__link,.tcard__link,.nps__link,.who-card--links .who-card__list a,.card__link,.read-more{font-weight:600 !important;}
+
+/* ── Site-wide readability pass (WCAG 2.1 AA 1.4.3: 4.5:1 text, 3:1 large) ── */
+body { --gold-text-aa: #7D5E17; --stone-text-aa: #5E5A52; }
+
+/* Gold text on light surfaces: deeper antique gold, slightly heavier */
+body .door__label, body .door__link, body .tcard__link,
+body .fcard__role, body .tmn__format, body .tmn__type,
+body .book__ey, body .insights__all, body .icard__tag,
+body .icard__read, body .concierge__ey,
+body .section-bar__left, body .section-bar__right,
+body .section-bar__left .char, body .section-bar__right .char,
+body .concierge__title em, body .treatments__title em, body .doors__title em,
+body .founders__title em, body .testimonials__title em,
+body .book__title em, body .insights__title em {
+  color: var(--gold-text-aa) !important;
+}
+body .door__label { font-size: 10px; font-weight: 700; background: rgba(125,94,23,.10); }
+body .fcard__role, body .tmn__type, body .tmn__format { font-weight: 700; }
+body .tcard__link { font-size: 12px; }
+
+/* Active nav item (was pale gold on off-white, 2.1:1) */
+body a[class~="text-[var(--color--gold,#c9a96e)]"]:not(footer a) { color: var(--gold-text-aa) !important; font-weight: 500; }
+
+/* Grey supporting text: warm dark stone */
+body .fcard__spec, body .icard__exc, body .icard__read-time,
+body .book__subtitle, body .form__label, body .form__note,
+body .form__note a, body .contact-form-panel__sub,
+body .tmn__sample {
+  color: var(--stone-text-aa) !important;
+}
+body .fcard__spec { font-weight: 500; }
+body .form__note { font-size: 12px; }
+body .founders__sub { color: #3A4254 !important; }
+
+/* NPS band (navy): lift faint off-white text */
+body .nps__copy { color: rgba(248,246,242,.8) !important; }
+body .nps__updated { color: rgba(248,246,242,.72); font-size: 12px; }
+body .nps__verbatim cite { color: rgba(248,246,242,.75); }
+
+/* Text over photography: stronger scrim + shadow */
+body .tmn--video .tmn__media::before { background: linear-gradient(to top, rgba(26,34,51,.8) 0%, rgba(26,34,51,0) 55%); }
+body .tmn__media-label { color: #fff; font-weight: 600; font-size: 12px; background: rgba(26,34,51,.78); border-radius: 100px; padding: 5px 12px; margin: 0 0 12px 12px; }
+body .tmn__audio { background: rgba(26,34,51,.7); }
+body .tmn__audio-time { color: #fff; font-weight: 600; font-size: 12px; }
+body .contact-img__overlay { background: linear-gradient(to bottom, rgba(26,34,51,0) 30%, rgba(26,34,51,.55) 55%, rgba(26,34,51,.88) 100%); }
+body .contact-img__heading { text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+body .contact-img__sub { color: rgba(248,246,242,.92); text-shadow: 0 1px 6px rgba(0,0,0,.4); }
+
+/* Footer compliance line (was 8px at 40% opacity) */
+body footer p[class*="opacity-40"] { opacity: .75 !important; font-size: 12px !important; }
+
+/* Grey text tokens darkened at source (these tokens are only used for text colour) */
+:root, body {
+  --stone: #5E5A52; --color-stone: #5E5A52;
+  --stone-2: #66625A; --color-stone-2: #66625A;
+}
+
+/* Gold text on light surfaces, other pages: small text → deep gold; large numerals → mid gold (3:1 large-text rule) */
+body .featured-article__tag, body .featured-article__read, body .article__read, body .trt__label,
+body .pstep__label, body .btn--ghost, body .nps__link {
+  color: var(--gold-text-aa) !important;
+}
+body .featured-article__tag, body .trt__label, body .pstep__label, body .btn--ghost { font-weight: 700 !important; }
+body .step__num, body .tg-card__num, body .check__num { color: var(--gold-text, #A57C22) !important; }
+
+/* Faint off-white on navy */
+body .who__source-role { color: rgba(248,246,242,.75); }
+
+/* Eyebrow labels: deep gold on light surfaces; the --paper variant (dark surfaces) keeps light gold */
+body .eyebrow, body .eyebrow--gold { color: var(--gold-text-aa); }
+body .eyebrow--paper { color: var(--color-gold); }
