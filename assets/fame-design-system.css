@@ -2235,3 +2235,19 @@ body h1, body h2, body h3, body h4 { font-weight: 500 !important; }
 /* Small labels: no smaller than 12px */
 body .section-bar__right { font-size: 12px; opacity: 1; }
 body .door__link, body .tcard__link, body .icard__read, body .insights__all { font-size: 13px; }
+
+/* ── Readability pass 2: serif weights + faded light text (all pages) ── */
+/* Large serif display (section + hero headings): 500 */
+html body :is(h1, h2, [class*="__title"], .font-prata),
+html body :is(h1, h2) :is(em, span) { font-weight: 500 !important; }
+/* Small serif (cards, FAQ questions, quotes, names): 600, thin strokes vanish at 20–32px */
+html body :is(h3, h4, h5, h6, .faq__q, summary, blockquote, [class*="__name"], .door__q),
+html body :is(h3, h4) :is(em, span) { font-weight: 600 !important; }
+html body .faq__q { color: var(--color--ink-navy, #1A2233) !important; }
+/* Serif numerals (stats, step numbers, NPS score) */
+html body :is(.signal__num, .signal__num span, .nps__score, .step__num, .tg-card__num, .check__num) { font-weight: 500 !important; }
+/* Light text on navy: lift faded copy to near-full strength */
+html body :is(.dark-point__text, .why-point__text, .flow-step__body, .why-fame__body, .dark-band__body, .nps__updated, .who__source-role),
+html body cite { color: rgba(248, 246, 242, .9) !important; }
+html body footer p[class*="opacity-"] { opacity: .9 !important; }
+@media (min-width: 768px) { html body .faq__q { font-size: 24px !important; line-height: 1.35; } }
