@@ -2220,3 +2220,18 @@ body .who__source-role { color: rgba(248,246,242,.75); }
 /* Eyebrow labels: deep gold on light surfaces; the --paper variant (dark surfaces) keeps light gold */
 body .eyebrow, body .eyebrow--gold { color: var(--gold-text-aa); }
 body .eyebrow--paper { color: var(--color-gold); }
+
+/* ── Headings: one colour (no gold accent words) + readability pass ── */
+body h1 em, body h2 em, body h3 em, body h4 em, body h5 em, body h6 em,
+body h1 span, body h2 span, body h3 span,
+body [class*="title"] em, body [class*="headline"] em {
+  color: inherit !important;
+  font-style: normal !important;
+}
+/* Serif headings a touch heavier so thin strokes read clearly */
+body h1, body h2, body h3, body h4 { font-weight: 500 !important; }
+/* Body copy: darker warm grey on light surfaces */
+:root, body { --stone: #45423C; --color-stone: #45423C; --stone-2: #4F4B44; --color-stone-2: #4F4B44; }
+/* Small labels: no smaller than 12px */
+body .section-bar__right { font-size: 12px; opacity: 1; }
+body .door__link, body .tcard__link, body .icard__read, body .insights__all { font-size: 13px; }
