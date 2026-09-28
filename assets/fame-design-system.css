@@ -2289,3 +2289,14 @@ html body :is(.door__link, .tcard__link, .icard__read, .insights__all, .featured
 /* Solid CTAs match the outline ones */
 html body :is(.form__submit, .book__cta, button[type="submit"], [data-name="button-primary"], [data-name="button-primary"] span, .btn) { font-weight: 600 !important; }
 html body .fixed.bottom-0 a { font-weight: 600 !important; }
+
+/* Text-link CTAs (arrow links) on light surfaces: dark ink instead of gold, extra bold for visibility */
+html body :is(.door__link, .tcard__link, .icard__read, .insights__all, .featured-article__read, .article__read,
+  .nps__link, .card__link, .read-more, .fcard__link, [class*="__read"], [class*="__more"], [class*="__cta-link"]) {
+  color: var(--color--ink-navy, #1A2233) !important;
+  font-weight: 700 !important;
+}
+/* Keep these readable on dark/navy sections where they were designed to sit on gold */
+html body :is(.dark-band, .book, .nps, .concierge, .signal, [class*="dark"]) :is(.door__link, .tcard__link, .nps__link, .article__read, [class*="__read"]) {
+  color: var(--color-gold, #c9a96e) !important;
+}
