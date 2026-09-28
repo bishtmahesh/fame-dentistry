@@ -2300,3 +2300,20 @@ html body :is(.door__link, .tcard__link, .icard__read, .insights__all, .featured
 html body :is(.dark-band, .book, .nps, .concierge, .signal, [class*="dark"]) :is(.door__link, .tcard__link, .nps__link, .article__read, [class*="__read"]) {
   color: var(--color-gold, #c9a96e) !important;
 }
+
+/* Elfsight Google Reviews badge: floating, fixed to the bottom-left on every page (not inline content) */
+.elfsight-app-bbb93d84-63b4-4073-b011-456c28135c9c {
+  position: fixed !important;
+  left: 16px !important;
+  bottom: 16px !important;
+  z-index: 9000 !important;
+  max-width: 220px;
+}
+/* On mobile the sticky "Enquire Now" bar owns the bottom edge; sit just above it */
+@media (max-width: 1023.98px) {
+  .elfsight-app-bbb93d84-63b4-4073-b011-456c28135c9c {
+    left: 12px !important;
+    bottom: 84px !important;
+    max-width: 160px;
+  }
+}
